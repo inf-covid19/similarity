@@ -14,9 +14,11 @@ from fnc.mappings import merge
 
 from countries import process_country
 from brazil import process_brazil
+from sweden import process_sweden
 
 COUNTRY_PROCESS_MAPPING = {
     'Brazil': process_brazil,
+    'Sweden': process_sweden,
 }
 
 
