@@ -52,11 +52,12 @@ def per_similarity(region_attributes):
     return model
 
 
-def per_timeline(metadata, cluster, df):
-    cluster_data = []
+def per_timeline(metadata, df):
+    data = []
     features = ['cases_daily', 'deaths_daily']
 
     idx = 1
+    count = len(df)
     for _, a_row in df.iterrows():
         a_key = a_row['key']
         a_timeline = get_timeline(metadata, a_key)
@@ -76,7 +77,7 @@ def per_timeline(metadata, cluster, df):
                 metric='manhattan'
             )
 
-            cluster_data.append([
+            data.append([
                 a_key,
                 b_key,
                 distance.mean(),
@@ -85,12 +86,7 @@ def per_timeline(metadata, cluster, df):
             ])
         idx += 1
 
-    if len(cluster_data) == 0:
-        print("[Warning] Unable to calculate similarity for cluster:", cluster)
-        print(df['key'])
-        return pd.DataFrame()
-
-    df = pd.DataFrame(cluster_data, columns=['region_a', 'region_b', 'distance', 'days', 'distance_per_day'])
+    df = pd.DataFrame(data, columns=['region_a', 'region_b', 'distance', 'days', 'distance_per_day'])
     df['similarity'] = 1 - MinMaxScaler().fit_transform(df[['distance']].to_numpy())[:,0]
     return df
 
