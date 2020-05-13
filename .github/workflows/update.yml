@@ -2,8 +2,8 @@ name: Scheduled Update
 
 on:
   push:
-    paths-ignore:
-      - "output/**"
+    branches:
+      - master
   schedule:
     - cron: "0 */6 * * *"
 
