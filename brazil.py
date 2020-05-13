@@ -16,10 +16,10 @@ def process_brazil(key, metadata):
         ['CD_GCUF', 'AR_MUN_2018']].set_index('CD_GCUF')
 
 
-    regions_with_file = [x for x in metadata['regions'].items() if 'file' in x[1]]
+    parent_regions = [x for x in metadata['regions'].items() if 'parent' not in x[1]]
     regions_by_parent = groupby([1, 'parent'], metadata['regions'].items())
 
-    for region_key, data in regions_with_file:
+    for region_key, data in parent_regions:
         df = pd.read_csv(path.join('data', data['file']), parse_dates=[0])
         df = df[['state', 'city', 'place_type', 'estimated_population_2019', 'city_ibge_code']].drop_duplicates()
         for _, row in df.iterrows():

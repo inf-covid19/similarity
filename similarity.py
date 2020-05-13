@@ -1,34 +1,54 @@
 from os import path
 import json
+import pandas as pd
+import numpy as np
 
-from clusters import process, per_similarity
-
+from sklearn import preprocessing
+from clusters import process, per_similarity, per_timeline
+from sklearn.metrics.pairwise import cosine_similarity
 
 if __name__ == "__main__":
+    print('Loading metadata...')
     metadata = {}
     with open(path.join('data', 'data', 'metadata.json')) as f:
         metadata = json.load(f)
 
-    region_attributes = process(metadata)
+    # process atributes
+    print('Processing attributes...')
+    df_attributes = process(metadata)
 
-    clusters = per_similarity(region_attributes)
-    # clusters = per_timeline(region_timeline)
+    # clustering by attributes
+    print('Clustering by attributes...')
+    clusters = per_similarity(df_attributes)
 
-    region_attributes['cluster'] = clusters.labels_
+    df_attributes['cluster'] = clusters.labels_
+    df_attributes.to_csv(path.join('output', 'region_attributes.csv'), index=False)
 
-    clusters = region_attributes['cluster'].unique()
+    clusters = df_attributes['cluster'].unique()
+    print(f'  Found {len(clusters)} clusters.')
 
+    # similarity by timeline
+    print('Calculating similarity by timeline for each cluster...')
+    df_similarities = pd.DataFrame()
     for cluster in clusters:
-        print(region_attributes[region_attributes['cluster'] == cluster])
+        cluster_similarities = per_timeline(metadata, cluster, df_attributes[df_attributes['cluster'] == cluster])
+        df_similarities = pd.concat([df_similarities, cluster_similarities], ignore_index=True)
 
-    print(region_attributes.groupby('cluster').count()['key'].sort_values())
+    df_similarities.to_csv(path.join('output', 'region_similarities.csv'), index=False)
 
-    print(len(region_attributes))
-    print(len(clusters))
+    # save each region
+    print('Saving output file for each region...')
+    for region in df_attributes['key']:
+        within_a = df_similarities['region_a'] == region
+        within_b = df_similarities['region_b'] == region
+        region_df = df_similarities[within_a | within_b].copy()
 
-    region_attributes.to_csv('region_attributes.csv', index=False)
+        if len(region_df) == 0:
+            continue
 
+        region_df['region'] = region_df.apply(lambda r: r['region_b'] if r['region_a'] == region else r['region_a'], axis=1)
 
-    # print(region_attributes)
-    # print(clusters.labels_)
-    # print(clusters.get_params())
+        region_df = region_df[['region', 'similarity', 'distance', 'days']]
+        region_df = region_df.sort_values(by=['days', 'similarity', 'distance'], ascending=[False, False, True])
+
+        region_df.to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)

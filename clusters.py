@@ -7,14 +7,16 @@ from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 from sklearn.datasets import load_iris
 from sklearn.cluster import AgglomerativeClustering
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.manifold import SpectralEmbedding
+from sklearn.metrics.pairwise import paired_distances
 
-from fnc.mappings import merge
+from fnc.mappings import merge, get
 
 from countries import process_country
 from brazil import process_brazil
 from sweden import process_sweden
+from common import normalize_timeline
 
 COUNTRY_PROCESS_MAPPING = {
     'Brazil': process_brazil,
@@ -50,5 +52,69 @@ def per_similarity(region_attributes):
     return model
 
 
-def per_timeline(regions):
-    pass
+def per_timeline(metadata, cluster, df):
+    cluster_data = []
+    features = ['cases_daily', 'deaths_daily']
+
+    idx = 1
+    for _, a_row in df.iterrows():
+        a_key = a_row['key']
+        a_timeline = get_timeline(metadata, a_key)
+
+        for _, b_row in df.iloc[idx:].iterrows():
+            b_key = b_row['key']
+            b_timeline = get_timeline(metadata, b_key)
+
+            length = min(len(a_timeline), len(b_timeline))
+
+            if length == 0:
+                continue
+
+            distance = paired_distances(
+                a_timeline[features][:length],
+                b_timeline[features][:length],
+                metric='manhattan'
+            )
+
+            cluster_data.append([
+                a_key,
+                b_key,
+                distance.mean(),
+                length,
+                ' '.join((str(x) for x in distance)),
+            ])
+        idx += 1
+
+    if len(cluster_data) == 0:
+        print("[Warning] Unable to calculate similarity for cluster:", cluster)
+        print(df['key'])
+        return pd.DataFrame()
+
+    df = pd.DataFrame(cluster_data, columns=['region_a', 'region_b', 'distance', 'days', 'distance_per_day'])
+    df['similarity'] = 1 - MinMaxScaler().fit_transform(df[['distance']].to_numpy())[:,0]
+    return df
+
+
+timeline_cache = {}
+
+def get_timeline(metadata, key):
+    if key in timeline_cache:
+        return timeline_cache[key]
+
+    key_path = key.split('.regions.')
+    is_country = len(key_path) == 1
+
+    if not is_country:
+        country, region = key_path
+        key_path = [country, 'regions', region]
+
+    filename = get(key_path + ['file'], metadata)
+
+    df = pd.read_csv(path.join('data', filename), parse_dates=True)
+
+    df = normalize_timeline(key, df, get(key_path, metadata))
+
+    timeline_cache[key] = df
+    df.to_csv(path.join('tmp', f'{key}.csv'), index=False)
+
+    return df
