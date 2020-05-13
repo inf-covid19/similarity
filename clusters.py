@@ -115,6 +115,5 @@ def get_timeline(metadata, key):
     df = normalize_timeline(key, df, get(key_path, metadata))
 
     timeline_cache[key] = df
-    df.to_csv(path.join('tmp', f'{key}.csv'), index=False)
 
     return df
