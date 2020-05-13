@@ -22,7 +22,7 @@ if __name__ == "__main__":
     clusters = per_similarity(df_attributes)
 
     df_attributes['cluster'] = clusters.labels_
-    df_attributes.to_csv(path.join('output', 'region_attributes.csv'), index=False)
+    df_attributes.to_csv(path.join('output', 'region_clusters.csv'), index=False)
 
     clusters = df_attributes['cluster'].unique()
     print(f'  Found {len(clusters)} clusters.')
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     # similarity by timeline
     print('Calculating similarity by timeline...')
     df_similarities = per_timeline(metadata, df_attributes)
-    df_similarities.to_csv(path.join('output', 'region_similarities.csv'), index=False)
+    # df_similarities.to_csv(path.join('output', 'region_similarities.csv'), index=False)
 
     # save each region
     print('Saving output file for each region...')
@@ -47,4 +47,4 @@ if __name__ == "__main__":
         region_df = region_df[['region', 'similarity', 'distance', 'days']]
         region_df = region_df.sort_values(by=['similarity', 'days'], ascending=[False, False])
 
-        region_df.to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)
+        region_df[:100].to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)
