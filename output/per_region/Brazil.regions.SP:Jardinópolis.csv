@@ -1,5 +1,4 @@
 region,similarity,distance,days
-Brazil.regions.SP:Nova Aliança,1.0,0.0,4
 Brazil.regions.BA:Barrocas,1.0,0.0,3
 Brazil.regions.BA:Dom Basílio,1.0,0.0,3
 Brazil.regions.BA:Itapicuru,1.0,0.0,3
@@ -19,6 +18,9 @@ Brazil.regions.MA:Godofredo Viana,1.0,0.0,1
 Brazil.regions.PB:Itatuba,1.0,0.0,1
 Brazil.regions.RO:Nova Mamoré,1.0,0.0,1
 Brazil.regions.RS:Restinga Sêca,1.0,0.0,1
+Brazil.regions.SP:Casa Branca,1.0,0.0,1
+Brazil.regions.SP:Severínia,1.0,0.0,1
+Brazil.regions.SP:Tambaú,1.0,0.0,1
 Brazil.regions.RS:Canudos do Vale,0.9999931708961084,0.09090909090909091,11
 Brazil.regions.PA:Chaves,0.9999924879857193,0.1,10
 Brazil.regions.SC:Água Doce,0.9999924879857193,0.1,10
@@ -37,12 +39,15 @@ Brazil.regions.SC:Alto Bela Vista,0.9999863417922168,0.18181818181818182,11
 Brazil.regions.RS:Feliz,0.9999849759714385,0.2,15
 Brazil.regions.MA:Capinzal do Norte,0.9999849759714385,0.2,5
 Brazil.regions.MA:Centro do Guilherme,0.9999849759714385,0.2,5
+Brazil.regions.SP:Nova Aliança,0.9999849759714385,0.2,5
 Brazil.regions.CE:Aratuba,0.9999833066349317,0.2222222222222222,9
 Brazil.regions.MA:Fortaleza dos Nogueiras,0.9999833066349317,0.2222222222222222,9
 Brazil.regions.RS:São Luiz Gonzaga,0.9999833066349317,0.2222222222222222,9
 Brazil.regions.RS:Terra de Areia,0.9999833066349317,0.2222222222222222,9
-Brazil.regions.GO:Rialma,0.999983037387108,0.22580645161290322,31
-Brazil.regions.MG:Vazante,0.999983037387108,0.22580645161290322,31
+Brazil.regions.SP:Cândido Mota,0.9999833066349317,0.2222222222222222,9
+Brazil.regions.SP:Guaraçaí,0.9999833066349317,0.2222222222222222,9
+Brazil.regions.SP:Sud Mennucci,0.9999833066349317,0.2222222222222222,9
+Brazil.regions.AC:Assis Brasil,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.BA:Guaratinga,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.CE:Antonina do Norte,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.MG:Divisa Nova,0.9999826645824291,0.23076923076923078,13
@@ -60,22 +65,18 @@ Brazil.regions.RS:São José das Missões,0.9999826645824291,0.23076923076923078
 Brazil.regions.SC:Garuva,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.SC:Ibicaré,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.SC:São João do Itaperiú,0.9999826645824291,0.23076923076923078,13
-Brazil.regions.SP:Adolfo,0.9999826645824291,0.23076923076923078,13
-Brazil.regions.SP:Anhembi,0.9999826645824291,0.23076923076923078,13
-Brazil.regions.SP:Nova Guataporanga,0.9999826645824291,0.23076923076923078,13
-Brazil.regions.SP:Salto Grande,0.9999826645824291,0.23076923076923078,13
-Brazil.regions.SP:Timburi,0.9999826645824291,0.23076923076923078,13
+Brazil.regions.SP:Tarumã,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.TO:Bandeirantes do Tocantins,0.9999826645824291,0.23076923076923078,13
 Brazil.regions.PE:São Joaquim do Monte,0.9999823246722807,0.23529411764705882,17
 Brazil.regions.RS:Trindade do Sul,0.9999823246722807,0.23529411764705882,17
 Brazil.regions.RS:Campinas do Sul,0.9999821142517126,0.23809523809523808,21
+Brazil.regions.MG:Alfenas,0.9999812199642981,0.25,32
 Brazil.regions.MG:Minas Novas,0.9999812199642981,0.25,16
 Brazil.regions.MT:Poconé,0.9999812199642981,0.25,16
 Brazil.regions.PA:São João da Ponta,0.9999812199642981,0.25,16
 Brazil.regions.PR:Paraíso do Norte,0.9999812199642981,0.25,16
 Brazil.regions.SE:Ribeirópolis,0.9999812199642981,0.25,16
-Brazil.regions.SP:Santa Fé do Sul,0.9999812199642981,0.25,16
-Brazil.regions.AC:Assis Brasil,0.9999812199642981,0.25,12
+Brazil.regions.AC:Feijó,0.9999812199642981,0.25,12
 Brazil.regions.AL:Colônia Leopoldina,0.9999812199642981,0.25,12
 Brazil.regions.BA:Jussari,0.9999812199642981,0.25,12
 Brazil.regions.BA:Várzea Nova,0.9999812199642981,0.25,12
@@ -90,7 +91,6 @@ Brazil.regions.PB:Casserengue,0.9999812199642981,0.25,12
 Brazil.regions.PB:São José de Espinharas,0.9999812199642981,0.25,12
 Brazil.regions.PR:Palotina,0.9999812199642981,0.25,12
 Brazil.regions.RO:Vale do Anari,0.9999812199642981,0.25,12
-Brazil.regions.SP:Tarumã,0.9999812199642981,0.25,12
 Brazil.regions.MA:Amapá do Maranhão,0.9999812199642981,0.25,8
 Brazil.regions.MA:Joselândia,0.9999812199642981,0.25,8
 Brazil.regions.RS:General Câmara,0.9999812199642981,0.25,8
@@ -98,4 +98,4 @@ Brazil.regions.RS:Mormaço,0.9999812199642981,0.25,8
 Brazil.regions.RS:Pinto Bandeira,0.9999812199642981,0.25,8
 Brazil.regions.RS:Sertão,0.9999812199642981,0.25,8
 Brazil.regions.SC:Balneário Rincão,0.9999812199642981,0.25,8
-Brazil.regions.SP:Cândido Mota,0.9999812199642981,0.25,8
+Brazil.regions.SP:Itapura,0.9999812199642981,0.25,8

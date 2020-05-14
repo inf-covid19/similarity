@@ -1,6 +1,6 @@
 region,similarity,distance,days
 Brazil.regions.MA:Centro do Guilherme,1.0,0.0,5
-Brazil.regions.SP:Nova Aliança,1.0,0.0,4
+Brazil.regions.SP:Nova Aliança,1.0,0.0,5
 Brazil.regions.BA:Barrocas,1.0,0.0,3
 Brazil.regions.BA:Dom Basílio,1.0,0.0,3
 Brazil.regions.BA:Itapicuru,1.0,0.0,3
@@ -20,6 +20,9 @@ Brazil.regions.MA:Godofredo Viana,1.0,0.0,1
 Brazil.regions.PB:Itatuba,1.0,0.0,1
 Brazil.regions.RO:Nova Mamoré,1.0,0.0,1
 Brazil.regions.RS:Restinga Sêca,1.0,0.0,1
+Brazil.regions.SP:Casa Branca,1.0,0.0,1
+Brazil.regions.SP:Severínia,1.0,0.0,1
+Brazil.regions.SP:Tambaú,1.0,0.0,1
 Brazil.regions.RS:Canudos do Vale,0.9999931708961084,0.09090909090909091,11
 Brazil.regions.SC:Treze de Maio,0.9999924879857193,0.1,30
 Brazil.regions.RJ:Engenheiro Paulo de Frontin,0.9999906099821491,0.125,8
@@ -33,12 +36,11 @@ Brazil.regions.MG:Cambuquira,0.9999882624776864,0.15625,32
 Brazil.regions.SC:Santa Cecília,0.9999882624776864,0.15625,32
 Brazil.regions.PR:Matinhos,0.9999880490681897,0.1590909090909091,44
 Brazil.regions.PR:Quatro Barras,0.999987771139543,0.16279069767441862,43
-Brazil.regions.SP:Conchal,0.9999874799761987,0.16666666666666666,12
 Brazil.regions.CE:Paramoti,0.9999874799761987,0.16666666666666666,6
 Brazil.regions.PI:Coivaras,0.9999874799761987,0.16666666666666666,6
 Brazil.regions.BA:Floresta Azul,0.9999870482512401,0.1724137931034483,29
 Brazil.regions.MA:Governador Nunes Freire,0.9999870482512401,0.1724137931034483,29
-Brazil.regions.GO:Anhanguera,0.9999867435042105,0.17647058823529413,34
+Brazil.regions.SP:Rinópolis,0.9999870482512401,0.1724137931034483,29
 Brazil.regions.RS:Cidreira,0.9999867435042105,0.17647058823529413,34
 Brazil.regions.SC:Aurora,0.9999867435042105,0.17647058823529413,34
 Brazil.regions.SC:Rio Rufino,0.9999867435042105,0.17647058823529413,34
@@ -47,14 +49,15 @@ Brazil.regions.SC:São Pedro de Alcântara,0.9999867435042105,0.1764705882352941
 Brazil.regions.SC:Vidal Ramos,0.9999867435042105,0.17647058823529413,34
 Brazil.regions.MG:Serra do Salitre,0.9999866453079453,0.17777777777777778,45
 Brazil.regions.RN:Passa e Fica,0.9999866453079453,0.17777777777777778,45
-Brazil.regions.SP:Rinópolis,0.9999865856887844,0.17857142857142858,28
 Brazil.regions.PR:Pinhão,0.9999865168974449,0.1794871794871795,39
 Brazil.regions.BA:Nova Soure,0.9999863417922168,0.18181818181818182,44
 Brazil.regions.SC:Pescaria Brava,0.9999863417922168,0.18181818181818182,44
 Brazil.regions.BA:Cansanção,0.9999863417922168,0.18181818181818182,33
+Brazil.regions.GO:Aloândia,0.9999863417922168,0.18181818181818182,33
 Brazil.regions.PR:Paiçandu,0.9999863417922168,0.18181818181818182,33
 Brazil.regions.RS:Sarandi,0.9999863417922168,0.18181818181818182,33
 Brazil.regions.SC:Nova Trento,0.9999863417922168,0.18181818181818182,33
+Brazil.regions.SP:Estiva Gerbi,0.9999863417922168,0.18181818181818182,33
 Brazil.regions.PA:Rio Maria,0.9999863417922168,0.18181818181818182,11
 Brazil.regions.PR:Loanda,0.9999863417922168,0.18181818181818182,11
 Brazil.regions.SC:Alto Bela Vista,0.9999863417922168,0.18181818181818182,11
@@ -64,12 +67,9 @@ Brazil.regions.MS:Alcinópolis,0.9999860241594777,0.18604651162790697,43
 Brazil.regions.RN:Carnaubais,0.9999860241594777,0.18604651162790697,43
 Brazil.regions.RN:Luís Gomes,0.9999860241594777,0.18604651162790697,43
 Brazil.regions.RS:Capão do Leão,0.9999860241594777,0.18604651162790697,43
-Brazil.regions.GO:Aloândia,0.9999859149732236,0.1875,32
 Brazil.regions.MG:Ipuiúna,0.9999859149732236,0.1875,32
 Brazil.regions.PE:Quipapá,0.9999859149732236,0.1875,32
-Brazil.regions.SP:Estiva Gerbi,0.9999859149732236,0.1875,32
 Brazil.regions.MT:Poconé,0.9999859149732236,0.1875,16
-Brazil.regions.SP:Santa Fé do Sul,0.9999859149732236,0.1875,16
 Brazil.regions.RS:São Lourenço do Sul,0.9999857880810905,0.1891891891891892,37
 Brazil.regions.BA:Barra do Rocha,0.9999856914013701,0.19047619047619047,42
 Brazil.regions.GO:Campestre de Goiás,0.9999856914013701,0.19047619047619047,42
@@ -80,6 +80,7 @@ Brazil.regions.MS:Naviraí,0.9999854606175211,0.1935483870967742,31
 Brazil.regions.RS:Imbé,0.9999854606175211,0.1935483870967742,31
 Brazil.regions.RJ:Porto Real,0.9999853933055652,0.19444444444444445,36
 Brazil.regions.RJ:Quatis,0.9999853933055652,0.19444444444444445,36
+Brazil.regions.GO:Nova Veneza,0.9999853424111596,0.1951219512195122,41
 Brazil.regions.PR:Cornélio Procópio,0.9999853424111596,0.1951219512195122,41
 Brazil.regions.PR:Leópolis,0.9999853424111596,0.1951219512195122,41
 Brazil.regions.PR:São Manoel do Paraná,0.9999853424111596,0.1951219512195122,41
@@ -89,13 +90,12 @@ Brazil.regions.SC:Papanduva,0.9999853025807551,0.1956521739130435,46
 Brazil.regions.BA:Itororó,0.9999849759714385,0.2,45
 Brazil.regions.PR:Marechal Cândido Rondon,0.9999849759714385,0.2,45
 Brazil.regions.PR:Peabiru,0.9999849759714385,0.2,45
-Brazil.regions.GO:Nova Veneza,0.9999849759714385,0.2,40
 Brazil.regions.PA:Novo Progresso,0.9999849759714385,0.2,40
 Brazil.regions.PB:Serra Branca,0.9999849759714385,0.2,40
 Brazil.regions.SC:Irati,0.9999849759714385,0.2,40
+Brazil.regions.SP:Cedral,0.9999849759714385,0.2,40
 Brazil.regions.BA:Serrinha,0.9999849759714385,0.2,35
+Brazil.regions.GO:Faina,0.9999849759714385,0.2,30
+Brazil.regions.GO:Morrinhos,0.9999849759714385,0.2,30
 Brazil.regions.PI:Caracol,0.9999849759714385,0.2,30
 Brazil.regions.PI:Pimenteiras,0.9999849759714385,0.2,30
-Brazil.regions.RN:Januário Cicco,0.9999849759714385,0.2,30
-Brazil.regions.RS:Ajuricaba,0.9999849759714385,0.2,30
-Brazil.regions.RS:Santo Cristo,0.9999849759714385,0.2,30

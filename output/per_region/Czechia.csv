@@ -1,6 +1,6 @@
 region,similarity,distance,days
-Brazil.regions.AC:Marechal Thaumaturgo,1.0,0.0,1
 Brazil.regions.ES:Água Doce do Norte,1.0,0.0,1
+Brazil.regions.GO:Itapuranga,1.0,0.0,1
 Brazil.regions.PA:Trairão,1.0,0.0,1
 Brazil.regions.PR:Wenceslau Braz,1.0,0.0,1
 Brazil.regions.MG:Estrela Dalva,0.9999499199047951,0.6666666666666666,3
@@ -10,6 +10,7 @@ Brazil.regions.CE:Santana do Cariri,0.9999248798571927,1.0,5
 Brazil.regions.BA:Barrocas,0.9999248798571927,1.0,3
 Brazil.regions.BA:Dom Basílio,0.9999248798571927,1.0,3
 Brazil.regions.BA:Itapicuru,0.9999248798571927,1.0,3
+Brazil.regions.GO:Palmeiras de Goiás,0.9999248798571927,1.0,3
 Brazil.regions.MA:Cedral,0.9999248798571927,1.0,3
 Brazil.regions.MA:Vila Nova dos Martírios,0.9999248798571927,1.0,3
 Brazil.regions.PB:Aroeiras,0.9999248798571927,1.0,3
@@ -19,22 +20,23 @@ Brazil.regions.PB:São José dos Ramos,0.9999248798571927,1.0,3
 Brazil.regions.PB:Tacima,0.9999248798571927,1.0,3
 Brazil.regions.PI:Marcolândia,0.9999248798571927,1.0,3
 Brazil.regions.RS:Butiá,0.9999248798571927,1.0,3
+Brazil.regions.AC:Marechal Thaumaturgo,0.9999248798571927,1.0,2
+Brazil.regions.AC:Rodrigues Alves,0.9999248798571927,1.0,2
 Brazil.regions.MT:Tapurah,0.9999248798571927,1.0,2
 Brazil.regions.PB:São José do Sabugi,0.9999248798571927,1.0,2
 Brazil.regions.RS:Portão,0.9999248798571927,1.0,2
-Brazil.regions.AC:Rodrigues Alves,0.9999248798571927,1.0,1
 Brazil.regions.MA:Godofredo Viana,0.9999248798571927,1.0,1
 Brazil.regions.PB:Itatuba,0.9999248798571927,1.0,1
 Brazil.regions.PE:Barra de Guabiraba,0.9999248798571927,1.0,1
 Brazil.regions.RO:Nova Mamoré,0.9999248798571927,1.0,1
 Brazil.regions.RS:Restinga Sêca,0.9999248798571927,1.0,1
+Brazil.regions.SP:Casa Branca,0.9999248798571927,1.0,1
+Brazil.regions.SP:Severínia,0.9999248798571927,1.0,1
+Brazil.regions.SP:Tambaú,0.9999248798571927,1.0,1
 Brazil.regions.TO:Praia Norte,0.9999248798571927,1.0,1
 Brazil.regions.MA:Belágua,0.9999098558286312,1.2,5
-Brazil.regions.AC:Brasiléia,0.9999060998214908,1.25,4
 Brazil.regions.MG:Caldas,0.9999060998214908,1.25,4
 Brazil.regions.PR:Colorado,0.9999060998214908,1.25,4
-Brazil.regions.SP:Indiana,0.9999060998214908,1.25,4
-Brazil.regions.SP:Nova Aliança,0.9999060998214908,1.25,4
 Brazil.regions.TO:Pugmil,0.9999060998214908,1.25,4
 Brazil.regions.AL:Japaratinga,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.AM:Pauini,0.9998998398095902,1.3333333333333333,3
@@ -45,6 +47,11 @@ Brazil.regions.BA:Presidente Tancredo Neves,0.9998998398095902,1.333333333333333
 Brazil.regions.CE:Pires Ferreira,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.CE:Potengi,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.GO:Alto Paraíso de Goiás,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.GO:Aragarças,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.GO:Campo Alegre de Goiás,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.GO:Padre Bernardo,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.GO:Porangatu,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.GO:Santo Antônio de Goiás,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.MA:Mirador,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.MA:Paraibano,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.MG:Alfredo Vasconcelos,0.9998998398095902,1.3333333333333333,3
@@ -72,8 +79,8 @@ Brazil.regions.SC:Rio do Oeste,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.SE:Amparo de São Francisco,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.SE:Nossa Senhora das Dores,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.SE:Pedrinhas,0.9998998398095902,1.3333333333333333,3
-Brazil.regions.SP:Barbosa,0.9998998398095902,1.3333333333333333,3
-Brazil.regions.SP:Poloni,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.SP:Catiguá,0.9998998398095902,1.3333333333333333,3
+Brazil.regions.SP:Silveiras,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.TO:Goiatins,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.TO:Ponte Alta do Tocantins,0.9998998398095902,1.3333333333333333,3
 Brazil.regions.TO:Silvanópolis,0.9998998398095902,1.3333333333333333,3
@@ -92,10 +99,3 @@ Brazil.regions.PI:Morro do Chapéu do Piauí,0.9998873197857889,1.5,4
 Brazil.regions.PI:Simplício Mendes,0.9998873197857889,1.5,4
 Brazil.regions.RN:Santana do Matos,0.9998873197857889,1.5,4
 Brazil.regions.SE:Carmópolis,0.9998873197857889,1.5,4
-Brazil.regions.SE:Graccho Cardoso,0.9998873197857889,1.5,4
-Brazil.regions.SE:Poço Verde,0.9998873197857889,1.5,4
-Brazil.regions.SP:Guaiçara,0.9998873197857889,1.5,4
-Brazil.regions.SP:Nova Europa,0.9998873197857889,1.5,4
-Brazil.regions.SP:Presidente Bernardes,0.9998873197857889,1.5,4
-Brazil.regions.CE:Palmácia,0.9998873197857889,1.5,2
-Brazil.regions.GO:Palmeiras de Goiás,0.9998873197857889,1.5,2

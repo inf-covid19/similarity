@@ -1,17 +1,20 @@
 region,similarity,distance,days
-Brazil.regions.AC:Marechal Thaumaturgo,1.0,0.0,1
 Brazil.regions.ES:Água Doce do Norte,1.0,0.0,1
+Brazil.regions.GO:Itapuranga,1.0,0.0,1
 Brazil.regions.PA:Trairão,1.0,0.0,1
 Brazil.regions.PR:Wenceslau Braz,1.0,0.0,1
 Brazil.regions.TO:Dueré,0.9999749599523976,0.3333333333333333,3
+Brazil.regions.SP:Irapuru,0.9999624399285963,0.5,8
+Brazil.regions.AC:Marechal Thaumaturgo,0.9999624399285963,0.5,2
+Brazil.regions.AC:Rodrigues Alves,0.9999624399285963,0.5,2
 Brazil.regions.MT:Tapurah,0.9999624399285963,0.5,2
 Brazil.regions.PB:São José do Sabugi,0.9999624399285963,0.5,2
 Brazil.regions.RS:Portão,0.9999624399285963,0.5,2
-Brazil.regions.SP:Irapuru,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.CE:Santana do Cariri,0.9999549279143156,0.6,5
 Brazil.regions.BA:Barrocas,0.9999499199047951,0.6666666666666666,3
 Brazil.regions.BA:Dom Basílio,0.9999499199047951,0.6666666666666666,3
 Brazil.regions.BA:Itapicuru,0.9999499199047951,0.6666666666666666,3
+Brazil.regions.GO:Palmeiras de Goiás,0.9999499199047951,0.6666666666666666,3
 Brazil.regions.MA:Cedral,0.9999499199047951,0.6666666666666666,3
 Brazil.regions.MA:Vila Nova dos Martírios,0.9999499199047951,0.6666666666666666,3
 Brazil.regions.PB:Aroeiras,0.9999499199047951,0.6666666666666666,3
@@ -28,10 +31,7 @@ Brazil.regions.RO:Nova Brasilândia D'Oeste,0.9999248798571927,1.0,7
 Brazil.regions.TO:Barrolândia,0.9999248798571927,1.0,7
 Brazil.regions.MA:Presidente Vargas,0.9999248798571927,1.0,6
 Brazil.regions.PB:Baía da Traição,0.9999248798571927,1.0,6
-Brazil.regions.AC:Brasiléia,0.9999248798571927,1.0,4
 Brazil.regions.MG:Caldas,0.9999248798571927,1.0,4
-Brazil.regions.SP:Indiana,0.9999248798571927,1.0,4
-Brazil.regions.SP:Nova Aliança,0.9999248798571927,1.0,4
 Brazil.regions.AL:Japaratinga,0.9999248798571927,1.0,3
 Brazil.regions.AM:Pauini,0.9999248798571927,1.0,3
 Brazil.regions.BA:Anguera,0.9999248798571927,1.0,3
@@ -41,6 +41,11 @@ Brazil.regions.BA:Presidente Tancredo Neves,0.9999248798571927,1.0,3
 Brazil.regions.CE:Pires Ferreira,0.9999248798571927,1.0,3
 Brazil.regions.CE:Potengi,0.9999248798571927,1.0,3
 Brazil.regions.GO:Alto Paraíso de Goiás,0.9999248798571927,1.0,3
+Brazil.regions.GO:Aragarças,0.9999248798571927,1.0,3
+Brazil.regions.GO:Campo Alegre de Goiás,0.9999248798571927,1.0,3
+Brazil.regions.GO:Padre Bernardo,0.9999248798571927,1.0,3
+Brazil.regions.GO:Porangatu,0.9999248798571927,1.0,3
+Brazil.regions.GO:Santo Antônio de Goiás,0.9999248798571927,1.0,3
 Brazil.regions.MA:Mirador,0.9999248798571927,1.0,3
 Brazil.regions.MA:Paraibano,0.9999248798571927,1.0,3
 Brazil.regions.MG:Alfredo Vasconcelos,0.9999248798571927,1.0,3
@@ -69,15 +74,14 @@ Brazil.regions.SC:Rio do Oeste,0.9999248798571927,1.0,3
 Brazil.regions.SE:Amparo de São Francisco,0.9999248798571927,1.0,3
 Brazil.regions.SE:Nossa Senhora das Dores,0.9999248798571927,1.0,3
 Brazil.regions.SE:Pedrinhas,0.9999248798571927,1.0,3
-Brazil.regions.SP:Barbosa,0.9999248798571927,1.0,3
-Brazil.regions.SP:Poloni,0.9999248798571927,1.0,3
+Brazil.regions.SP:Catiguá,0.9999248798571927,1.0,3
+Brazil.regions.SP:Silveiras,0.9999248798571927,1.0,3
 Brazil.regions.TO:Goiatins,0.9999248798571927,1.0,3
 Brazil.regions.TO:Ponte Alta do Tocantins,0.9999248798571927,1.0,3
 Brazil.regions.TO:Silvanópolis,0.9999248798571927,1.0,3
 Brazil.regions.TO:São Bento do Tocantins,0.9999248798571927,1.0,3
 Brazil.regions.TO:Xambioá,0.9999248798571927,1.0,3
 Brazil.regions.CE:Palmácia,0.9999248798571927,1.0,2
-Brazil.regions.GO:Palmeiras de Goiás,0.9999248798571927,1.0,2
 Brazil.regions.MA:Fortuna,0.9999248798571927,1.0,2
 Brazil.regions.MG:Caxambu,0.9999248798571927,1.0,2
 Brazil.regions.PA:Floresta do Araguaia,0.9999248798571927,1.0,2
@@ -88,14 +92,10 @@ Brazil.regions.RS:Fontoura Xavier,0.9999248798571927,1.0,2
 Brazil.regions.RS:Ibirubá,0.9999248798571927,1.0,2
 Brazil.regions.RS:Progresso,0.9999248798571927,1.0,2
 Brazil.regions.RS:São Borja,0.9999248798571927,1.0,2
-Brazil.regions.AC:Rodrigues Alves,0.9999248798571927,1.0,1
+Brazil.regions.SP:General Salgado,0.9999248798571927,1.0,2
+Brazil.regions.SP:Guapiara,0.9999248798571927,1.0,2
 Brazil.regions.MA:Godofredo Viana,0.9999248798571927,1.0,1
 Brazil.regions.PB:Itatuba,0.9999248798571927,1.0,1
 Brazil.regions.PE:Barra de Guabiraba,0.9999248798571927,1.0,1
 Brazil.regions.RO:Nova Mamoré,0.9999248798571927,1.0,1
 Brazil.regions.RS:Restinga Sêca,0.9999248798571927,1.0,1
-Brazil.regions.TO:Praia Norte,0.9999248798571927,1.0,1
-Brazil.regions.MT:Sorriso,0.9999154898393418,1.125,8
-Brazil.regions.BA:Jacobina,0.9999141484082201,1.1428571428571428,7
-Brazil.regions.BA:Jitaúna,0.9999141484082201,1.1428571428571428,7
-Brazil.regions.MG:Carmópolis de Minas,0.9999141484082201,1.1428571428571428,7

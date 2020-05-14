@@ -1,6 +1,6 @@
 region,similarity,distance,days
-Brazil.regions.AC:Marechal Thaumaturgo,1.0,0.0,1
 Brazil.regions.ES:Água Doce do Norte,1.0,0.0,1
+Brazil.regions.GO:Itapuranga,1.0,0.0,1
 Brazil.regions.PA:Trairão,1.0,0.0,1
 Brazil.regions.PR:Wenceslau Braz,1.0,0.0,1
 Brazil.regions.PA:Novo Repartimento,0.9999874799761987,0.16666666666666666,6
@@ -12,7 +12,6 @@ Brazil.regions.SC:Ipira,0.9999718299464473,0.375,8
 Brazil.regions.PB:Mulungu,0.9999699519428771,0.4,10
 Brazil.regions.SC:Água Doce,0.9999699519428771,0.4,10
 Brazil.regions.MA:Timbiras,0.9999699519428771,0.4,5
-Brazil.regions.SP:Guapiaçu,0.9999678056530825,0.42857142857142855,7
 Brazil.regions.AM:Alvarães,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.CE:Aratuba,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.CE:Tamboril,0.9999666132698634,0.4444444444444444,9
@@ -21,6 +20,9 @@ Brazil.regions.PI:Marcos Parente,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.RO:Alto Alegre dos Parecis,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.RS:Terra de Areia,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.SC:Porto União,0.9999666132698634,0.4444444444444444,9
+Brazil.regions.SP:Cândido Mota,0.9999666132698634,0.4444444444444444,9
+Brazil.regions.SP:Sete Barras,0.9999666132698634,0.4444444444444444,9
+Brazil.regions.SP:Sud Mennucci,0.9999666132698634,0.4444444444444444,9
 Brazil.regions.PI:Francisco Santos,0.9999624399285963,0.5,10
 Brazil.regions.PI:Vila Nova do Piauí,0.9999624399285963,0.5,10
 Brazil.regions.SC:Paial,0.9999624399285963,0.5,10
@@ -31,12 +33,13 @@ Brazil.regions.RS:Mormaço,0.9999624399285963,0.5,8
 Brazil.regions.RS:Sertão,0.9999624399285963,0.5,8
 Brazil.regions.SC:Balneário Rincão,0.9999624399285963,0.5,8
 Brazil.regions.SC:Santa Rosa de Lima,0.9999624399285963,0.5,8
-Brazil.regions.SP:Cândido Mota,0.9999624399285963,0.5,8
-Brazil.regions.SP:Sete Barras,0.9999624399285963,0.5,8
-Brazil.regions.SP:Sud Mennucci,0.9999624399285963,0.5,8
+Brazil.regions.SP:Guapiaçu,0.9999624399285963,0.5,8
+Brazil.regions.SP:Patrocínio Paulista,0.9999624399285963,0.5,8
+Brazil.regions.SP:Torre de Pedra,0.9999624399285963,0.5,8
 Brazil.regions.MA:Fernando Falcão,0.9999624399285963,0.5,6
 Brazil.regions.SE:Riachuelo,0.9999624399285963,0.5,6
-Brazil.regions.SP:Indiana,0.9999624399285963,0.5,4
+Brazil.regions.AC:Marechal Thaumaturgo,0.9999624399285963,0.5,2
+Brazil.regions.AC:Rodrigues Alves,0.9999624399285963,0.5,2
 Brazil.regions.MT:Tapurah,0.9999624399285963,0.5,2
 Brazil.regions.PB:São José do Sabugi,0.9999624399285963,0.5,2
 Brazil.regions.RS:Portão,0.9999624399285963,0.5,2
@@ -62,17 +65,25 @@ Brazil.regions.SC:Grão Pará,0.9999582665873292,0.5555555555555556,9
 Brazil.regions.SC:Passo de Torres,0.9999582665873292,0.5555555555555556,9
 Brazil.regions.SC:Pinhalzinho,0.9999582665873292,0.5555555555555556,9
 Brazil.regions.SE:Pinhão,0.9999582665873292,0.5555555555555556,9
-Brazil.regions.SP:Nova Granada,0.9999582665873292,0.5555555555555556,9
+Brazil.regions.SP:Ibirarema,0.9999582665873292,0.5555555555555556,9
+Brazil.regions.SP:Nipoã,0.9999582665873292,0.5555555555555556,9
+Brazil.regions.SP:Santa Cruz das Palmeiras,0.9999582665873292,0.5555555555555556,9
+Brazil.regions.SP:Uchoa,0.9999582665873292,0.5555555555555556,9
 Brazil.regions.TO:Miranorte,0.9999582665873292,0.5555555555555556,9
+Brazil.regions.AC:Epitaciolândia,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.BA:Jacobina,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.GO:Britânia,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.GO:Cristalina,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.MG:Carmópolis de Minas,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.MG:Ponte Nova,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.RO:Alvorada D'Oeste,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.RR:Normandia,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.RR:São João da Baliza,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.SC:Treze Tílias,0.9999570742041101,0.5714285714285714,7
-Brazil.regions.SP:Patrocínio Paulista,0.9999570742041101,0.5714285714285714,7
-Brazil.regions.SP:Torre de Pedra,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.SP:Américo de Campos,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.SP:Bananal,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.SP:Guareí,0.9999570742041101,0.5714285714285714,7
+Brazil.regions.SP:Santa Cruz da Esperança,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.TO:Abreulândia,0.9999570742041101,0.5714285714285714,7
 Brazil.regions.BA:Jussiape,0.9999549279143156,0.6,10
 Brazil.regions.BA:Nazaré,0.9999549279143156,0.6,10
@@ -88,14 +99,3 @@ Brazil.regions.PI:Bertolínia,0.9999549279143156,0.6,10
 Brazil.regions.PI:Porto,0.9999549279143156,0.6,10
 Brazil.regions.PI:Regeneração,0.9999549279143156,0.6,10
 Brazil.regions.RN:Brejinho,0.9999549279143156,0.6,10
-Brazil.regions.RN:Maxaranguape,0.9999549279143156,0.6,10
-Brazil.regions.RS:Poço das Antas,0.9999549279143156,0.6,10
-Brazil.regions.SC:Caxambu do Sul,0.9999549279143156,0.6,10
-Brazil.regions.SE:Cedro de São João,0.9999549279143156,0.6,10
-Brazil.regions.SE:Malhada dos Bois,0.9999549279143156,0.6,10
-Brazil.regions.TO:Aguiarnópolis,0.9999549279143156,0.6,10
-Brazil.regions.TO:Ananás,0.9999549279143156,0.6,10
-Brazil.regions.MA:Capinzal do Norte,0.9999549279143156,0.6,5
-Brazil.regions.PI:Fronteiras,0.9999549279143156,0.6,5
-Brazil.regions.RS:Estação,0.9999549279143156,0.6,5
-Brazil.regions.RS:Paim Filho,0.9999549279143156,0.6,5

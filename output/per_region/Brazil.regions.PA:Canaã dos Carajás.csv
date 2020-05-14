@@ -1,15 +1,16 @@
 region,similarity,distance,days
 Brazil.regions.TO:Lizarda,1.0,0.0,8
+Brazil.regions.GO:Iporá,1.0,0.0,7
 Brazil.regions.PI:Santa Luz,1.0,0.0,7
-Brazil.regions.GO:Iporá,1.0,0.0,6
-Brazil.regions.SP:São Luiz do Paraitinga,1.0,0.0,6
-Brazil.regions.SP:Pacaembu,1.0,0.0,5
-Brazil.regions.SP:Viradouro,1.0,0.0,5
+Brazil.regions.SP:São Luiz do Paraitinga,1.0,0.0,7
+Brazil.regions.SP:Pacaembu,1.0,0.0,6
+Brazil.regions.SP:Viradouro,1.0,0.0,6
 Brazil.regions.AL:Cacimbinhas,1.0,0.0,4
 Brazil.regions.GO:Colinas do Sul,1.0,0.0,2
 Brazil.regions.PE:Belém de Maria,1.0,0.0,2
 Brazil.regions.MS:Vicentina,1.0,0.0,1
 Brazil.regions.PB:Mogeiro,1.0,0.0,1
+Brazil.regions.SP:São João das Duas Pontes,1.0,0.0,1
 Brazil.regions.PE:Brejo da Madre de Deus,0.9999931708961084,0.09090909090909091,11
 Brazil.regions.PI:São Gonçalo do Piauí,0.9999931708961084,0.09090909090909091,11
 Brazil.regions.RO:Campo Novo de Rondônia,0.9999931708961084,0.09090909090909091,11
@@ -31,7 +32,11 @@ Brazil.regions.RS:Três Arroios,0.9999916533174659,0.1111111111111111,9
 Brazil.regions.SC:Grão Pará,0.9999916533174659,0.1111111111111111,9
 Brazil.regions.SC:Passo de Torres,0.9999916533174659,0.1111111111111111,9
 Brazil.regions.SE:Pinhão,0.9999916533174659,0.1111111111111111,9
+Brazil.regions.SP:Ibirarema,0.9999916533174659,0.1111111111111111,9
+Brazil.regions.SP:Nipoã,0.9999916533174659,0.1111111111111111,9
+Brazil.regions.SP:Santa Cruz das Palmeiras,0.9999916533174659,0.1111111111111111,9
 Brazil.regions.CE:Miraíma,0.9999911623361403,0.11764705882352941,17
+Brazil.regions.SP:Colina,0.9999906099821491,0.125,16
 Brazil.regions.AP:Pracuúba,0.9999906099821491,0.125,8
 Brazil.regions.ES:Divino de São Lourenço,0.9999906099821491,0.125,8
 Brazil.regions.MG:Capinópolis,0.9999906099821491,0.125,8
@@ -57,18 +62,26 @@ Brazil.regions.SC:Rodeio,0.9999906099821491,0.125,8
 Brazil.regions.SC:Trombudo Central,0.9999906099821491,0.125,8
 Brazil.regions.SE:Nossa Senhora de Lourdes,0.9999906099821491,0.125,8
 Brazil.regions.SE:Riachão do Dantas,0.9999906099821491,0.125,8
-Brazil.regions.SP:Ibirarema,0.9999906099821491,0.125,8
-Brazil.regions.SP:Nipoã,0.9999906099821491,0.125,8
+Brazil.regions.SP:Brejo Alegre,0.9999906099821491,0.125,8
+Brazil.regions.SP:Cunha,0.9999906099821491,0.125,8
+Brazil.regions.SP:Itobi,0.9999906099821491,0.125,8
+Brazil.regions.SP:Jambeiro,0.9999906099821491,0.125,8
+Brazil.regions.SP:Marapoama,0.9999906099821491,0.125,8
+Brazil.regions.SP:Pirapozinho,0.9999906099821491,0.125,8
+Brazil.regions.SP:Reginópolis,0.9999906099821491,0.125,8
+Brazil.regions.SP:Sarutaiá,0.9999906099821491,0.125,8
+Brazil.regions.SP:Tabatinga,0.9999906099821491,0.125,8
+Brazil.regions.SP:Tapiratiba,0.9999906099821491,0.125,8
 Brazil.regions.TO:Sampaio,0.9999906099821491,0.125,8
 Brazil.regions.ES:Montanha,0.9999899839809591,0.13333333333333333,15
-Brazil.regions.GO:Jesúpolis,0.9999899839809591,0.13333333333333333,15
-Brazil.regions.SP:Colina,0.9999899839809591,0.13333333333333333,15
-Brazil.regions.SP:Guará,0.9999899839809591,0.13333333333333333,15
+Brazil.regions.SP:Sarapuí,0.9999899839809591,0.13333333333333333,15
 Brazil.regions.AL:Lagoa da Canoa,0.9999892685510275,0.14285714285714285,14
-Brazil.regions.SP:Sarapuí,0.9999892685510275,0.14285714285714285,14
 Brazil.regions.AL:Campo Grande,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.BA:Tucano,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.ES:Conceição da Barra,0.9999892685510275,0.14285714285714285,7
+Brazil.regions.GO:Alexânia,0.9999892685510275,0.14285714285714285,7
+Brazil.regions.GO:Caturaí,0.9999892685510275,0.14285714285714285,7
+Brazil.regions.GO:Minaçu,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.MA:São Pedro da Água Branca,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.MG:São João do Paraíso,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.PB:Santa Luzia,0.9999892685510275,0.14285714285714285,7
@@ -80,22 +93,9 @@ Brazil.regions.RN:Pedro Velho,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.RS:Antônio Prado,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.SE:Moita Bonita,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.SP:Bernardino de Campos,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Brejo Alegre,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Cerqueira César,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Cunha,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Dois Córregos,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Dumont,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Itobi,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Jambeiro,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Marapoama,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Pirapozinho,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Reginópolis,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Sarutaiá,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Tabatinga,0.9999892685510275,0.14285714285714285,7
-Brazil.regions.SP:Tapiratiba,0.9999892685510275,0.14285714285714285,7
+Brazil.regions.SP:Canas,0.9999892685510275,0.14285714285714285,7
+Brazil.regions.SP:Porangaba,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.TO:Fátima,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.TO:Novo Acordo,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.TO:Palmeiras do Tocantins,0.9999892685510275,0.14285714285714285,7
 Brazil.regions.AM:Atalaia do Norte,0.9999884430549527,0.15384615384615385,13
-Brazil.regions.PA:Peixe-Boi,0.9999884430549527,0.15384615384615385,13
-Brazil.regions.RS:Monte Belo do Sul,0.9999884430549527,0.15384615384615385,13
