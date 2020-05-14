@@ -1,52 +1,101 @@
 region,similarity,distance,days
-Brazil.regions.SC:Braço do Norte,0.7857498754359741,3.3333333333333335,57
-Brazil.regions.MG:Uberlândia,0.7000498256103637,4.666666666666667,57
-Andorra,0.17006267537303643,12.912280701754385,57
-Brazil.regions.RJ:Guapimirim,0.877293110476967,1.9090909090909092,55
-Brazil.regions.SC:Pomerode,0.8726402037313846,1.9814814814814814,54
-Brazil.regions.PR:Ponta Grossa,0.8949350350695642,1.6346153846153846,52
-Brazil.regions.RS:Santa Maria,0.8801023341382086,1.8653846153846154,52
-Brazil.regions.RS:Viamão,0.8903543480172338,1.7058823529411764,51
-Brazil.regions.PR:Cascavel,0.8200298953662182,2.8,50
-Brazil.regions.PE:Fernando de Noronha,0.8798336257880028,1.8695652173913044,46
-Brazil.regions.BA:Ipiaú,0.7932020536816793,3.217391304347826,46
-Brazil.regions.RN:Macaíba,0.9000166085367879,1.5555555555555556,45
-Brazil.regions.SC:Indaial,0.9000166085367879,1.5555555555555556,45
-Brazil.regions.SP:Matão,0.9073243647234679,1.441860465116279,43
-Brazil.regions.SP:Salto de Pirapora,0.9073243647234679,1.441860465116279,43
-Brazil.regions.SP:Santa Isabel,0.905829596412556,1.4651162790697674,43
-Brazil.regions.SP:Araçatuba,0.8385650224215246,2.511627906976744,43
-Brazil.regions.SP:Itanhaém,0.8959356537831874,1.619047619047619,42
-Brazil.regions.AL:Marechal Deodoro,0.8585949177877429,2.2,40
-Brazil.regions.RJ:Barra do Piraí,0.892874937717987,1.6666666666666667,39
-Brazil.regions.AL:Palmeira dos Índios,0.8888215569829919,1.7297297297297298,37
-Brazil.regions.RS:Encantado,0.9071582793555888,1.4444444444444444,36
-Brazil.regions.MG:Ipaba,0.9302156737134315,1.0857142857142856,35
-Brazil.regions.SC:São Bento do Sul,0.9302156737134315,1.0857142857142856,35
-Brazil.regions.SP:Bady Bassitt,0.9283792440743113,1.1142857142857143,35
-Brazil.regions.SC:Guaramirim,0.9300536358040974,1.088235294117647,34
-Brazil.regions.MG:Pará de Minas,0.9262727512529676,1.1470588235294117,34
-Brazil.regions.SP:Guaratinguetá,0.9224918667018377,1.2058823529411764,34
-Brazil.regions.SP:Amparo,0.9076046337817638,1.4375,32
-Brazil.regions.PB:Sapé,0.8154684411013067,2.870967741935484,31
-Brazil.regions.PE:Gravatá,0.8913973506520282,1.6896551724137931,29
-Brazil.regions.PE:Ribeirão,0.9166805071139899,1.2962962962962963,27
-Brazil.regions.AL:União dos Palmares,0.8857332668991862,1.7777777777777777,27
-Brazil.regions.PE:São Vicente Ferrer,0.9357249626307922,1.0,25
-Brazil.regions.RN:Jaçanã,0.9280119581464873,1.12,25
-Brazil.regions.PB:Alagoa Nova,0.9418463947611929,0.9047619047619048,21
-Brazil.regions.AL:São Miguel dos Campos,0.9052788922980096,1.4736842105263157,19
-Brazil.regions.SP:Pirapora do Bom Jesus,0.892874937717987,1.6666666666666667,18
-Brazil.regions.PE:Orobó,0.9517937219730942,0.75,16
-Brazil.regions.SP:Santa Fé do Sul,0.9357249626307922,1.0,16
-Brazil.regions.SP:Lindóia,0.9357249626307922,1.0,15
-Brazil.regions.SP:Rio das Pedras,0.9770446295109972,0.35714285714285715,14
-Brazil.regions.SP:Vargem Grande do Sul,0.9678624813153961,0.5,12
-Brazil.regions.SC:Pinhalzinho,0.950008304268394,0.7777777777777778,9
-Brazil.regions.AL:Messias,0.9428666334495931,0.8888888888888888,9
-Brazil.regions.SC:São Miguel do Oeste,0.9214416209931905,1.2222222222222223,9
-Brazil.regions.RS:Bom Princípio,0.9540892590219945,0.7142857142857143,7
-Brazil.regions.PB:Cuitegi,0.9464374688589935,0.8333333333333334,6
+Brazil.regions.AC:Capixaba,1.0,0.0,5
+Brazil.regions.AC:Santa Rosa do Purus,1.0,0.0,5
+Brazil.regions.AL:Canapi,1.0,0.0,5
+Brazil.regions.GO:Palminópolis,1.0,0.0,5
+Brazil.regions.MA:Barão de Grajaú,1.0,0.0,5
+Brazil.regions.MA:Santana do Maranhão,1.0,0.0,5
+Brazil.regions.MA:Senador Alexandre Costa,1.0,0.0,5
+Brazil.regions.MA:São Pedro dos Crentes,1.0,0.0,5
+Brazil.regions.MG:Abadia dos Dourados,1.0,0.0,5
+Brazil.regions.MG:Astolfo Dutra,1.0,0.0,5
+Brazil.regions.MG:Carmo da Mata,1.0,0.0,5
+Brazil.regions.MG:Lajinha,1.0,0.0,5
+Brazil.regions.MG:Matias Cardoso,1.0,0.0,5
+Brazil.regions.MG:Rio Novo,1.0,0.0,5
+Brazil.regions.MG:Santa Bárbara,1.0,0.0,5
+Brazil.regions.MG:Vargem Alegre,1.0,0.0,5
+Brazil.regions.MT:Cotriguaçu,1.0,0.0,5
+Brazil.regions.PA:Faro,1.0,0.0,5
+Brazil.regions.PA:Jacareacanga,1.0,0.0,5
+Brazil.regions.PB:Cajazeirinhas,1.0,0.0,5
+Brazil.regions.PB:Joca Claudino,1.0,0.0,5
+Brazil.regions.PB:Teixeira,1.0,0.0,5
+Brazil.regions.PI:Ipiranga do Piauí,1.0,0.0,5
+Brazil.regions.PI:Redenção do Gurguéia,1.0,0.0,5
+Brazil.regions.PR:Abatiá,1.0,0.0,5
+Brazil.regions.PR:Guaraqueçaba,1.0,0.0,5
+Brazil.regions.PR:São José da Boa Vista,1.0,0.0,5
+Brazil.regions.RJ:Cardoso Moreira,1.0,0.0,5
+Brazil.regions.RO:São Felipe D'Oeste,1.0,0.0,5
+Brazil.regions.RS:Ametista do Sul,1.0,0.0,5
+Brazil.regions.RS:Caseiros,1.0,0.0,5
+Brazil.regions.RS:Coxilha,1.0,0.0,5
+Brazil.regions.RS:Lagoa Vermelha,1.0,0.0,5
+Brazil.regions.RS:Machadinho,1.0,0.0,5
+Brazil.regions.RS:Paraíso do Sul,1.0,0.0,5
+Brazil.regions.RS:Planalto,1.0,0.0,5
+Brazil.regions.RS:São Valério do Sul,1.0,0.0,5
+Brazil.regions.RS:Vanini,1.0,0.0,5
+Brazil.regions.RS:Água Santa,1.0,0.0,5
+Brazil.regions.SC:Coronel Freitas,1.0,0.0,5
+Brazil.regions.SP:Avanhandava,1.0,0.0,5
+Brazil.regions.SP:Divinolândia,1.0,0.0,5
+Brazil.regions.SP:Flórida Paulista,1.0,0.0,5
+Brazil.regions.SP:Getulina,1.0,0.0,5
+Brazil.regions.SP:Gália,1.0,0.0,5
+Brazil.regions.SP:Meridiano,1.0,0.0,5
+Brazil.regions.SP:Serra Azul,1.0,0.0,5
+Brazil.regions.SP:Taguaí,1.0,0.0,5
+Brazil.regions.SP:Taquarivaí,1.0,0.0,5
+Brazil.regions.SP:Teodoro Sampaio,1.0,0.0,5
+Brazil.regions.SP:Águas de Santa Bárbara,1.0,0.0,5
+Brazil.regions.SP:Álvaro de Carvalho,1.0,0.0,5
+Brazil.regions.TO:Alvorada,1.0,0.0,5
+Brazil.regions.AL:Craíbas,1.0,0.0,4
+Brazil.regions.AL:Olivença,1.0,0.0,4
+Brazil.regions.AL:Pindoba,1.0,0.0,4
+Brazil.regions.AL:Poço das Trincheiras,1.0,0.0,4
+Brazil.regions.AL:Quebrangulo,1.0,0.0,4
+Brazil.regions.BA:Itapitanga,1.0,0.0,4
+Brazil.regions.BA:Potiraguá,1.0,0.0,4
+Brazil.regions.BA:Santo Estêvão,1.0,0.0,4
+Brazil.regions.BA:Umburanas,1.0,0.0,4
+Brazil.regions.GO:Hidrolândia,1.0,0.0,4
+Brazil.regions.MA:Paulo Ramos,1.0,0.0,4
+Brazil.regions.MG:Capelinha,1.0,0.0,4
+Brazil.regions.MG:Fervedouro,1.0,0.0,4
+Brazil.regions.MG:Itabirito,1.0,0.0,4
+Brazil.regions.MG:Itambacuri,1.0,0.0,4
+Brazil.regions.MG:Medina,1.0,0.0,4
+Brazil.regions.MG:Nova Porteirinha,1.0,0.0,4
+Brazil.regions.MG:Recreio,1.0,0.0,4
+Brazil.regions.MG:Riacho dos Machados,1.0,0.0,4
+Brazil.regions.MG:São João do Manhuaçu,1.0,0.0,4
+Brazil.regions.MS:São Gabriel do Oeste,1.0,0.0,4
+Brazil.regions.MT:Santo Antônio do Leverger,1.0,0.0,4
+Brazil.regions.MT:Água Boa,1.0,0.0,4
+Brazil.regions.PA:Itupiranga,1.0,0.0,4
+Brazil.regions.PE:Itaíba,1.0,0.0,4
+Brazil.regions.PR:General Carneiro,1.0,0.0,4
+Brazil.regions.RN:Macau,1.0,0.0,4
 Brazil.regions.RN:Senador Georgino Avelino,1.0,0.0,4
-Brazil.regions.SE:Santana do São Francisco,1.0,0.0,3
-Brazil.regions.PE:Belém de Maria,0.9678624813153961,0.5,2
+Brazil.regions.RN:São Vicente,1.0,0.0,4
+Brazil.regions.RR:Uiramutã,1.0,0.0,4
+Brazil.regions.RS:Bom Jesus,1.0,0.0,4
+Brazil.regions.RS:Dom Feliciano,1.0,0.0,4
+Brazil.regions.RS:Marques de Souza,1.0,0.0,4
+Brazil.regions.SE:Santana do São Francisco,1.0,0.0,4
+Brazil.regions.SP:Inúbia Paulista,1.0,0.0,4
+Brazil.regions.SP:Ipiguá,1.0,0.0,4
+Brazil.regions.SP:Nova Campina,1.0,0.0,4
+Brazil.regions.SP:Valparaíso,1.0,0.0,4
+Brazil.regions.TO:Aurora do Tocantins,1.0,0.0,4
+Brazil.regions.AM:Pauini,1.0,0.0,3
+Brazil.regions.BA:Anguera,1.0,0.0,3
+Brazil.regions.BA:Capela do Alto Alegre,1.0,0.0,3
+Brazil.regions.BA:Presidente Dutra,1.0,0.0,3
+Brazil.regions.BA:Presidente Tancredo Neves,1.0,0.0,3
+Brazil.regions.CE:Pires Ferreira,1.0,0.0,3
+Brazil.regions.CE:Potengi,1.0,0.0,3
+Brazil.regions.GO:Alto Paraíso de Goiás,1.0,0.0,3
