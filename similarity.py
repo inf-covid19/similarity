@@ -5,7 +5,10 @@ import numpy as np
 
 from sklearn import preprocessing
 from clusters import process, per_similarity, per_timeline
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
+
+TOP_K = 100
 
 if __name__ == "__main__":
     print('Loading metadata...')
@@ -20,8 +23,10 @@ if __name__ == "__main__":
     # clustering by attributes
     print('Clustering by attributes...')
     clusters = per_similarity(df_attributes)
-
     df_attributes['cluster'] = clusters.labels_
+
+    df_attributes = df_attributes.sort_values(by=['cluster', 'key'])
+
     df_attributes.to_csv(path.join('output', 'region_clusters.csv'), index=False)
 
     clusters = df_attributes['cluster'].unique()
@@ -44,7 +49,15 @@ if __name__ == "__main__":
 
         region_df['region'] = region_df.apply(lambda r: r['region_b'] if r['region_a'] == region else r['region_a'], axis=1)
 
-        region_df = region_df[['region', 'similarity', 'distance', 'days']]
-        region_df = region_df.sort_values(by=['similarity', 'days'], ascending=[False, False])
+        region_df = region_df[['region', 'similarity', 'distance', 'days', 'is_same_cluster']]
 
-        region_df[:100].to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)
+        days_factor = MinMaxScaler().fit_transform(region_df[['days']].to_numpy())[:,0]
+        cluster_factor = [1.5 if x else 1.0 for x in region_df['is_same_cluster']]
+
+        region_df['score'] = region_df['similarity'] * days_factor * cluster_factor
+        region_df = region_df.sort_values(by=['score'], ascending=[False])
+        score_target = region_df['score'].iloc[min(TOP_K, len(region_df)) - 1]
+
+        within_top_k = region_df['score'] >= score_target
+        within_same_cluster = region_df['is_same_cluster'] == True
+        region_df[within_top_k | within_same_cluster].to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)

@@ -10,6 +10,7 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.manifold import SpectralEmbedding
 from sklearn.metrics.pairwise import paired_distances
+from sklearn import cluster, covariance, manifold
 
 from fnc.mappings import merge, get
 
@@ -38,9 +39,9 @@ def process(metadata):
             region_attributes = pd.concat([region_attributes, subregion_attributes], ignore_index=True)
 
     region_attributes['population_density'] = region_attributes['population']/region_attributes['area_km']
+    region_attributes['days'] = region_attributes.apply(lambda r: len(get_timeline(metadata, r['key'])), axis=1)
 
     return region_attributes
-
 
 
 def per_similarity(region_attributes):
@@ -54,16 +55,18 @@ def per_similarity(region_attributes):
 
 def per_timeline(metadata, df):
     data = []
-    features = ['cases_daily', 'deaths_daily']
+    features = ['cases', 'deaths', 'cases_daily', 'deaths_daily']
 
     idx = 1
     count = len(df)
     for _, a_row in df.iterrows():
         a_key = a_row['key']
+        a_cluster = a_row['cluster']
         a_timeline = get_timeline(metadata, a_key)
 
         for _, b_row in df.iloc[idx:].iterrows():
             b_key = b_row['key']
+            b_cluster = b_row['cluster']
             b_timeline = get_timeline(metadata, b_key)
 
             length = min(len(a_timeline), len(b_timeline))
@@ -80,13 +83,13 @@ def per_timeline(metadata, df):
             data.append([
                 a_key,
                 b_key,
-                distance.mean(),
+                np.average(distance, weights=range(1, length+1)),
                 length,
-                ' '.join((str(x) for x in distance)),
+                a_cluster == b_cluster,
             ])
         idx += 1
 
-    df = pd.DataFrame(data, columns=['region_a', 'region_b', 'distance', 'days', 'distance_per_day'])
+    df = pd.DataFrame(data, columns=['region_a', 'region_b', 'distance', 'days', 'is_same_cluster'])
     df['similarity'] = 1 - MinMaxScaler().fit_transform(df[['distance']].to_numpy())[:,0]
     return df
 
