@@ -49,10 +49,12 @@ if __name__ == "__main__":
 
         region_df['region'] = region_df.apply(lambda r: r['region_b'] if r['region_a'] == region else r['region_a'], axis=1)
 
+        region_df['similarity'] = 1 - (region_df['distance'] / region_df['distance'].max())
+
         region_df = region_df[['region', 'similarity', 'distance', 'days', 'is_same_cluster']]
 
-        days_factor = MinMaxScaler().fit_transform(region_df[['days']].to_numpy())[:,0]
-        cluster_factor = [1.5 if x else 1.0 for x in region_df['is_same_cluster']]
+        days_factor = region_df['days'] / region_df['days'].max()
+        cluster_factor = [1.25 if x else 1.0 for x in region_df['is_same_cluster']]
 
         region_df['score'] = region_df['similarity'] * days_factor * cluster_factor
         region_df = region_df.sort_values(by=['score'], ascending=[False])

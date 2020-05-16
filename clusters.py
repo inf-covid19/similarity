@@ -64,6 +64,8 @@ def per_timeline(metadata, df):
         a_cluster = a_row['cluster']
         a_timeline = get_timeline(metadata, a_key)
 
+        print('  ', str(idx).rjust(len(str(count)), ' '), '/', count)
+
         for _, b_row in df.iloc[idx:].iterrows():
             b_key = b_row['key']
             b_cluster = b_row['cluster']
@@ -83,14 +85,13 @@ def per_timeline(metadata, df):
             data.append([
                 a_key,
                 b_key,
-                np.average(distance, weights=range(1, length+1)),
+                np.average(distance, weights=[min(0.1, x/length) for x in range(1, length+1)]),
                 length,
                 a_cluster == b_cluster,
             ])
         idx += 1
 
     df = pd.DataFrame(data, columns=['region_a', 'region_b', 'distance', 'days', 'is_same_cluster'])
-    df['similarity'] = 1 - MinMaxScaler().fit_transform(df[['distance']].to_numpy())[:,0]
     return df
 
 
