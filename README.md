@@ -1,3 +1,7 @@
+# An experiment with COVID-19 timeseries
+
+Trying to find similarities between regions around the World.
+
 ### Sources
 
 - `raw/area_by_country.csv`: [World Development Indicators](https://data.worldbank.org/indicator/AG.LND.TOTL.K2) (License : CC BY-4.0)
