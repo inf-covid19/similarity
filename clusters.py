@@ -55,7 +55,7 @@ def per_similarity(region_attributes):
 
 def per_timeline(metadata, df):
     data = []
-    features = ['cases', 'deaths', 'cases_daily', 'deaths_daily']
+    features = ['cases', 'deaths']
 
     idx = 1
     count = len(df)
@@ -72,7 +72,6 @@ def per_timeline(metadata, df):
             b_timeline = get_timeline(metadata, b_key)
 
             length = min(len(a_timeline), len(b_timeline))
-
             if length == 0:
                 continue
 

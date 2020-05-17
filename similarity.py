@@ -54,9 +54,9 @@ if __name__ == "__main__":
         region_df = region_df[['region', 'similarity', 'distance', 'days', 'is_same_cluster']]
 
         days_factor = region_df['days'] / region_df['days'].max()
-        cluster_factor = [1.25 if x else 1.0 for x in region_df['is_same_cluster']]
+        # cluster_factor = [1.25 if x else 1.0 for x in region_df['is_same_cluster']]
 
-        region_df['score'] = region_df['similarity'] * days_factor * cluster_factor
+        region_df['score'] = region_df['similarity'] * days_factor
         region_df = region_df.sort_values(by=['score'], ascending=[False])
         score_target = region_df['score'].iloc[min(TOP_K, len(region_df)) - 1]
 
