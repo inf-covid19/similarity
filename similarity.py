@@ -2,6 +2,7 @@ from os import path
 import json
 import pandas as pd
 import numpy as np
+import multiprocessing as mp
 
 from sklearn import preprocessing
 from clusters import process, per_similarity, per_timeline
@@ -13,6 +14,10 @@ TOP_K = 100
 
 def get_top_k_target(df, attr):
     return df[attr].sort_values(ascending=False).iloc[min(TOP_K, len(df))-1]
+
+
+def similarity_worker(metadata, df_attributes, offset=0):
+    return per_timeline(metadata, df_attributes, offset)
 
 
 if __name__ == "__main__":
@@ -40,8 +45,11 @@ if __name__ == "__main__":
 
     # similarity by timeline
     print('Calculating similarity by timeline...')
-    df_similarities = per_timeline(metadata, df_attributes)
-    # df_similarities.to_csv(path.join('output', 'region_similarities.csv'), index=False)
+
+    df_similarities = None
+    with mp.Pool(processes=8) as pool:
+        dfs = pool.map(per_timeline, ((metadata, df_attributes, offset) for offset in range(0, len(df_attributes), 500)))
+        df_similarities = pd.concat(dfs, ignore_index=True)
 
     # save each region
     print('Saving output file for each region...')

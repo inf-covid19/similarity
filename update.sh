@@ -11,4 +11,4 @@ git add --all
 git commit -m "Scheduled updates ($(date +'%F %T %Z'))"
 
 # push files
-git push
+# git push

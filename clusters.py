@@ -56,13 +56,13 @@ def per_similarity(region_attributes):
     return model
 
 
-def per_timeline(metadata, df):
+def per_timeline(metadata, df, offset=0):
     data = []
     features = ['cases', 'deaths']
 
-    idx = 1
+    idx = offset+1
     count = len(df)
-    for _, a_row in df.iterrows():
+    for _, a_row in df[offset:offset+500].iterrows():
         a_key = a_row['key']
         a_cluster = a_row['cluster']
         a_timeline = get_timeline(metadata, a_row)
