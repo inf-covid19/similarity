@@ -10,6 +10,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 TOP_K = 100
 
+
+def get_top_k_target(df, attr):
+    return df[attr].sort_values(ascending=False).iloc[min(TOP_K, len(df))-1]
+
+
 if __name__ == "__main__":
     print('Loading metadata...')
     metadata = {}
@@ -19,6 +24,7 @@ if __name__ == "__main__":
     # process atributes
     print('Processing attributes...')
     df_attributes = process(metadata)
+    print(f'  Found {len(df_attributes)} regions.')
 
     # clustering by attributes
     print('Clustering by attributes...')
@@ -40,26 +46,23 @@ if __name__ == "__main__":
     # save each region
     print('Saving output file for each region...')
     for region in df_attributes['key']:
-        within_a = df_similarities['region_a'] == region
-        within_b = df_similarities['region_b'] == region
-        region_df = df_similarities[within_a | within_b].copy()
+        is_a = df_similarities['region_a'] == region
+        is_b = df_similarities['region_b'] == region
+        region_df = df_similarities[is_a | is_b].copy()
 
         if len(region_df) == 0:
             continue
 
         region_df['region'] = region_df.apply(lambda r: r['region_b'] if r['region_a'] == region else r['region_a'], axis=1)
 
-        region_df['similarity'] = 1 - (region_df['distance'] / region_df['distance'].max())
+        region_df = region_df[['region', 'cases_distance', 'deaths_distance', 'cases_per_100k_distance', 'deaths_per_100k_distance', 'is_same_cluster']]
 
-        region_df = region_df[['region', 'similarity', 'distance', 'days', 'is_same_cluster']]
+        within_cases_top_k = region_df['cases_distance'] >= get_top_k_target(region_df, 'cases_distance')
+        within_deaths_top_k = region_df['deaths_distance'] >= get_top_k_target(region_df, 'deaths_distance')
+        within_cases_per_100k_top_k = region_df['cases_per_100k_distance'] >= get_top_k_target(region_df, 'cases_per_100k_distance')
+        within_deaths_per_100k_top_k = region_df['deaths_per_100k_distance'] >= get_top_k_target(region_df, 'deaths_per_100k_distance')
 
-        days_factor = region_df['days'] / region_df['days'].max()
-        # cluster_factor = [1.25 if x else 1.0 for x in region_df['is_same_cluster']]
-
-        region_df['score'] = region_df['similarity'] * days_factor
-        region_df = region_df.sort_values(by=['score'], ascending=[False])
-        score_target = region_df['score'].iloc[min(TOP_K, len(region_df)) - 1]
-
-        within_top_k = region_df['score'] >= score_target
+        within_top_k = within_cases_top_k | within_deaths_top_k | within_cases_per_100k_top_k | within_deaths_per_100k_top_k 
         within_same_cluster = region_df['is_same_cluster'] == True
         region_df[within_top_k | within_same_cluster].to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)
+

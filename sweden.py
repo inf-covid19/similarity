@@ -11,7 +11,7 @@ def process_sweden(key, metadata):
     area_km_list = []
 
     for region_key, data in metadata['regions'].items():
-        df = pd.read_csv(path.join('data', data['file']), parse_dates=[0])
+        df = pd.read_csv(path.join('data', data['file']), parse_dates=False)
         df = df[['estimated_population_2019', 'area_km2']]
         for _, row in df.iterrows():
             area_km = row['area_km2']
