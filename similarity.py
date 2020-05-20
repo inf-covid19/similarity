@@ -16,8 +16,9 @@ def get_top_k_target(df, attr):
     return df[attr].sort_values(ascending=False).iloc[min(TOP_K, len(df))-1]
 
 
-def similarity_worker(metadata, df_attributes, offset=0):
-    return per_timeline(metadata, df_attributes, offset)
+def similarity_worker(args):
+    metadata, df, offset = args
+    return per_timeline(metadata, df, offset)
 
 
 if __name__ == "__main__":
@@ -47,8 +48,8 @@ if __name__ == "__main__":
     print('Calculating similarity by timeline...')
 
     df_similarities = None
-    with mp.Pool(processes=8) as pool:
-        dfs = pool.map(per_timeline, ((metadata, df_attributes, offset) for offset in range(0, len(df_attributes), 500)))
+    with mp.Pool(processes=2) as pool:
+        dfs = pool.map(similarity_worker, ((metadata, df_attributes, offset) for offset in range(0, len(df_attributes), 500)))
         df_similarities = pd.concat(dfs, ignore_index=True)
 
     # save each region
