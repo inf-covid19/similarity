@@ -13,7 +13,7 @@ TOP_K = 100
 
 
 def get_top_k_target(df, attr):
-    return df[attr].sort_values(ascending=False).iloc[min(TOP_K, len(df))-1]
+    return df[attr].sort_values(ascending=True).iloc[min(TOP_K, len(df))-1]
 
 
 def similarity_worker(args):
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     print('Calculating similarity by timeline...')
 
     df_similarities = None
-    with mp.Pool(processes=2) as pool:
+    with mp.Pool(processes=3) as pool:
         dfs = pool.map(similarity_worker, ((metadata, df_attributes, offset) for offset in range(0, len(df_attributes), 500)))
         df_similarities = pd.concat(dfs, ignore_index=True)
 
@@ -66,10 +66,10 @@ if __name__ == "__main__":
 
         region_df = region_df[['region', 'cases_distance', 'deaths_distance', 'cases_per_100k_distance', 'deaths_per_100k_distance', 'is_same_cluster']]
 
-        within_cases_top_k = region_df['cases_distance'] >= get_top_k_target(region_df, 'cases_distance')
-        within_deaths_top_k = region_df['deaths_distance'] >= get_top_k_target(region_df, 'deaths_distance')
-        within_cases_per_100k_top_k = region_df['cases_per_100k_distance'] >= get_top_k_target(region_df, 'cases_per_100k_distance')
-        within_deaths_per_100k_top_k = region_df['deaths_per_100k_distance'] >= get_top_k_target(region_df, 'deaths_per_100k_distance')
+        within_cases_top_k = region_df['cases_distance'] <= get_top_k_target(region_df, 'cases_distance')
+        within_deaths_top_k = region_df['deaths_distance'] <= get_top_k_target(region_df, 'deaths_distance')
+        within_cases_per_100k_top_k = region_df['cases_per_100k_distance'] <= get_top_k_target(region_df, 'cases_per_100k_distance')
+        within_deaths_per_100k_top_k = region_df['deaths_per_100k_distance'] <= get_top_k_target(region_df, 'deaths_per_100k_distance')
 
         within_top_k = within_cases_top_k | within_deaths_top_k | within_cases_per_100k_top_k | within_deaths_per_100k_top_k 
         within_same_cluster = region_df['is_same_cluster'] == True
