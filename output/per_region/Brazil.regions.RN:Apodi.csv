@@ -1,851 +1,1232 @@
 region,cases_distance,deaths_distance,cases_per_100k_distance,deaths_per_100k_distance,is_same_cluster
-Brazil.regions.PR:Santo Antônio do Caiuá,9.264957264957262,0.13461538461538458,573.5515216642385,34.10117925663501,False
-Brazil.regions.RS:Saldanha Marinho,15.502369668246448,0.9952606635071091,706.2297533368924,59.41899611563679,False
-United_States_of_America.regions.Colorado:Eagle,299.7374282821465,3.1319608504893695,512.5332096464333,4.739479971827444,False
-United_States_of_America.regions.Georgia:Appling,32.8893013837327,4.970469119136011,263.61830892312827,29.591030727682792,False
-United_States_of_America.regions.Georgia:Brooks,23.75514681066487,4.333445831927101,218.4281840715554,32.67401470843474,False
-United_States_of_America.regions.Georgia:Dooly,81.1891663854202,7.290752615592305,755.9889040015009,60.34666614934211,False
-United_States_of_America.regions.Georgia:Mitchell,218.6756665541681,22.563280458994264,1057.2772358273064,105.45204156335625,False
-United_States_of_America.regions.Georgia:Worth,85.14259196760041,5.743334458319271,489.26501279861424,31.075532525293795,False
-United_States_of_America.regions.Indiana:Newton,22.5742490718866,5.496118798515018,253.0465101143696,44.8004563821532,False
-United_States_of_America.regions.Kansas:Finney,437.34812689841374,1.0757678029024638,1197.7778446802736,2.931507806923255,False
-United_States_of_America.regions.Kansas:Ford,227.67718528518395,1.2605467431657102,682.627802116726,3.516659905609459,False
-United_States_of_America.regions.Kansas:Seward,494.63292598570445,0.8577357620474984,2340.1073960834165,2.3020166229228898,False
-United_States_of_America.regions.Kentucky:Butler,91.235234559568,2.624029699628754,867.2269734154411,26.536303801448252,False
-United_States_of_America.regions.Kentucky:Jackson,38.92493946731235,7.823244552058113,367.10913212744737,63.15502143150866,False
-United_States_of_America.regions.Louisiana:De Soto,116.9757003037462,7.396220047249409,453.1747758199253,28.004902889478913,False
-United_States_of_America.regions.Louisiana:East Feliciana,73.591967600405,10.534087073911577,462.5197668720263,58.06895418943479,False
-United_States_of_America.regions.Louisiana:Franklin,96.06834289571381,1.8064461694228824,550.5583990259546,11.75840836670655,False
-United_States_of_America.regions.Louisiana:Plaquemines,110.49915626054674,10.959331758353022,525.0058851387059,49.16204208826359,False
-United_States_of_America.regions.Louisiana:Pointe Coupee,56.191866351670605,9.975531555855552,316.5550142010335,48.108452740930744,False
-United_States_of_America.regions.Louisiana:West Feliciana,83.32534593317584,2.010631117111036,651.4616695691269,16.134294261997194,False
-United_States_of_America.regions.Minnesota:Nobles,892.9916934619507,0.5225080385852089,4154.013937631525,4.044524764034823,False
-United_States_of_America.regions.Missouri:Saline,144.12751677852347,1.162032598274209,671.4162733982075,3.2418261913076,False
-United_States_of_America.regions.Tennessee:Bledsoe,384.120992237597,1.141579480256497,2672.176683936569,2.978830988650581,False
-United_States_of_America.regions.Virginia:Buckingham,129.73337833277085,0.6631792102598718,853.846921536074,3.088151162062862,False
-United_States_of_America.regions.Virginia:Greensville,15.89250759365508,3.8162335470806616,207.01150030959798,39.252618075680644,False
-Brazil.regions.PE:Recife,993.330577117786,72.64090448869389,27.61953763077666,2.3912694050436754,False
-Czechia,3660.6889976375296,66.83260209247385,54.48280929021384,2.878254939506602,False
-Hungary,929.4800877489031,72.79615254809315,79.39289606836087,2.7587719027065316,False
-Portugal,9880.695916301047,286.75835302058726,30.922142769373746,1.1206764751716076,False
-Brazil.regions.AM:Iranduba,149.4963281577843,11.020772135963071,295.7057492640314,22.03903230768787,True
-Brazil.regions.AM:Tabatinga,212.25907990314775,19.221549636803875,302.17927563787435,28.16772041512401,True
-Brazil.regions.BA:Abaíra,7.022852639873918,0.8699763593380616,11.186906474221873,2.427050800217775,True
-Brazil.regions.BA:Almadina,3.354740061162079,0.7553516819571865,9.73333935682311,2.1072720936174822,True
-Brazil.regions.BA:Canavieiras,6.063041765169426,0.8699763593380616,19.846534373278367,2.427050800217775,True
-Brazil.regions.BA:Capela do Alto Alegre,0.0,0.0,5.803490684094494,0.0,True
-Brazil.regions.BA:Dom Basílio,1.0,0.0,13.604997087003891,0.0,True
+Brazil.regions.BA:Bom Jesus da Lapa,2.0,0.0,1.5487309044489228,0.0,False
+Brazil.regions.GO:Padre Bernardo,0.0,0.0,0.16573006163777215,0.0,False
+Brazil.regions.GO:Quirinópolis,0.25,0.0,0.8955438415483222,0.0,False
+Brazil.regions.MA:Parnarama,3.0,0.0,8.669230309963805,0.0,False
+Brazil.regions.MG:Diamantina,3.8666666666666667,0.0,7.685694440377151,0.0,False
+Brazil.regions.RS:Itaqui,0.5454545454545454,0.0,1.461872012308134,0.0,False
+Brazil.regions.RS:São Borja,2.155555555555556,0.0,2.444867003397552,0.0,False
+Brazil.regions.TO:Porto Nacional,1.6729857819905214,0.3554502369668247,1.6401093969837306,1.2356650011312773,False
+Brazil.regions.AL:Canapi,0.4219948849104859,0.0,1.6756377683480197,0.0,False
+Brazil.regions.AL:Maravilha,1.0666666666666667,0.0,19.764686965086447,0.0,False
+Brazil.regions.AL:Olho d'Água do Casado,0.0,0.0,7.879153336875163,0.0,False
+Brazil.regions.BA:Araças,0.0,0.0,5.4224139632520565,0.0,False
+Brazil.regions.BA:Ponto Novo,0.6666666666666666,0.0,8.385392784566639,0.0,False
+Brazil.regions.CE:Aurora,0.9954456733897202,0.5120364346128822,1.6137026130488243,2.6948213670782653,False
+Brazil.regions.CE:Piquet Carneiro,0.0,0.0,3.1067847195509497,0.0,False
+Brazil.regions.ES:Conceição da Barra,0.38899430740037955,0.25616698292220114,1.3191006858911367,0.7146519261325183,False
+Brazil.regions.ES:São Domingos do Norte,0.0,0.0,8.786964507310051,0.0,False
+Brazil.regions.GO:Jaraguá,1.2262996941896023,0.7553516819571865,2.160195186745915,2.1072720936174822,False
+Brazil.regions.MA:Central do Maranhão,0.8928571428571429,0.0,19.03492114284295,0.0,False
+Brazil.regions.MA:Lago Verde,1.6666666666666667,0.0,13.613401049634298,0.0,False
+Brazil.regions.MA:Nina Rodrigues,1.6666666666666667,0.0,15.659544146924171,0.0,False
+Brazil.regions.MA:Senador Alexandre Costa,0.3836317135549872,0.0,12.239976226619232,0.0,False
+Brazil.regions.MA:São Bernardo,21.695652173913043,0.0,77.12756688812982,0.0,False
+Brazil.regions.MG:Cana Verde,4.112531969309463,0.0,94.81085372427326,0.0,False
+Brazil.regions.MG:Cruzília,0.0,0.0,3.696556870259856,0.0,False
+Brazil.regions.MG:Inhapim,0.0,0.0,1.3527127003485386,0.0,False
+Brazil.regions.MG:Itaipé,0.0,0.0,5.047201224708789,0.0,False
+Brazil.regions.MG:Lagoa Dourada,0.0,0.0,4.897196561913246,0.0,False
+Brazil.regions.MG:Malacacheta,0.0,0.0,2.5721409240036692,0.0,False
+Brazil.regions.MG:Piranguçu,0.578005115089514,0.0,32.582641386938185,0.0,False
+Brazil.regions.PB:Cuité,0.0,0.0,2.1271149461394936,0.0,False
+Brazil.regions.PB:Lastro,0.0,0.0,33.746564301001044,0.0,False
+Brazil.regions.PB:Picuí,0.0,0.0,2.5569464468807466,0.0,False
+Brazil.regions.PB:Pocinhos,0.6462212486308871,0.14238773274917854,1.7829100369991493,0.39723178337056364,False
+Brazil.regions.PB:Soledade,0.8181818181818182,0.0,10.046094484767933,0.0,False
+Brazil.regions.PE:Ouricuri,3.522200132538105,0.043074884029158385,2.075406316275585,1.0551236194078932,False
+Brazil.regions.PR:Anahy,0.0,0.0,32.911745795109645,0.0,False
+Brazil.regions.PR:Centenário do Sul,0.7777777777777778,0.0,13.630066339615444,0.0,False
+Brazil.regions.PR:Cruzeiro do Iguaçu,1.0,0.0,44.24689924621887,0.0,False
+Brazil.regions.PR:São João,0.0,0.0,6.974882047904259,0.0,False
+Brazil.regions.RJ:Cambuci,7.666666666666667,0.0,53.10615817290058,0.0,False
+Brazil.regions.RJ:Laje do Muriaé,1.2444444444444445,0.0,27.726110621544063,0.0,False
+Brazil.regions.RN:Antônio Martins,0.0,0.0,11.206011888719617,0.0,False
+Brazil.regions.RN:Caiçara do Norte,1.0666666666666667,0.0,28.76719133862058,0.0,False
+Brazil.regions.RN:Rodolfo Fernandes,0.0,0.0,19.596599704539635,0.0,False
+Brazil.regions.RS:Butiá,0.8,0.0,6.166794457984122,0.0,False
+Brazil.regions.RS:São Jerônimo,0.0,0.0,1.3342620972598258,0.0,False
+Brazil.regions.SC:Ipuaçu,1.3333333333333333,0.0,28.263355869093953,0.0,False
+Brazil.regions.SC:Praia Grande,0.18181818181818182,0.0,10.36604492326001,0.0,False
+Brazil.regions.SE:Itabi,0.0,0.0,17.60588674576077,0.0,False
+Brazil.regions.SE:Nossa Senhora Aparecida,0.0,0.0,8.579014630916511,0.0,False
+Brazil.regions.SP:Flórida Paulista,0.4219948849104859,0.0,2.8635348774951814,0.0,False
+Brazil.regions.SP:Guaimbê,1.0,0.0,31.902318174630892,0.0,False
+Brazil.regions.SP:Herculândia,1.6666666666666667,0.0,25.20377210995691,0.0,False
+Brazil.regions.SP:Marapoama,0.0,0.0,30.202622374396082,0.0,False
+Brazil.regions.SP:Mendonça,1.0666666666666667,0.0,34.85441220772531,0.0,False
+Brazil.regions.SP:Trabiju,0.0,0.0,55.2148510003272,0.0,False
+Brazil.regions.TO:Praia Norte,8.5,0.0,109.87624478469522,0.0,False
+United_States_of_America.regions.Kentucky:Bell,0.0,0.0,1.0516365664054312,0.0,False
+United_States_of_America.regions.North Carolina:Avery,0.0,0.0,2.9059445244099136,0.0,False
+Brazil.regions.AL:Inhapi,0.6462212486308871,0.14238773274917854,1.7825079267900086,0.39723178337056364,False
+Brazil.regions.AL:Jundiá,0.0,0.0,21.27759931742482,0.0,False
+Brazil.regions.AL:Major Isidoro,3.2829046898638423,0.0,19.554579725570918,0.0,False
+Brazil.regions.AL:Tanque d'Arca,1.8,0.0,42.650002904332815,0.0,False
+Brazil.regions.CE:Pires Ferreira,0.18181818181818182,0.0,5.8345623545397105,0.0,False
+Brazil.regions.ES:Jaguaré,1.75,0.0,6.233408450405374,0.0,False
+Brazil.regions.ES:Mantenópolis,1.0666666666666667,0.0,10.673837122039956,0.0,False
+Brazil.regions.GO:Santo Antônio de Goiás,0.0,0.0,13.126174340700242,0.0,False
+Brazil.regions.MG:Alpinópolis,0.6462212486308871,0.14238773274917854,1.785591565871962,0.39723178337056364,False
+Brazil.regions.MG:Cajuri,0.0,0.0,22.29172555259888,0.0,False
+Brazil.regions.MG:Campanha,0.0,0.0,3.2108106891035035,0.0,False
+Brazil.regions.MG:Cipotânea,0.0,0.0,11.944261019549836,0.0,False
+Brazil.regions.MG:Cláudio,1.1892583120204603,0.0,5.157765866686389,0.0,False
+Brazil.regions.MG:Igaratinga,0.0,0.0,6.418313759852569,0.0,False
+Brazil.regions.MG:Inconfidentes,0.0,0.0,10.85649883870449,0.0,False
+Brazil.regions.MG:Itamarati de Minas,1.0,0.0,43.13443565780015,0.0,False
+Brazil.regions.MG:Lajinha,0.4219948849104859,0.0,1.525107117414194,0.0,False
+Brazil.regions.MG:Miraí,0.3333333333333333,0.0,6.090810957679715,0.0,False
+Brazil.regions.MG:Oliveira,0.0,0.0,0.3909599996356752,0.0,False
+Brazil.regions.MG:Pitangui,0.0,0.0,0.7830428131698168,0.0,False
+Brazil.regions.MG:Recreio,0.3177004538577912,0.0,5.832308227022434,0.0,False
+Brazil.regions.MG:Santa Bárbara,0.4219948849104859,0.0,1.2400945088419641,0.0,False
+Brazil.regions.MG:São Gonçalo do Sapucaí,0.0,0.0,1.1396381115133152,0.0,False
+Brazil.regions.PE:Palmeirina,0.0,0.0,10.209040734388026,0.0,False
+Brazil.regions.PE:Terezinha,1.8888888888888888,0.0,37.50716820880024,0.0,False
+Brazil.regions.PR:Agudos do Sul,6.6414523449319205,0.0,81.25776158402752,0.0,False
+Brazil.regions.PR:Capanema,0.0,0.0,2.439242212448267,0.0,False
+Brazil.regions.PR:Laranjeiras do Sul,0.0,0.0,0.3280979486497744,0.0,False
+Brazil.regions.PR:Realeza,0.578005115089514,0.0,7.851867716758327,0.0,False
+Brazil.regions.PR:Wenceslau Braz,3.2777777777777777,0.0,19.24471036010491,0.0,False
+Brazil.regions.RN:Itaú,10.38095238095238,0.0,190.82967951226152,0.0,False
+Brazil.regions.RN:Serra Caiada,0.3333333333333333,0.0,10.036890122443664,0.0,False
+Brazil.regions.RN:Umarizal,0.3333333333333333,0.0,9.842454431402887,0.0,False
+Brazil.regions.RS:Brochier,0.0,0.0,16.91852753883341,0.0,False
+Brazil.regions.RS:Nova Bassano,1.5555555555555556,0.0,22.982251326511335,0.0,False
+Brazil.regions.RS:Planalto,2.774936061381074,0.0,37.65263773433681,0.0,False
+Brazil.regions.SC:Luiz Alves,0.6363636363636364,0.0,10.842347985735795,0.0,False
+Brazil.regions.SC:Luzerna,0.0,0.0,14.800360145368392,0.0,False
+Brazil.regions.SE:São Francisco,0.0,0.0,24.063057030816083,0.0,False
+Brazil.regions.SP:Bernardino de Campos,0.0,0.0,6.180429502438013,0.0,False
+Brazil.regions.SP:Descalvado,0.0,0.0,0.17598558609376624,0.0,False
+Brazil.regions.SP:Divinolândia,0.4219948849104859,0.0,5.004762243238878,0.0,False
+Brazil.regions.SP:Guaiçara,0.6822995461422088,0.0,12.760448177887495,0.0,False
+Brazil.regions.SP:Inúbia Paulista,0.3177004538577912,0.0,21.380270127701927,0.0,False
+Brazil.regions.SP:Santa Adélia,0.0,0.0,3.6701589495109395,0.0,False
+Brazil.regions.TO:Buriti do Tocantins,0.0,0.0,6.022336113764405,0.0,False
+Brazil.regions.AL:Cajueiro,1.2545454545454544,0.0,8.160668242623814,0.0,False
+Brazil.regions.RS:Portão,2.7777777777777777,0.0,7.398667107907012,0.0,False
+Brazil.regions.AC:Marechal Thaumaturgo,8.133333333333333,0.0,45.61924933866094,0.0,False
+Brazil.regions.AC:Santa Rosa do Purus,0.5333333333333333,0.0,20.65567444153379,0.0,False
+Brazil.regions.AM:Guajará,7.476190476190475,0.0,48.032794129460115,0.0,False
+Brazil.regions.BA:Morro do Chapéu,0.0,0.0,0.034032389467988367,0.0,False
+Brazil.regions.GO:Cristalina,1.2267250821467688,0.8433734939759037,1.6010444066043878,1.5854036585959563,False
+Brazil.regions.GO:Jussara,0.0,0.0,2.622051737442562,0.0,False
+Brazil.regions.MA:Carolina,5.9,0.0,25.579588147393697,0.0,False
+Brazil.regions.MA:Formosa da Serra Negra,3.5,0.0,20.783996579121073,0.0,False
+Brazil.regions.MA:Mirador,0.18181818181818182,0.0,1.7600539954250003,0.0,False
+Brazil.regions.MA:São Raimundo das Mangabeiras,8.416666666666666,0.0,47.11834432989603,0.0,False
+Brazil.regions.MA:Tasso Fragoso,0.0,0.0,8.945922400016409,0.0,False
+Brazil.regions.MG:Campina Verde,0.0,0.0,2.274783938796161,0.0,False
+Brazil.regions.MS:Bela Vista,0.5626598465473146,0.0,4.091136437803767,0.0,False
+Brazil.regions.MS:Bonito,8.337595907928389,0.0,40.44315763260991,0.0,False
+Brazil.regions.MS:Camapuã,0.0,0.0,4.503624676212958,0.0,False
+Brazil.regions.MT:Alto Araguaia,1.0,0.0,7.712206008219535,0.0,False
+Brazil.regions.MT:Campo Verde,0.6,0.0,1.2585313063558188,0.0,False
+Brazil.regions.MT:Nobres,0.0,0.0,3.7308157412519103,0.0,False
+Brazil.regions.MT:Nossa Senhora do Livramento,0.0,0.0,4.776796585513968,0.0,False
+Brazil.regions.MT:Nova Lacerda,0.37084398976982097,0.0,23.033519246651824,0.0,False
+Brazil.regions.MT:Nova Xavantina,0.0,0.0,1.8887920832006195,0.0,False
+Brazil.regions.MT:Santa Rita do Trivelato,0.0,0.0,26.373231918103052,0.0,False
+Brazil.regions.MT:Tapurah,5.777777777777778,0.0,46.6649919335687,0.0,False
+Brazil.regions.MT:Vila Rica,3.0,0.0,12.572963634436059,0.0,False
+Brazil.regions.MT:Água Boa,1.3636363636363635,0.0,6.599382035489994,0.0,False
+Brazil.regions.PA:Brasil Novo,4.022222222222222,0.0,30.50082591626589,0.0,False
+Brazil.regions.PA:Itupiranga,1.0363636363636364,0.18181818181818182,1.7962063523258636,0.34132080913511015,False
+Brazil.regions.PA:Mojuí dos Campos,2.6785714285714284,0.0,20.081209314570202,0.0,False
+Brazil.regions.PA:Rurópolis,0.0,0.0,0.8099833918884403,0.0,False
+Brazil.regions.PI:Ribeiro Gonçalves,1.3571428571428572,0.0,29.31949897050681,0.0,False
+Brazil.regions.RO:São Miguel do Guaporé,0.0,0.0,1.5570917418990682,0.0,False
+Brazil.regions.RR:Uiramutã,0.18181818181818182,0.0,6.173570004255972,0.0,False
+Brazil.regions.TO:Araguaçu,0.0,0.0,8.95143406457948,0.0,False
+Brazil.regions.TO:Goiatins,3.3777777777777773,0.0,30.83627851278886,0.0,False
+Brazil.regions.TO:Ponte Alta do Tocantins,2.5111111111111115,0.0,40.88617917134294,0.0,False
+United_States_of_America.regions.California:Trinity,0.7636363636363637,0.0,12.538992034040156,0.0,False
+United_States_of_America.regions.Colorado:Bent,0.18181818181818182,0.0,14.633763359580714,0.0,False
+United_States_of_America.regions.New Mexico:Hidalgo,0.0,0.0,21.031077708659197,0.0,False
+United_States_of_America.regions.North Dakota:Bottineau,0.0,0.0,13.128707922952964,0.0,False
+United_States_of_America.regions.South Dakota:Tripp,0.8571428571428571,0.0,31.342591756516306,0.0,False
+United_States_of_America.regions.Texas:Reeves,0.8567774936061381,0.0,10.296656734753139,0.0,False
+Brazil.regions.GO:Novo Gama,4.305993690851735,0.0,5.9880011937664035,1.518586199053045,False
+Brazil.regions.MG:Visconde do Rio Branco,0.9523809523809524,0.0,1.8390823221067836,0.0,False
+Brazil.regions.PB:Belém,5.833333333333333,0.0,35.86903238364226,0.0,False
+Brazil.regions.SE:General Maynard,0.0,0.0,27.096642189169224,0.0,False
+Brazil.regions.SE:Santana do São Francisco,0.18181818181818182,0.0,9.556446635042313,0.0,False
+Brazil.regions.SP:Capivari,0.0,0.0,0.996646349815135,0.0,False
+Lesotho,0.0,0.0,2.7423540110673446,0.0,False
+Brazil.regions.SE:Pedrinhas,0.0,0.0,7.624707608893379,0.0,False
+Brazil.regions.AC:Brasiléia,1.4444444444444444,0.0,6.512457544556992,0.0,False
+Brazil.regions.AC:Capixaba,0.37777777777777777,0.0,8.952968472596845,0.0,False
+Brazil.regions.AC:Rodrigues Alves,3.4,0.0,20.453739419377484,0.0,False
+Brazil.regions.BA:Boa Vista do Tupim,0.6462212486308871,0.14238773274917854,1.7829367169328725,0.39723178337056364,False
+Brazil.regions.BA:Lafaiete Coutinho,0.1111111111111111,0.0,27.046706631007037,0.0,False
+Brazil.regions.BA:Manoel Vitorino,0.7636363636363637,0.0,11.396741647076778,0.0,False
+Brazil.regions.BA:Potiraguá,0.3177004538577912,0.0,10.166639680680074,0.0,False
+Brazil.regions.GO:Aparecida do Rio Doce,0.0,1.0,37.630582496518684,40.42037186742118,False
+Brazil.regions.GO:Bom Jardim de Goiás,0.0,0.0,8.521148305830904,0.0,False
+Brazil.regions.GO:Caçu,5.428571428571429,0.0,37.36619431684457,0.0,False
+Brazil.regions.GO:Corumbaíba,0.5370843989769821,0.0,7.501508443310269,0.0,False
+Brazil.regions.GO:Córrego do Ouro,0.0,0.0,40.183996619643274,0.0,False
+Brazil.regions.GO:Porangatu,3.7555555555555555,0.0,7.8428818017110995,0.0,False
+Brazil.regions.GO:Portelândia,0.0,0.0,22.14164917310149,0.0,False
+Brazil.regions.GO:Santa Rita do Araguaia,0.0,0.0,8.630950693053647,0.0,False
+Brazil.regions.GO:Urutaí,0.0,0.0,29.76229396243083,0.0,False
+Brazil.regions.MA:Feira Nova do Maranhão,1.9047619047619049,0.0,31.367805934388013,0.0,False
+Brazil.regions.MA:Jenipapo dos Vieiras,0.6,0.0,6.898372905815639,0.0,False
+Brazil.regions.MA:Lajeado Novo,0.3177004538577912,0.0,9.568926392376918,0.0,False
+Brazil.regions.MA:Nova Colinas,0.0,0.0,15.783761892098987,0.0,False
+Brazil.regions.MA:São Domingos do Azeitão,0.4,0.0,16.149604568491444,0.0,False
+Brazil.regions.MA:São Francisco do Maranhão,0.0,0.0,5.400218819105693,0.0,False
+Brazil.regions.MA:São Pedro dos Crentes,0.6521739130434783,0.0,40.46671266107639,0.0,False
+Brazil.regions.MG:Abadia dos Dourados,1.7263427109974425,0.0,41.07997335975895,0.0,False
+Brazil.regions.MG:Delfinópolis,0.0,0.0,11.267000058391853,0.0,False
+Brazil.regions.MG:Matias Cardoso,0.3069053708439898,0.0,11.529037179368887,0.0,False
+Brazil.regions.MG:Monte Alegre de Minas,2.6822995461422083,0.0,15.263287219188074,0.0,False
+Brazil.regions.MG:Riachinho,0.0,0.0,9.501262743158467,0.0,False
+Brazil.regions.MG:Riacho dos Machados,0.3177004538577912,0.0,6.8713038904892105,0.0,False
+Brazil.regions.MG:Sacramento,0.6666666666666666,0.0,3.575177849516318,0.0,False
+Brazil.regions.MG:Salto da Divisa,0.0,0.0,11.477581152710002,0.0,False
+Brazil.regions.MS:Amambai,2.1636363636363636,0.0,5.249703832889375,0.0,False
+Brazil.regions.MS:São Gabriel do Oeste,0.3177004538577912,0.0,1.2310807685410394,0.0,False
+Brazil.regions.MS:Tacuru,0.0,0.0,5.866720324388362,0.0,False
+Brazil.regions.MT:Acorizal,0.0,0.0,15.732159138080647,0.0,False
+Brazil.regions.MT:Alto Paraguai,0.0,0.0,6.016128205708985,0.0,False
+Brazil.regions.MT:Guarantã do Norte,0.6666666666666666,0.0,1.863624373420338,0.0,False
+Brazil.regions.PA:Brejo Grande do Araguaia,0.0,0.0,10.760346130452517,0.0,False
+Brazil.regions.PA:Floresta do Araguaia,1.0,0.0,7.06048643682012,0.0,False
+Brazil.regions.PA:Sapucaia,0.8928571428571429,0.0,29.130229901561968,0.0,False
+Brazil.regions.PA:Soure,11.447806354009074,0.0,46.63329190778684,0.0,False
+Brazil.regions.PI:Alto Longá,0.0,0.0,4.201262083236205,0.0,False
+Brazil.regions.PI:Dirceu Arcoverde,0.0,0.0,11.473511156839624,0.0,False
+Brazil.regions.PI:Juazeiro do Piauí,0.0,0.0,15.46504816104347,0.0,False
+Brazil.regions.PI:Lagoa do Sítio,0.0,0.0,16.52641692618075,0.0,False
+Brazil.regions.PI:Landri Sales,2.866666666666667,0.0,70.23507685509686,0.0,False
+Brazil.regions.PI:Nova Santa Rita,0.0,0.0,20.072579170478388,0.0,False
+Brazil.regions.PI:Passagem Franca do Piauí,0.0,0.0,20.39592822705716,0.0,False
+Brazil.regions.PI:Pavussu,0.0,0.6,24.406294393035495,16.317650258362793,False
+Brazil.regions.PI:Socorro do Piauí,0.0,1.0,19.096837899835084,21.88662727073758,False
+Brazil.regions.PI:São João da Fronteira,0.0,0.0,13.761021618836,0.0,False
+Brazil.regions.RO:Cabixi,0.0,0.0,16.035511833916782,0.0,False
+Brazil.regions.RO:Santa Luzia D'Oeste,1.0,0.0,28.00312825804285,0.0,False
+Brazil.regions.RO:Vale do Paraíso,4.0,0.0,70.47028388917076,0.0,False
+Brazil.regions.RS:Coxilha,0.21739130434782605,0.0,55.517193191649525,0.0,False
+Brazil.regions.RS:Hulha Negra,0.0,0.0,11.968179932521352,0.0,False
+Brazil.regions.SC:Vargem,0.0,0.0,37.58162766583549,0.0,False
+Brazil.regions.TO:Alvorada,1.1649016641452343,0.0,25.83651950427138,0.0,False
+Brazil.regions.TO:Aragominas,0.8,0.0,28.47106509245283,0.0,False
+Brazil.regions.TO:Arapoema,0.0,0.0,12.263650340071461,0.0,False
+Brazil.regions.TO:Aurora do Tocantins,0.5454545454545454,0.0,42.67776265723985,0.0,False
+Brazil.regions.TO:Cristalândia,0.0,0.0,10.929513688502086,0.0,False
+Brazil.regions.TO:Filadélfia,0.0,0.0,8.501990213560013,0.0,False
+Brazil.regions.TO:Itaguatins,6.933333333333334,0.0,132.4989782507437,0.0,False
+Brazil.regions.TO:Maurilândia do Tocantins,6.6732223903177,0.0,229.5674088716065,0.0,False
+Brazil.regions.TO:Oliveira de Fátima,1.8,0.0,249.00877178017663,0.0,False
+Brazil.regions.TO:Pedro Afonso,0.7857142857142857,0.0,10.36173725830862,0.0,False
+Brazil.regions.TO:Presidente Kennedy,0.4,0.0,35.21238218175766,0.0,False
+Brazil.regions.TO:Pugmil,3.236363636363636,0.0,161.06985931490743,0.0,False
+Brazil.regions.TO:Santa Fé do Araguaia,1.0,0.0,23.834278786711987,0.0,False
+Brazil.regions.TO:Silvanópolis,0.0,0.0,15.718446794190971,0.0,False
+Brazil.regions.TO:São Bento do Tocantins,1.5333333333333332,0.0,44.79348135286409,0.0,False
+United_States_of_America.regions.Illinois:Pope,0.4219948849104859,0.0,19.97356102903281,0.0,False
+United_States_of_America.regions.Iowa:Adams,0.0,0.0,24.972564876737707,0.0,False
+United_States_of_America.regions.Iowa:Fremont,1.4705882352941178,0.0,37.59303608638929,0.0,False
+United_States_of_America.regions.Iowa:Ida,3.8055555555555554,0.0,67.2620408850094,0.0,False
+United_States_of_America.regions.Iowa:Lucas,0.5,0.0,14.652071094213785,0.0,False
+United_States_of_America.regions.Iowa:Monroe,11.14508783344177,0.0,174.21195814040703,4.970117744301168,False
+United_States_of_America.regions.Iowa:Palo Alto,0.11508951406649616,0.0,13.330755065006187,0.0,False
+United_States_of_America.regions.Iowa:Ringgold,0.0,0.0,17.643394119085244,0.0,False
+United_States_of_America.regions.Kansas:Anderson,0.3177004538577912,0.0,9.04977772876334,0.0,False
+United_States_of_America.regions.Missouri:Dent,0.0,0.0,3.6315809495238818,0.0,False
+United_States_of_America.regions.Missouri:Schuyler,0.0,0.0,18.669438096908657,0.0,False
+United_States_of_America.regions.Nebraska:Richardson,0.0,0.0,9.924768798201127,0.0,False
+United_States_of_America.regions.Nevada:Storey,0.0,0.0,21.464394475811062,0.0,False
+United_States_of_America.regions.Oklahoma:Coal,0.0,0.0,15.408572776504236,0.0,False
+Brazil.regions.PB:Sertãozinho,1.4859335038363173,0.0,53.91367400647009,0.0,False
+Brazil.regions.PE:Belém de Maria,0.0,1.0,5.493156044487215,8.282945415389712,False
+Brazil.regions.RS:Gramado,0.0,0.0,0.029798202874234736,0.0,False
+Brazil.regions.SC:Maravilha,6.177777777777778,0.0,25.072091607972503,0.0,False
+Brazil.regions.SP:Palmares Paulista,0.0,0.0,4.743167314596561,0.0,False
+Brazil.regions.SP:Vargem Grande do Sul,0.9481403876375064,0.5866946045049763,1.2003691959659626,1.6367543716138275,False
+Brazil.regions.AL:Olivença,0.1361573373676248,0.0,8.831272763839353,0.0,False
+Brazil.regions.AL:São José da Tapera,4.571428571428571,0.0,14.480602976985201,0.0,False
+Brazil.regions.BA:Guanambi,0.0,0.0,1.6060912612683782,0.0,False
+Brazil.regions.BA:Presidente Dutra,0.18181818181818182,0.0,3.3071236025943915,0.0,False
+Brazil.regions.BA:Presidente Tancredo Neves,0.18181818181818182,0.0,1.0276808560579338,0.0,False
+Brazil.regions.BA:Teofilândia,0.8095238095238095,0.0,5.24610995196725,0.0,False
+Brazil.regions.MG:Maria da Fé,0.0,0.0,4.304925066841383,0.0,False
+Brazil.regions.MG:Orizânia,0.0,0.0,9.682148768284334,0.0,False
+Brazil.regions.MG:Piranguinho,0.0,0.0,8.843528451340408,0.0,False
+Brazil.regions.PB:Ingá,1.2,0.0,9.86001194800047,0.0,False
+Brazil.regions.PB:Nova Olinda,0.0,0.0,14.019758452261062,0.0,False
+Brazil.regions.PE:Riacho das Almas,0.6666666666666666,0.0,5.322089664757324,0.0,False
+Brazil.regions.PE:Saloá,0.0,0.9333333333333332,3.5221464998290566,5.891140146016116,False
+Brazil.regions.PR:Cambará,0.0,0.0,1.1534282947126453,0.0,False
+Brazil.regions.PR:Santo Antônio da Platina,0.7857142857142857,0.0,1.3565942328376857,0.0,False
+Brazil.regions.RS:São Vendelino,0.0,0.0,41.79335819931596,0.0,False
+Brazil.regions.SC:São Carlos,8.176470588235293,0.0,81.11816978447295,0.0,False
+Brazil.regions.SE:Amparo de São Francisco,0.8666666666666666,0.0,75.83980905650553,0.0,False
+Brazil.regions.SP:Nova Europa,2.677760968229954,0.0,32.042303990394394,0.0,False
+Brazil.regions.AM:Apuí,16.608695652173914,0.0,78.09132607097047,0.0,False
+Brazil.regions.AM:Japurá,9.244444444444444,0.0,369.0593737668268,0.0,False
+Brazil.regions.MG:São Joaquim de Bicas,2.6785714285714284,0.0,8.859369627676983,0.0,False
+Brazil.regions.SP:Pedreira,1.8305597579425112,0.0,2.959788871431083,0.0,False
+Brazil.regions.AM:Pauini,0.5454545454545454,0.0,5.594527352522042,0.0,False
+Brazil.regions.BA:Irará,0.2,0.0,1.343295977309943,0.0,False
+Brazil.regions.ES:Ibatiba,1.5333333333333332,0.0,6.923167201957457,0.0,False
+Brazil.regions.MG:Rodeiro,3.5,0.0,52.70410630057364,0.0,False
+Brazil.regions.PB:Caldas Brandão,2.0,0.0,47.093815550946516,0.0,False
+Brazil.regions.PB:Juarez Távora,2.2,0.0,37.5327912742588,0.0,False
+Brazil.regions.PB:Logradouro,2.0,0.0,66.46228819142439,0.0,False
+Brazil.regions.PB:Solânea,8.821428571428571,0.0,34.402729928633875,0.0,False
+Brazil.regions.RS:Santo Ângelo,3.950471698113207,0.6171383647798742,1.8872001863140948,0.9970750743699035,False
+United_States_of_America.regions.Virginia:Covington city,0.45385779122541603,0.0,28.313027354969417,0.0,False
+Brazil.regions.AL:Pão de Açúcar,2.6666666666666665,0.0,12.238148932579884,0.0,False
+Brazil.regions.AL:Quebrangulo,3.9031770045385774,0.0,42.550893973935885,0.0,False
+Brazil.regions.BA:Entre Rios,0.0,0.0,0.39629966290824165,0.0,False
+Brazil.regions.BA:Inhambupe,0.0,0.0,0.28515579879409625,0.0,False
+Brazil.regions.ES:Itarana,2.6222222222222222,0.0,31.52780629202713,0.0,False
+Brazil.regions.MA:Cedral,1.4909090909090907,0.0,21.740234022167392,0.0,False
+Brazil.regions.MG:Cachoeira de Minas,0.0,0.0,5.8704687047881565,0.0,False
+Brazil.regions.MG:Campestre,0.0,0.0,1.959676314207928,0.0,False
+Brazil.regions.MG:Careaçu,0.0,0.0,12.009677848277612,0.0,False
+Brazil.regions.MG:Conceição do Rio Verde,1.0,0.0,11.875117506938828,0.0,False
+Brazil.regions.MG:Eugenópolis,0.0,0.0,6.079390229984421,0.0,False
+Brazil.regions.MG:Padre Paraíso,0.30909090909090914,0.0,4.100560255328533,0.0,False
+Brazil.regions.MG:Santo Antônio do Amparo,0.9333333333333332,0.0,7.6465579075500445,0.0,False
+Brazil.regions.PB:Joca Claudino,0.4219948849104859,0.0,33.96920085591919,0.0,False
+Brazil.regions.PB:São José de Caiana,3.2,0.0,63.25833140280406,0.0,False
+Brazil.regions.PR:Saudade do Iguaçu,0.0,0.0,15.392028810915683,0.0,False
+Brazil.regions.RN:Almino Afonso,0.0,0.0,18.32953481072369,0.0,False
+Brazil.regions.RS:Capitão,0.0,0.0,33.481520023366635,0.0,False
+Brazil.regions.RS:Crissiumal,0.0,0.0,4.646260599353304,0.0,False
+Brazil.regions.RS:Humaitá,2.3333333333333335,0.0,67.20881065709695,0.0,False
+Brazil.regions.SC:Quilombo,1.0,0.0,17.43879361685921,0.0,False
+Brazil.regions.SC:Serra Alta,0.0,0.0,27.85685482155843,0.0,False
+Brazil.regions.SE:Monte Alegre de Sergipe,0.0,0.0,3.8631279333354103,0.0,False
+Brazil.regions.SP:Alfredo Marcondes,0.0,0.0,21.214051243595822,0.0,False
+Brazil.regions.SP:Barbosa,0.0,0.0,10.720072828503067,0.0,False
+Brazil.regions.SP:Casa Branca,1.7857142857142858,0.0,6.379777073186658,0.0,False
+Brazil.regions.SP:Indiana,3.6338880484114973,0.0,97.6870151276813,0.0,False
+Brazil.regions.SP:Ouroeste,0.0,0.0,6.861788662105899,0.0,False
+Brazil.regions.SP:Tabapuã,0.0,0.0,5.270176777239682,0.0,False
+Brazil.regions.AL:Jacuípe,2.0,0.0,39.939166618272836,0.0,False
+Brazil.regions.AL:Porto de Pedras,0.0,0.0,10.053776002845256,0.0,False
+Brazil.regions.BA:Banzaê,0.0,0.0,4.769360980597995,0.0,False
+Brazil.regions.BA:Cardeal da Silva,0.0,0.0,7.968682926031338,0.0,False
+Brazil.regions.BA:Nova Ibiá,0.0,0.0,12.38241515041445,0.0,False
+Brazil.regions.BA:Riachão do Jacuípe,0.0,0.0,0.20099900091231326,0.0,False
+Brazil.regions.BA:Várzea da Roça,0.0,0.8571428571428571,4.3003978100390805,6.077303297949924,False
+Brazil.regions.CE:Potengi,0.18181818181818182,0.0,5.7568467276757485,0.0,False
+Brazil.regions.ES:Alto Rio Novo,0.0,0.0,9.971823696989285,0.0,False
+Brazil.regions.GO:Alexânia,0.6462212486308871,0.14238773274917854,1.796484715495232,0.39723178337056364,False
+Brazil.regions.GO:Aragarças,0.0,0.0,2.180883658225647,0.0,False
+Brazil.regions.GO:Iporá,0.3723986856516977,1.131434830230011,1.1321422233058014,3.642673589054,False
+Brazil.regions.MA:Igarapé Grande,49.5,0.0,443.3232848340445,0.0,False
+Brazil.regions.MA:Lago do Junco,2.5,0.0,29.498033507326284,0.0,False
+Brazil.regions.MA:Mata Roma,12.709513023782561,0.0,90.49954941392,2.4365438163729256,False
+Brazil.regions.MA:São Domingos do Maranhão,50.370843989769824,0.0,146.69862750894245,0.0,False
+Brazil.regions.MG:Carmo da Mata,0.4219948849104859,0.0,4.746771358666627,0.0,False
+Brazil.regions.MG:Cristina,0.9642857142857143,0.0,16.388942461607893,0.0,False
+Brazil.regions.MG:Córrego do Bom Jesus,1.8666666666666665,0.0,74.60401912441789,0.0,False
+Brazil.regions.MG:Fervedouro,1.13464447806354,0.0,18.605784356673396,0.0,False
+Brazil.regions.MG:Guanhães,0.0,0.0,0.12404844488467637,0.0,False
+Brazil.regions.MG:Laranjal,0.2222222222222222,0.0,15.15767351048109,0.0,False
+Brazil.regions.MG:São Gonçalo do Rio Abaixo,0.0,0.0,6.36771978660666,0.0,False
+Brazil.regions.PB:Conceição,0.7142857142857143,0.0,6.24132281056265,0.0,False
+Brazil.regions.PB:Malta,3.244444444444445,0.0,70.9112775581554,0.0,False
+Brazil.regions.PI:Dom Expedito Lopes,0.4,0.0,17.488310281472934,0.0,False
+Brazil.regions.PR:Abatiá,0.4219948849104859,0.0,9.44315237116197,0.0,False
+Brazil.regions.PR:Carlópolis,0.0,0.0,4.19345085256119,0.0,False
+Brazil.regions.PR:Cidade Gaúcha,1.0,0.0,13.017988055591337,0.0,False
+Brazil.regions.PR:Coronel Vivida,0.0,0.0,2.0332066742407457,0.0,False
+Brazil.regions.PR:Itaipulândia,0.0,0.0,6.157955797315111,0.0,False
+Brazil.regions.PR:Missal,0.0,0.0,6.554258470622452,0.0,False
+Brazil.regions.PR:Rebouças,0.0,0.0,3.922070485463702,0.0,False
+Brazil.regions.PR:Santa Tereza do Oeste,0.2222222222222222,0.0,9.264873043755971,0.0,False
+Brazil.regions.PR:Sertanópolis,0.0,1.0,3.3193193101409393,6.109108681043436,False
+Brazil.regions.PR:São Miguel do Iguaçu,1.0,0.0,4.495654312617829,0.0,False
+Brazil.regions.RN:Jardim do Seridó,0.0,0.0,5.277329054395986,0.0,False
+Brazil.regions.RN:São Vicente,0.0,0.0,12.776835784763755,0.0,False
+Brazil.regions.RS:Casca,0.0,0.0,8.283181507184095,0.0,False
+Brazil.regions.RS:Ibirubá,3.333333333333333,0.0,18.504231923118795,0.0,False
+Brazil.regions.RS:Marques de Souza,0.3177004538577912,0.0,21.2677695581678,0.0,False
+Brazil.regions.RS:Vanini,0.4219948849104859,0.0,43.3590104528432,0.0,False
+Brazil.regions.RS:Vila Flores,0.18181818181818182,0.0,26.245073686946036,0.0,False
+Brazil.regions.SC:Atalanta,0.0,0.0,28.362858604175386,0.0,False
+Brazil.regions.SC:Entre Rios,3.7619047619047623,0.0,145.88035617717,0.0,False
+Brazil.regions.SC:Nova Itaberaba,0.0,0.0,20.29956643607049,0.0,False
+Brazil.regions.SC:Rio do Oeste,0.18181818181818182,0.0,10.055893810522655,0.0,False
+Brazil.regions.SE:Feira Nova,1.0,0.0,33.02682954027229,0.0,False
+Brazil.regions.SP:Campina do Monte Alegre,0.0,0.0,13.810476233347169,0.0,False
+Brazil.regions.SP:Fernando Prestes,0.0,0.0,14.50227357220662,0.0,False
+Brazil.regions.SP:Nova Aliança,1.25,0.0,29.47752742244327,0.0,False
+Brazil.regions.SP:Santo Expedito,0.8333333333333334,0.0,56.14088672467234,0.0,False
+Brazil.regions.SP:Valparaíso,2.7231467473524957,0.0,11.58389026321667,0.0,False
+Brazil.regions.SP:Álvaro de Carvalho,0.4219948849104859,0.0,15.164366728926536,0.0,False
+Brazil.regions.AL:Dois Riachos,0.0,0.0,6.2395560015579985,0.0,False
+Brazil.regions.AL:Igaci,0.0,0.0,1.1117361255666225,0.0,False
+Brazil.regions.BA:Barrocas,1.7272727272727273,0.0,14.909828802173207,0.0,False
+Brazil.regions.BA:Mutuípe,1.3333333333333333,0.0,7.71078816086175,0.0,False
+Brazil.regions.MG:Piraúba,0.0,0.0,6.480628724953625,0.0,False
+Brazil.regions.PB:Maturéia,1.2181818181818183,0.0,33.23821748284697,0.0,False
+Brazil.regions.RJ:Comendador Levy Gasparian,1.0,0.0,20.571967433209174,0.0,False
+Brazil.regions.RN:Pedro Velho,0.0,0.0,5.637113744821118,0.0,False
+Brazil.regions.RN:Várzea,0.0,0.0,15.392028810915683,0.0,False
+Brazil.regions.RS:Ametista do Sul,0.4219948849104859,0.0,9.530031908502371,0.0,False
+Brazil.regions.SC:Ibirama,0.0,0.0,2.4872554839787693,0.0,False
+Brazil.regions.SP:Piquete,0.0,0.0,4.532462953912616,0.0,False
+Brazil.regions.AL:Poço das Trincheiras,0.3177004538577912,0.0,3.275095837836679,0.0,False
+Brazil.regions.AL:Roteiro,1.9,0.0,40.72761759188261,0.0,False
+Brazil.regions.BA:Itamari,0.0,0.0,9.655761344716668,0.0,False
+Brazil.regions.ES:Atilio Vivacqua,0.0,0.0,5.588226714888387,0.0,False
+Brazil.regions.GO:São Simão,0.0,0.0,2.0539984711900194,0.0,False
+Brazil.regions.MG:Carandaí,0.6462212486308871,0.14238773274917854,1.7941449622162702,0.39723178337056364,False
+Brazil.regions.MG:Ervália,0.0,0.0,2.502616027351009,0.0,False
+Brazil.regions.MG:Naque,0.0,0.0,11.504092847508025,0.0,False
+Brazil.regions.MG:Paraguaçu,1.9285714285714286,0.0,10.823241952350553,0.0,False
+Brazil.regions.MG:Vargem Alegre,1.176470588235294,0.0,36.13270960474993,0.0,False
+Brazil.regions.PB:Aroeiras,4.181818181818182,0.0,24.70713410350317,0.0,False
+Brazil.regions.PB:Cachoeira dos Índios,0.0,0.0,6.972022421366148,0.0,False
+Brazil.regions.PB:Catolé do Rocha,3.666666666666667,0.0,12.487715594286616,0.0,False
+Brazil.regions.PB:Jacaraú,3.619047619047619,0.0,29.218024495410436,0.0,False
+Brazil.regions.PB:Natuba,0.0,0.0,6.775927101261269,0.0,False
+Brazil.regions.PR:Piên,0.0,0.0,5.055809248272147,0.0,False
+Brazil.regions.RJ:Varre-Sai,0.0,0.0,6.301119720006593,0.0,False
+Brazil.regions.RN:Martins,1.0,0.0,20.13284673224937,0.0,False
+Brazil.regions.RN:Paraná,0.0,0.0,20.717497888147808,0.0,False
+Brazil.regions.SC:Cordilheira Alta,0.0,0.0,19.66698134546849,0.0,False
+Brazil.regions.SC:Imbuia,0.0,0.0,13.347051035745881,0.0,False
+Brazil.regions.SC:Lauro Muller,0.0,0.0,3.7701686453661987,0.0,False
+Brazil.regions.SE:Nossa Senhora das Dores,1.7333333333333336,0.0,7.474709233376046,0.0,False
+Brazil.regions.SE:Poço Verde,2.1636363636363636,0.0,10.802160897343882,0.0,False
+Brazil.regions.SE:Siriri,1.3333333333333333,0.0,23.44807561654081,0.0,False
+Brazil.regions.SP:Catiguá,0.0,0.0,10.02415219752395,0.0,False
+Brazil.regions.SP:Pirangi,1.9333333333333336,0.0,22.90289113477617,0.0,False
+Brazil.regions.SP:Potirendaba,0.8928571428571429,0.0,8.113137550686943,0.0,False
+Brazil.regions.SP:Serra Azul,0.25575447570332477,0.0,5.382572236173287,0.0,False
+Brazil.regions.AM:Itamarati,1.0,0.0,22.68467248109088,0.0,False
+United_States_of_America.regions.Nevada:Lincoln,0.3836317135549872,0.0,30.87041397880069,0.0,False
+Brazil.regions.BA:Senhor do Bonfim,0.0,0.0,1.5242068865640803,0.0,False
+Brazil.regions.MG:Itabirito,0.3177004538577912,0.5748865355521936,1.7483958768323675,1.1082150082933853,False
+Brazil.regions.MG:Mateus Leme,0.0,0.0,0.4270928268714207,0.0,False
+Brazil.regions.PB:Cacimba de Dentro,2.4,0.0,16.99260429873153,0.0,False
+Brazil.regions.PB:Serraria,0.0,0.0,13.60634114229639,0.0,False
+Brazil.regions.PB:Teixeira,0.7161125319693094,0.0,8.448690932389196,0.0,False
+Brazil.regions.PE:Afogados da Ingazeira,0.7243755383290267,0.6589147286821705,1.9499988841040563,1.838233306408622,False
+Brazil.regions.PE:São Benedito do Sul,0.18181818181818182,0.0,2.994262766127498,0.0,False
+Brazil.regions.PE:Vertente do Lério,0.8333333333333334,0.0,21.276019677841706,0.0,False
+Brazil.regions.SP:Cesário Lange,0.0,0.0,2.720459692355162,0.0,False
+Brazil.regions.SP:Taguaí,0.11508951406649616,0.0,7.123809020741456,0.0,False
+Brazil.regions.BA:Conceição da Feira,0.5714285714285714,0.0,4.169284945684773,0.0,False
+Brazil.regions.BA:Santo Estêvão,0.3177004538577912,0.0,1.783959132694036,0.0,False
+Brazil.regions.PB:Arara,0.6,0.0,9.088458587523634,0.0,False
+Brazil.regions.PB:Duas Estradas,0.6,0.0,41.70409272030996,0.0,False
+Brazil.regions.PR:Pontal do Paraná,1.5885022692889559,0.0,6.975567239428896,0.0,False
+Brazil.regions.RN:Goianinha,2.1483375959079285,0.0,9.593904921101643,0.0,False
+Brazil.regions.RN:Tibau do Sul,0.0,0.0,4.262396806812594,0.0,False
+Brazil.regions.BA:Muritiba,0.14285714285714285,1.0,1.0976120470271706,3.401476240688459,False
+Brazil.regions.AL:Feira Grande,1.4,0.0,8.03760393415931,0.0,False
+Brazil.regions.MG:Manhumirim,0.0,0.0,1.6141389331447131,0.0,False
+Brazil.regions.PE:Casinhas,0.2857142857142857,0.0,6.175514901563061,0.0,False
+Brazil.regions.PE:Salgadinho,0.0,0.0,6.36855846314824,0.0,False
+Brazil.regions.SE:Riachuelo,2.1150895140664963,0.0,30.666091514717316,0.0,False
+Brazil.regions.SP:Severínia,3.2142857142857144,0.0,21.29734891376665,0.0,False
+Brazil.regions.AP:Cutias,24.522821576763487,0.0,442.4034020174452,4.853259876903502,False
+Brazil.regions.BA:Rodelas,0.0,0.0,7.927175584622099,0.0,False
+Brazil.regions.GO:Alto Paraíso de Goiás,0.0,0.0,10.326684920807892,0.0,False
+Brazil.regions.GO:Aporé,0.0,0.0,21.031077708659197,0.0,False
+Brazil.regions.GO:Campo Alegre de Goiás,0.0,0.0,10.387177291371849,0.0,False
+Brazil.regions.GO:Chapadão do Céu,2.1904761904761907,0.0,28.59091477462903,0.0,False
+Brazil.regions.GO:Colinas do Sul,0.0,1.0,26.778513408517966,29.568302779420463,False
+Brazil.regions.GO:Doverlândia,0.0,0.0,10.867681265535634,0.0,False
+Brazil.regions.GO:Itajá,0.0,0.0,19.241495052979413,0.0,False
+Brazil.regions.GO:Ivolândia,0.0,0.0,39.40430345610172,0.0,False
+Brazil.regions.MA:Sambaíba,0.0,0.0,14.843784954613284,0.0,False
+Brazil.regions.MG:Olhos-d'Água,2.0,0.0,46.422809054294355,0.0,False
+Brazil.regions.MS:Bodoquena,0.0,0.0,9.9086233275102,0.0,False
+Brazil.regions.MT:Alto Garças,0.0,0.0,5.522762582547212,0.0,False
+Brazil.regions.MT:Juscimeira,0.7999999999999999,0.0,13.251561667329392,0.0,False
+Brazil.regions.MT:Porto Alegre do Norte,0.0,0.0,5.1993454058011865,0.0,False
+Brazil.regions.PA:Piçarra,0.0,0.0,4.913777380503404,0.0,False
+Brazil.regions.PI:Curimatá,1.0,0.0,14.772556958567119,0.0,False
+Brazil.regions.PI:Currais,0.0,0.0,17.395919147466497,0.0,False
+Brazil.regions.PI:Dom Inocêncio,0.0,0.0,7.6748401812113585,0.0,False
+Brazil.regions.PI:Redenção do Gurguéia,0.4219948849104859,0.0,7.425050439873556,0.0,False
+Brazil.regions.RO:Cacaulândia,0.3333333333333333,0.0,18.612029783725646,0.0,False
+Brazil.regions.RO:Rio Crespo,0.16666666666666666,0.0,28.205605598987685,0.0,False
+Brazil.regions.RS:Bom Jesus,0.3177004538577912,0.0,5.135242297328723,0.0,False
+Brazil.regions.RS:Lavras do Sul,7.0,0.0,104.16208228685151,0.0,False
+Brazil.regions.TO:Aliança do Tocantins,0.49872122762148346,0.0,31.667741067195838,0.0,False
+Brazil.regions.TO:Caseara,0.0,0.0,15.835652983353418,0.0,False
+Brazil.regions.TO:Darcinópolis,6.907928388746803,0.0,132.65624481719354,0.0,False
+Brazil.regions.TO:Dueré,2.7777777777777777,0.0,77.82860110664289,0.0,False
+Brazil.regions.TO:Figueirópolis,0.6354009077155824,0.0,33.43393245086337,0.0,False
+Brazil.regions.TO:Marianópolis do Tocantins,0.5833333333333334,0.0,27.80602383360636,0.0,False
+United_States_of_America.regions.Kansas:Ness,0.0,0.0,33.57384699273386,0.0,False
+United_States_of_America.regions.Kansas:Wichita,0.0,0.0,44.40228236104654,0.0,False
+United_States_of_America.regions.Nebraska:Dawes,0.27231467473524956,0.0,11.313336378828911,0.0,False
+United_States_of_America.regions.Nebraska:Nuckolls,0.0,0.0,21.31821448637812,0.0,False
+United_States_of_America.regions.North Dakota:Steele,0.0,0.0,50.120263539150415,0.0,False
+United_States_of_America.regions.Oklahoma:Washita,0.0,0.0,6.3710754147332676,0.0,False
+United_States_of_America.regions.Texas:Archer,0.0,0.0,8.902014674461704,0.0,False
+United_States_of_America.regions.Texas:Cottle,1.2896253602305476,0.0,243.15488599912885,49.02994176266812,False
+United_States_of_America.regions.Texas:Fisher,0.3333333333333333,0.0,32.02309139498088,0.0,False
+United_States_of_America.regions.Texas:Haskell,0.3333333333333333,0.0,20.775663674932307,0.0,False
+United_States_of_America.regions.Texas:Kimble,0.4219948849104859,0.0,19.09034674286509,0.0,False
+United_States_of_America.regions.Texas:Mills,0.0,0.0,17.731450111962268,0.0,False
+United_States_of_America.regions.Texas:San Saba,0.0,0.0,13.725487259981069,0.0,False
+Brazil.regions.AL:Carneiros,3.533333333333333,0.0,47.131291273666754,0.0,False
+Brazil.regions.AL:Craíbas,3.5249621785173972,0.0,16.319197100658698,0.0,False
+Brazil.regions.AL:Monteirópolis,2.5714285714285716,0.0,47.097465433240146,0.0,False
+Brazil.regions.AL:São Luís do Quitunde,9.989769820971865,0.0,29.057864202432473,0.0,False
+Brazil.regions.BA:Amargosa,2.1636363636363636,0.0,5.697641059465246,0.0,False
+Brazil.regions.BA:Cabaceiras do Paraguaçu,0.0,0.0,2.527379768247819,0.0,False
+Brazil.regions.CE:Pacujá,0.5238095238095238,0.0,20.535015830529066,0.0,False
+Brazil.regions.MG:Andradas,0.0,0.0,0.35533700096311494,0.0,False
+Brazil.regions.MG:Araxá,2.392963625521765,0.0,22.88828944197455,1.620266821040882,False
+Brazil.regions.MG:Astolfo Dutra,0.6777493606138106,0.0,10.841765476003879,0.0,False
+Brazil.regions.MG:Monte Sião,3.0476190476190474,0.0,14.214869905739302,0.0,False
+Brazil.regions.PB:Bananeiras,5.562659846547315,0.0,28.797052048309492,0.0,False
+Brazil.regions.PB:Lagoa de Dentro,1.5333333333333334,0.0,30.02966047147778,0.0,False
+Brazil.regions.PE:Calçado,0.0,0.0,6.257528099467539,0.0,False
+Brazil.regions.PR:Andirá,0.7999999999999999,0.0,6.196282218134495,0.0,False
+Brazil.regions.RN:Lagoa Nova,0.0,0.0,3.6147194032745236,0.0,False
+Brazil.regions.RN:Tenente Laurentino Cruz,0.0,0.0,14.011285897914707,0.0,False
+Brazil.regions.RS:Guaporé,0.0,0.0,1.097177628747676,0.0,False
+Brazil.regions.RS:Vera Cruz,0.0,0.0,0.9328030424541649,0.0,False
+Brazil.regions.SP:Roseira,0.0,0.0,6.5455354984029555,0.0,False
+Brazil.regions.SP:Valentim Gentil,0.9,0.0,11.46805244209465,0.0,False
+Brazil.regions.SP:Viradouro,0.4219948849104859,1.0,1.5675794744727047,5.291565244999471,False
+Brazil.regions.PB:Areial,1.3928571428571428,0.0,31.403653653635125,0.0,False
+Brazil.regions.BA:Caetité,0.0,0.0,0.8280434170035269,0.0,False
+Brazil.regions.BA:Capela do Alto Alegre,0.18181818181818182,0.0,5.296256253021313,0.0,False
+Brazil.regions.BA:Caém,1.0,0.0,18.918666072492705,0.0,False
+Brazil.regions.BA:Dom Basílio,0.8181818181818182,0.0,13.097762655930712,0.0,False
+Brazil.regions.BA:Miguel Calmon,0.0,0.3333333333333333,1.052965115513366,1.280918162138621,False
+Brazil.regions.BA:Mundo Novo,0.0,1.0,0.9448984091990864,3.734687780101584,False
+Brazil.regions.BA:Sobradinho,0.9523809523809524,0.0,5.62891164406431,0.0,False
+Brazil.regions.BA:Urandi,0.0,0.0,3.2133322523415893,0.0,False
+Brazil.regions.CE:Jaguaribara,7.889993373094765,0.0,95.38131905401075,4.399815685566634,False
+Brazil.regions.CE:Santana do Cariri,7.332480818414322,0.0,45.49324849264877,0.0,False
+Brazil.regions.CE:Tarrafas,1.0,0.0,20.487678040643125,0.0,False
+Brazil.regions.GO:Itapuranga,2.0,0.0,8.852557726272295,0.0,False
+Brazil.regions.GO:Leopoldo de Bulhões,3.0,0.0,49.518305306748864,0.0,False
+Brazil.regions.GO:Palmeiras de Goiás,4.2444444444444445,0.0,15.383488210511478,0.0,False
+Brazil.regions.MA:Afonso Cunha,0.0,0.0,12.538230248962616,0.0,False
+Brazil.regions.MA:Bacuri,5.305555555555555,0.0,31.143885989960463,0.0,False
+Brazil.regions.MA:Buritirana,18.35273573923167,0.0,130.4749549181681,1.9980882345402409,False
+Brazil.regions.MA:Capinzal do Norte,6.907928388746803,0.0,72.21661106333771,0.0,False
+Brazil.regions.MA:Gonçalves Dias,4.977777777777779,0.0,30.542304851121468,0.0,False
+Brazil.regions.MA:Governador Eugênio Barros,0.0,0.0,3.1526874534378875,0.0,False
+Brazil.regions.MA:Matões do Norte,0.0,0.0,3.182142549073615,0.0,False
+Brazil.regions.MA:Paulo Ramos,2.64750378214826,0.0,13.981986167163443,0.0,False
+Brazil.regions.MA:Poção de Pedras,6.866666666666667,0.0,41.224459309602544,0.0,False
+Brazil.regions.MA:Santo Antônio dos Lopes,64.0537084398977,0.0,446.71921768333374,0.0,False
+Brazil.regions.MG:Caldas,1.5733736762481088,0.0,16.28987484129897,0.0,False
+Brazil.regions.MG:Candeias,1.0,0.0,10.645653326934397,0.0,False
+Brazil.regions.MG:Delfim Moreira,3.142857142857143,0.0,48.83459870208371,0.0,False
+Brazil.regions.MG:Ladainha,0.0,0.0,2.731716896007116,0.0,False
+Brazil.regions.MG:Santo Antônio do Aventureiro,0.0,0.0,24.972564876737707,0.0,False
+Brazil.regions.MG:Várzea da Palma,3.5357142857142856,0.0,8.750287269940106,0.0,False
+Brazil.regions.MS:Glória de Dourados,0.0,0.0,7.2453335593534005,0.0,False
+Brazil.regions.MS:Itaporã,0.0,0.0,1.236137598782273,0.0,False
+Brazil.regions.PB:Aguiar,0.0,0.0,14.940707082998212,0.0,False
+Brazil.regions.PB:Amparo,6.733333333333333,0.0,342.75682963416153,0.0,False
+Brazil.regions.PB:São José do Sabugi,25.044444444444444,0.0,626.1511535038728,0.0,False
+Brazil.regions.PI:Batalha,14.474377745241583,0.0,56.3657127145083,0.39641882878550105,False
+Brazil.regions.PI:Cabeceiras do Piauí,0.0,0.0,6.656649321710388,0.0,False
+Brazil.regions.PI:Campo Grande do Piauí,4.666666666666667,0.0,92.56048265781476,0.0,False
+Brazil.regions.PI:Capitão de Campos,0.0,0.0,5.96907898330614,0.0,False
+Brazil.regions.PI:Hugo Napoleão,2.0,0.0,74.58962770415553,0.0,False
+Brazil.regions.PI:Ipiranga do Piauí,0.4219948849104859,0.0,6.225574697859632,0.0,False
+Brazil.regions.PR:Reserva,2.0,0.0,8.43985689524012,0.0,False
+Brazil.regions.RN:Afonso Bezerra,0.6393861892583119,0.0,14.713324125956486,0.0,False
+Brazil.regions.RN:Jucurutu,0.0,0.0,2.676184939018246,0.0,False
+Brazil.regions.RN:Lajes,0.4219948849104859,0.0,4.9005404175687675,0.0,False
+Brazil.regions.RS:Alecrim,0.0,0.0,14.016933318173136,0.0,False
+Brazil.regions.RS:Barra do Ribeiro,0.0,0.0,4.62255960248717,0.0,False
+Brazil.regions.RS:Caibaté,0.0,0.0,17.845786361660444,0.0,False
+Brazil.regions.RS:Camargo,0.0,0.0,33.80003865690577,0.0,False
+Brazil.regions.RS:Doutor Ricardo,0.6521739130434783,0.0,100.63045259216152,0.0,False
+Brazil.regions.RS:Erebango,2.0,0.0,97.51111333722186,0.0,False
+Brazil.regions.RS:Fontoura Xavier,1.0,0.0,16.620148517296258,0.0,False
+Brazil.regions.RS:Machadinho,0.8567774936061381,0.0,37.883666172415786,0.0,False
+Brazil.regions.RS:Montauri,0.0,0.0,66.03333519895298,0.0,False
+Brazil.regions.RS:Muliterno,0.0,0.0,50.036412425188374,0.0,False
+Brazil.regions.RS:São José do Herval,0.9333333333333332,0.0,95.29916716554261,0.0,False
+Brazil.regions.SC:Abelardo Luz,0.9333333333333332,0.0,8.008542473005756,0.0,False
+Brazil.regions.SC:Petrolândia,0.0,0.0,14.053734294248253,0.0,False
+Brazil.regions.SP:Altinópolis,0.6428571428571428,0.0,7.361329900335408,0.0,False
+Brazil.regions.SP:Getulina,0.4219948849104859,0.0,4.797943864360598,0.0,False
+Brazil.regions.SP:Guaraci,0.0,0.0,6.148358644828643,0.0,False
+Brazil.regions.SP:Gália,0.0,0.0,12.482049358480522,0.0,False
+Brazil.regions.SP:Itaóca,0.0,0.0,27.258287552174426,0.0,False
+Brazil.regions.SP:Meridiano,0.4219948849104859,0.0,22.101755473858653,0.0,False
+Brazil.regions.SP:Murutinga do Sul,0.0,0.0,19.501784414206732,0.0,False
+Brazil.regions.SP:Palestina,0.0,0.0,4.928046547905869,0.0,False
+Brazil.regions.SP:Planalto,2.4,0.0,62.13287627736943,0.0,False
+Brazil.regions.SP:Presidente Bernardes,2.2254160363086233,0.0,23.358201918329264,0.0,False
+Brazil.regions.SP:Riolândia,0.0,0.0,5.19870719404398,0.0,False
+Brazil.regions.SP:Sagres,0.0,0.0,38.32863168172908,0.0,False
+Brazil.regions.SP:São João do Pau d'Alho,0.0,0.0,44.7161488713778,0.0,False
+Brazil.regions.SP:Ubirajara,1.2020460358056266,0.0,50.92918735606579,0.0,False
+United_States_of_America.regions.Missouri:Laclede,1.5733736762481088,0.0,4.416926144071774,0.0,False
+Brazil.regions.MG:Congonhas,0.7222222222222222,0.0,0.8905246904433929,0.0,False
+Brazil.regions.PB:Montadas,0.0,0.0,14.850006007471116,0.0,False
+Brazil.regions.PB:Puxinanã,0.16363636363636364,0.0,6.538170243744684,0.0,False
+Brazil.regions.AL:Mar Vermelho,1.4,0.0,65.50844625801042,0.0,False
+Brazil.regions.AL:Senador Rui Palmeira,0.0,0.0,4.420015964353452,0.0,False
+Brazil.regions.BA:Cairu,7.722222222222222,0.0,45.19778887635884,0.0,False
+Brazil.regions.BA:Ipecaetá,0.0,0.0,4.112951017031513,0.0,False
+Brazil.regions.BA:Santanópolis,0.44757033248081846,0.0,16.93828117799389,0.0,False
+Brazil.regions.BA:Serrolândia,0.0,0.0,4.674568321118105,0.0,False
+Brazil.regions.MA:Paraibano,1.4545454545454546,0.0,9.03049717606433,0.0,False
+Brazil.regions.MG:Capelinha,0.3177004538577912,0.0,1.0294838110379605,0.0,False
+Brazil.regions.MG:Guarará,0.0,0.0,23.553730123301925,0.0,False
+Brazil.regions.MG:Itamogi,1.0,0.0,16.8334445380457,0.0,False
+Brazil.regions.MG:Mantena,2.3657289002557547,0.0,9.734727248519714,0.0,False
+Brazil.regions.MG:Paraopeba,6.0,0.0,25.73506800481063,0.0,False
+Brazil.regions.MG:Pratápolis,0.0,0.0,8.834062773698225,0.0,False
+Brazil.regions.MG:Rio Novo,0.3069053708439898,0.0,15.35241367905063,0.0,False
+Brazil.regions.MG:São João do Manteninha,2.0,0.0,48.413487638826126,0.0,False
+Brazil.regions.PB:Caturité,0.0,0.0,17.820268337259087,0.0,False
+Brazil.regions.PB:Jericó,0.0,0.0,10.131776722908072,0.0,False
+Brazil.regions.PB:São Vicente do Seridó,2.9333333333333336,0.0,33.71446430272473,0.0,False
+Brazil.regions.PE:Araripina,9.973975276512688,0.0,7.6030128867351285,0.7832829620406546,False
+Brazil.regions.PR:Imbituva,9.527272727272727,0.0,29.58926445834526,0.0,False
+Brazil.regions.PR:Lupionópolis,0.0,0.0,17.53541388113002,0.0,False
+Brazil.regions.RJ:Natividade,2.0485933503836318,0.0,18.691341013783035,0.0,False
+Brazil.regions.RN:Macau,8.733333333333333,0.0,27.80470781063184,0.0,False
+Brazil.regions.RN:Senador Elói de Souza,0.40847201210287437,0.0,14.246528150728794,0.0,False
+Brazil.regions.RS:Imigrante,6.578005115089514,0.0,252.44319019485542,0.0,False
+Brazil.regions.SC:Agronômica,0.0,1.0,15.565570394148898,18.355359765051393,False
+Brazil.regions.SC:Coronel Freitas,0.4219948849104859,0.0,6.051969953319575,0.0,False
+Brazil.regions.SP:Avanhandava,0.4219948849104859,0.0,3.3594778537615824,0.0,False
+Brazil.regions.SP:Boracéia,0.0,0.0,17.94419362723145,0.0,False
+Brazil.regions.SP:Cerqueira César,0.9013282732447818,0.25616698292220114,2.0818059136180542,0.7146519261325183,False
+Brazil.regions.SP:Dois Córregos,0.5502846299810247,0.4743833017077799,2.150144864372847,1.9598869156393324,False
+Brazil.regions.SP:Dourado,0.7,0.0,16.36945778338579,0.0,False
+Brazil.regions.SP:Elisiário,0.0,0.0,24.599966860267045,0.0,False
+Brazil.regions.SP:Guapiara,0.9722222222222222,0.0,8.705356763166527,0.0,False
+Brazil.regions.SP:Ipeúna,0.0,0.0,10.462264697478101,0.0,False
+Brazil.regions.SP:Itirapuã,0.0,0.0,12.597193241807151,0.0,False
+Brazil.regions.SP:Itápolis,0.9523809523809524,0.0,1.782822427121435,0.0,False
+Brazil.regions.SP:Manduri,1.0,0.0,17.523028016869187,0.0,False
+Brazil.regions.SP:Nova Granada,2.8081991215226942,0.0,17.98871650885479,0.7903342485221103,False
+Brazil.regions.SP:Sales Oliveira,1.0,0.0,14.031068492848554,0.0,False
+Brazil.regions.SP:São Bento do Sapucaí,0.0,0.0,6.403076964820983,0.0,False
+Brazil.regions.SP:Tambaú,2.7142857142857144,0.0,13.215233744044347,0.0,False
+Brazil.regions.SP:Urupês,1.9047619047619049,0.0,18.24549127767383,0.0,False
+Brazil.regions.AL:Pindoba,1.9969742813918303,0.0,110.30858156210576,0.0,True
+Brazil.regions.AM:Iranduba,159.45397890699905,11.86385426653883,313.03012385388394,23.729117292237703,True
+Brazil.regions.BA:Almadina,3.651419558359622,0.7886435331230284,10.5642514352088,2.200149346137616,True
+Brazil.regions.BA:Arataca,1.443583118001723,0.6589147286821705,13.172727142085272,1.838233306408622,True
+Brazil.regions.BA:Canavieiras,7.391611354328485,0.7795509108882926,22.502423339037964,2.2186744026123635,True
+Brazil.regions.BA:Cansanção,14.930992736077481,0.9467312348668282,41.58335435217935,2.6411807361328723,True
 Brazil.regions.BA:Igrapiúna,1.0,0.0,12.331940555001026,0.0,True
-Brazil.regions.BA:Ipirá,2.4557023984336763,0.8027410670582477,9.388920189165546,2.2394784964660284,True
-Brazil.regions.BA:Itagibá,25.090280121498484,0.3341208234897064,48.95881653675479,2.837863173312306,True
-Brazil.regions.BA:Itapicuru,1.0,0.0,2.831978112794378,0.0,True
-Brazil.regions.BA:Itapé,8.45705279747833,0.12450748620961388,13.06935553651195,8.92420870837343,True
-Brazil.regions.BA:Jussari,1.9063109954456734,0.4879635653871178,9.03584126704236,1.361315568104667,True
-Brazil.regions.BA:Lajedo do Tabocal,0.9080188679245282,0.6878930817610063,41.30032499030304,1.9190768078142175,True
-Brazil.regions.BA:Medeiros Neto,30.6294296321296,1.2605467431657102,83.40239353918861,3.516659905609459,True
-Brazil.regions.BA:Miguel Calmon,0.0,0.0,1.052965115513366,0.0,True
-Brazil.regions.BA:Mundo Novo,0.0,1.0,0.9448984091990864,3.7346877801015834,True
-Brazil.regions.BA:Paramirim,6.266595857673925,0.43724553018233314,13.583534674333102,1.9878320223951333,True
-Brazil.regions.BA:Piripá,18.237515736466634,1.0847671002937473,45.33313342586241,3.0262717263042194,True
-Brazil.regions.BA:Prado,28.28214647316909,1.2605467431657102,76.3243709125288,3.516659905609459,True
-Brazil.regions.BA:Rafael Jambeiro,1.486090775988287,0.424597364568082,10.88669870243873,1.1845372145852477,True
-Brazil.regions.BA:Rio do Pires,11.907824222936764,0.8882636655948553,25.584141429472282,2.478068532835417,True
-Brazil.regions.BA:Santa Cruz Cabrália,16.431613732329723,1.1969891683495502,40.6400916462441,3.339347658946995,True
-Brazil.regions.BA:Santa Maria da Vitória,18.152538816617703,1.0847671002937473,50.945623023175486,3.0262717263042194,True
-Brazil.regions.BA:Santaluz,1.8690783807062874,0.6589147286821705,5.409284153383462,1.838233306408622,True
-Brazil.regions.BA:Seabra,2.2227488151658767,0.4407582938388626,6.762318023023854,1.326060526492439,True
-Brazil.regions.BA:Sobradinho,0.9,0.0,5.403044055857883,0.0,True
-Brazil.regions.BA:Sátiro Dias,2.5612988734261104,0.7355864811133201,4.258554193781647,2.052131346389511,True
-Brazil.regions.BA:Água Fria,3.425076452599388,0.24464831804281348,6.942501796253782,3.78547982152689,True
-Brazil.regions.CE:Araripe,4.568296025582457,0.8154408405664686,10.953492059240496,2.2749081896121317,True
-Brazil.regions.CE:Assaré,0.9582542694497154,0.25616698292220114,2.4682332480270412,0.7146519261325183,True
-Brazil.regions.CE:Boa Viagem,12.216699801192844,1.2326043737574552,19.055026912265614,1.731897888627241,True
-Brazil.regions.CE:Cariús,15.488125432326491,0.1906848051648605,39.848939329582365,2.612298807233386,True
-Brazil.regions.CE:Deputado Irapuan Pinheiro,1.2572046109510087,0.7132564841498559,25.079795060375073,1.9898353582085533,True
-Brazil.regions.CE:Ererê,1.7033639143730888,0.6055045871559633,70.97578403869099,3.3529763533837844,True
-Brazil.regions.CE:Granja,2.6057709329084795,0.8550185873605949,4.431180585614282,2.0579331728021066,True
-Brazil.regions.CE:Hidrolândia,1.5395157606212884,0.8154408405664686,7.860277366482895,2.2749081896121317,True
-Brazil.regions.CE:Ipaporanga,18.154362416107386,1.162032598274209,20.10057747418345,3.2418261913076,True
-Brazil.regions.CE:Iracema,2.4923547400611623,0.17737003058103978,36.668823728519776,2.925055802581949,True
-Brazil.regions.CE:Irauçuba,16.261792452830186,0.6878930817610063,72.5807349294662,1.9190768078142175,True
-Brazil.regions.CE:Jaguaribara,7.694968553459119,0.0,90.80328187739396,4.1145437672318845,True
-Brazil.regions.CE:Jaguaribe,11.420598494584173,1.3133835138608407,30.866905724521423,3.8989104640285865,True
-Brazil.regions.CE:Madalena,11.734597156398106,0.6255924170616115,67.53355948653454,1.7452710756356857,True
-Brazil.regions.CE:Miraíma,1.8867924528301885,0.3121069182389937,3.675992795948244,5.317860520308519,True
-Brazil.regions.CE:Mombaça,6.230024213075061,0.08111380145278452,21.08256572209568,0.6647498540769242,True
-Brazil.regions.CE:Monsenhor Tabosa,11.947613504074505,1.4260768335273575,78.73918361228233,9.905640273421117,True
-Brazil.regions.CE:Moraújo,8.605809128630705,0.6514522821576764,118.9058452042455,10.490257101777098,True
-Brazil.regions.CE:Palhano,2.321428571428571,0.0,32.59726125160519,0.0,True
-Brazil.regions.CE:Quiterianópolis,3.6289608780315104,0.8550185873605949,6.749981628131483,2.3853217669426554,True
-Brazil.regions.CE:Salitre,7.560630200035406,0.14498141263940523,18.45825717998458,3.6555142847669018,True
-Brazil.regions.CE:Santana do Cariri,6.654545454545455,0.0,40.9762170814347,0.0,True
-Brazil.regions.CE:Senador Sá,6.17631296891747,0.8882636655948553,64.69819751565767,2.478068532835417,True
-Brazil.regions.CE:Uruoca,2.761534947464596,0.8154408405664686,7.139118899147113,2.2749081896121317,True
-Brazil.regions.ES:Montanha,0.6029285099052542,0.6589147286821705,10.961165758065949,1.838233306408622,True
-Brazil.regions.ES:Presidente Kennedy,22.43405912550894,0.7488050982474774,243.91347452572734,11.471803562313195,True
-Brazil.regions.ES:Santa Leopoldina,5.756249117356306,0.8826436943934474,29.668128148898468,2.4623899969129512,True
-Brazil.regions.ES:Águia Branca,1.5333333333333332,1.5333333333333332,23.484151028737966,15.902648136624492,True
-Brazil.regions.GO:Aloândia,12.817524115755626,0.8882636655948553,30.056190915214696,2.478068532835417,True
-Brazil.regions.GO:Anhanguera,14.930992736077481,0.9467312348668282,48.50290302996777,2.6411807361328723,True
+Brazil.regions.BA:Itapicuru,0.8181818181818182,0.0,2.3247436817211966,0.0,True
+Brazil.regions.BA:Itapitanga,0.4992435703479576,0.0,7.78072559328358,0.0,True
+Brazil.regions.BA:Itiúba,0.0,1.0,0.01886194149187359,2.7709274294106234,True
+Brazil.regions.BA:Lajedo do Tabocal,0.9211398277004639,0.7355864811133201,42.6976171295378,2.052131346389511,True
+Brazil.regions.BA:Livramento de Nossa Senhora,2.287461773700306,0.7553516819571865,7.6984772244266075,2.1072720936174822,True
+Brazil.regions.BA:Luís Eduardo Magalhães,11.944762632047855,0.893470790378007,38.030200017249584,2.4925953142084163,True
+Brazil.regions.BA:Maraú,0.9388458225667529,0.3100775193798449,5.211788395992087,2.8724728095953416,True
+Brazil.regions.BA:Mucuri,2.857142857142857,0.0,6.486886846621325,0.0,True
+Brazil.regions.BA:Piripá,22.81687440076702,1.162032598274209,58.032167854369675,3.2418261913076,True
+Brazil.regions.BA:Piritiba,0.0,0.0,1.2497985911253764,0.0,True
+Brazil.regions.BA:Quixabeira,1.0555555555555556,0.0,20.120994797126432,0.0,True
+Brazil.regions.BA:Santaluz,2.1289625360230544,0.7132564841498559,6.166485057380714,1.9898353582085533,True
+Brazil.regions.BA:Saúde,0.3333333333333333,0.0,7.535722387274017,0.0,True
+Brazil.regions.BA:Serra Preta,4.390602055800294,0.8027410670582477,9.417748439234577,2.2394784964660284,True
+Brazil.regions.BA:Tucano,0.9582542694497154,0.25616698292220114,3.4902244888031158,0.7146519261325183,True
+Brazil.regions.BA:Água Fria,3.711882229232387,0.21135646687697163,7.248011932193937,3.6926025690067563,True
+Brazil.regions.CE:Acopiara,2.0802146589464767,0.21042225674339785,13.534499258143184,0.8973557146280897,True
+Brazil.regions.CE:Assaré,1.6471449487554906,0.424597364568082,4.103095184022679,1.1845372145852477,True
+Brazil.regions.CE:Campos Sales,3.1568516421291055,0.7729331823329558,15.579478881544514,2.156320776490322,True
+Brazil.regions.CE:Canindé,44.40270935960592,0.9966572836030965,20.767767793476064,2.234634326023996,True
+Brazil.regions.CE:Cariré,6.486976217440544,0.7729331823329558,47.663847832694564,2.156320776490322,True
+Brazil.regions.CE:Crateús,7.793704891740176,0.9452686447473937,22.25861518815544,0.9457502636512892,True
+Brazil.regions.CE:Deputado Irapuan Pinheiro,1.5168195718654434,0.7553516819571865,24.601397306763555,2.1072720936174822,True
+Brazil.regions.CE:Ipueiras,18.52588686481304,0.2444870565675935,52.5681211791139,0.8377347441907536,True
+Brazil.regions.CE:Jati,2.0,0.0,34.19701866756378,0.0,True
+Brazil.regions.CE:Morada Nova,70.89602446483181,0.7553516819571865,109.19856548931655,2.1072720936174822,True
+Brazil.regions.CE:Moraújo,9.22576447625244,0.5120364346128822,130.9575188241232,10.101316252161265,True
+Brazil.regions.CE:Palhano,3.7333333333333334,0.0,47.639928648843224,0.0,True
+Brazil.regions.CE:Paramoti,4.647316538882804,0.14238773274917854,46.88406038524126,0.39723178337056364,True
+Brazil.regions.CE:Quixeramobim,37.743048897411306,1.0882070949185043,15.267660060259763,1.1168552808196457,True
+Brazil.regions.CE:Senador Pompeu,14.515838011226945,1.1246992782678429,34.09753075323624,3.137674091973338,True
+Brazil.regions.ES:Alfredo Chaves,10.447213290460878,0.6806002143622722,127.6374670741052,4.699393286002904,True
+Brazil.regions.ES:Divino de São Lourenço,0.9875518672199171,0.34854771784232363,24.815202596753455,0.9723747184888373,True
+Brazil.regions.ES:Laranja da Terra,3.6473165388828037,0.14238773274917854,43.76344853865406,0.39723178337056364,True
+Brazil.regions.ES:Água Doce do Norte,7.138888888888889,0.5833333333333334,71.07252925046868,5.293886317572677,True
+Brazil.regions.ES:Águia Branca,1.9523809523809523,1.6666666666666665,27.8302163580018,17.285487105026622,True
+Brazil.regions.GO:Anhanguera,15.919990777034817,0.9960802397970946,46.99202797432205,2.7788540655519456,True
 Brazil.regions.GO:Anicuns,0.0,0.0,1.7868696679991052,0.0,True
-Brazil.regions.GO:Bom Jesus de Goiás,24.215164310629707,1.1969891683495502,64.76311726504926,3.339347658946995,True
+Brazil.regions.GO:Bela Vista de Goiás,10.98373268850297,0.7419213013849199,26.933566215507863,2.086017338862327,True
+Brazil.regions.GO:Carmo do Rio Verde,5.910780669144982,0.8550185873605949,14.513146910562638,2.3853217669426554,True
+Brazil.regions.GO:Caturaí,0.6462212486308871,0.14238773274917854,15.131255336127742,0.39723178337056364,True
 Brazil.regions.GO:Hidrolândia,30.986331420857244,1.2605467431657102,84.79431279137135,3.516659905609459,True
-Brazil.regions.GO:Itaguaru,11.196158734642001,0.8826436943934474,30.44976803986492,2.4623899969129512,True
-Brazil.regions.GO:Itapuranga,2.0,0.0,8.852557726272295,0.0,True
-Brazil.regions.GO:Jesúpolis,1.3953488372093024,0.6589147286821705,78.70297203164816,1.838233306408622,True
-Brazil.regions.GO:Joviânia,0.06666666666666667,1.0,11.649992227400832,13.537295248409372,True
-Brazil.regions.GO:Nova Glória,16.480545174763687,1.041987249945043,34.38702283125221,2.906924954512604,True
-Brazil.regions.GO:Palmeiras de Goiás,4.055555555555555,0.0,14.72894219592665,0.0,True
-Brazil.regions.GO:Uruaçu,5.859341900861461,0.8826436943934474,18.351880451030834,2.4623899969129512,True
-Brazil.regions.MA:Alcântara,3.450831163629081,0.8371720408572,7.519362778115807,2.335533661200168,True
-Brazil.regions.MA:Alto Alegre do Pindaré,26.522935779816514,0.7553516819571865,84.66435047821872,2.1072720936174822,True
-Brazil.regions.MA:Araguanã,11.151658767772513,0.6255924170616115,85.1022638299416,1.7452710756356857,True
-Brazil.regions.MA:Bacuri,4.821428571428571,0.0,28.538531431102513,0.0,True
-Brazil.regions.MA:Barreirinhas,22.106847253574117,0.8465011286681715,27.275138619489017,2.361559851215432,True
-Brazil.regions.MA:Boa Vista do Gurupi,6.918305597579425,0.45385779122541603,85.00706385626897,4.887022625448648,True
-Brazil.regions.MA:Buriti,8.499267935578331,0.424597364568082,31.482492592902588,1.1845372145852477,True
-Brazil.regions.MA:Buritirana,16.53220559531555,0.0,117.87072509050485,1.8011184266271405,True
-Brazil.regions.MA:Cajapió,18.10323122114981,0.9955937893411665,44.44351581570484,2.829001380582692,True
-Brazil.regions.MA:Capinzal do Norte,5.81089258698941,0.0,61.520463984451176,0.0,True
-Brazil.regions.MA:Carutapera,11.099585062240665,3.161825726141079,49.918631927814104,13.772756730175015,True
-Brazil.regions.MA:Colinas,3.895549919299054,0.9960802397970946,12.934991627303283,2.7788540655519456,True
-Brazil.regions.MA:Conceição do Lago-Açu,9.720911949685533,0.05110062893081761,72.99786397835929,2.287903449928246,True
-Brazil.regions.MA:Fortuna,1.9166666666666667,0.0,15.96449732319901,0.0,True
-Brazil.regions.MA:Godofredo Viana,4.178571428571429,0.0,41.02585855676844,0.0,True
-Brazil.regions.MA:Gonçalves Dias,4.722222222222222,0.0,29.117326845347204,0.0,True
-Brazil.regions.MA:Governador Eugênio Barros,0.0,0.0,3.152687453437888,0.0,True
-Brazil.regions.MA:Graça Aranha,1.0,0.0,29.148888367839117,0.0,True
-Brazil.regions.MA:Humberto de Campos,7.388625592417062,0.6255924170616115,28.13140767905539,1.7452710756356857,True
-Brazil.regions.MA:Joselândia,1.1195445920303606,0.25616698292220114,13.573244146341079,0.7146519261325183,True
-Brazil.regions.MA:João Lisboa,15.46058091286307,0.34854771784232363,68.7903254012048,0.9723747184888373,True
-Brazil.regions.MA:Maranhãozinho,5.043872919818456,0.0,35.435933695879264,0.0,True
-Brazil.regions.MA:Matões do Norte,0.0,0.0,3.1821425490736153,0.0,True
-Brazil.regions.MA:Mirinzal,7.004660358706398,0.6538624488066658,8.064130156527458,7.6640272844198325,True
-Brazil.regions.MA:Paulo Ramos,0.18181818181818182,0.0,1.7564559202430752,0.0,True
-Brazil.regions.MA:Porto Franco,5.61611374407583,0.2748815165876778,28.359392865146184,1.2567831630067658,True
-Brazil.regions.MA:Poção de Pedras,5.8,0.0,35.25642559021203,0.0,True
-Brazil.regions.MA:Presidente Médici,0.9481403876375064,0.5866946045049763,24.435762815470166,1.6367543716138275,True
-Brazil.regions.MA:Santa Helena,45.32796486090776,0.424597364568082,106.48900799058521,1.1845372145852477,True
-Brazil.regions.MA:Santa Quitéria do Maranhão,22.672199170124482,0.34854771784232363,91.01143326440771,0.9723747184888373,True
-Brazil.regions.MA:Santo Antônio dos Lopes,59.417549167927376,0.0,414.3804022403198,0.0,True
-Brazil.regions.MA:Senador La Rocque,10.035745047372954,0.05167958656330749,85.3815078716967,3.1333913717238766,True
-Brazil.regions.MA:São Benedito do Rio Preto,10.932072983073205,0.3528247966586064,13.893170216215816,2.0598868650590507,True
+Brazil.regions.GO:Itaguaru,12.352625937834942,0.8882636655948553,32.892799950278715,2.478068532835417,True
+Brazil.regions.GO:Jesúpolis,1.6194968553459117,0.6878930817610063,80.59465064036222,1.9190768078142175,True
+Brazil.regions.MA:Araioses,14.07928388746803,0.0,29.57812354490577,0.0,True
+Brazil.regions.MA:Bernardo do Mearim,6.095238095238096,0.0,114.62272254764947,0.0,True
+Brazil.regions.MA:Boa Vista do Gurupi,6.9258312020460355,0.5370843989769821,85.92015341372061,5.7831850864324545,True
+Brazil.regions.MA:Cajapió,20.076182838813153,0.9953889334402566,49.133579541107444,2.8516120835426686,True
+Brazil.regions.MA:Campestre do Maranhão,7.9642857142857135,0.4642857142857143,59.57479748234444,3.2300383629171714,True
+Brazil.regions.MA:Chapadinha,111.51452784503633,0.9467312348668282,117.02511953463845,2.6411807361328723,True
+Brazil.regions.MA:Conceição do Lago-Açu,10.068443804034583,0.04682997118155619,75.99734058501836,2.375825882910021,True
+Brazil.regions.MA:Cururupu,2.908201655379985,0.1474793077501881,10.050565343617203,0.678600529327035,True
+Brazil.regions.MA:Fortuna,1.9333333333333331,0.0,16.071664675736734,0.0,True
+Brazil.regions.MA:Governador Archer,0.0,0.0,6.4353028800200125,0.0,True
+Brazil.regions.MA:Governador Nunes Freire,7.486583184257603,0.8765652951699463,21.044123374621577,2.4454325433671262,True
+Brazil.regions.MA:Graça Aranha,1.0,0.0,29.14888836783912,0.0,True
+Brazil.regions.MA:Guimarães,1.3507109004739337,0.19905213270142183,10.05906497240605,2.910994246479403,True
+Brazil.regions.MA:Icatu,16.43767861068367,0.5286876236535504,44.65857084078311,1.693176940656222,True
+Brazil.regions.MA:Joselândia,1.103734439834025,0.34854771784232363,13.218495195943856,0.9723747184888373,True
+Brazil.regions.MA:Maranhãozinho,5.18925831202046,0.0,36.68004842911758,0.0,True
+Brazil.regions.MA:Mirinzal,7.816184351554127,0.6712218649517684,8.539761089137475,7.809270104713531,True
+Brazil.regions.MA:Porto Rico do Maranhão,4.111954459203036,0.25616698292220114,96.13033457913383,0.7146519261325183,True
+Brazil.regions.MA:Santa Luzia do Paruá,4.448023426061494,0.424597364568082,20.710249161800377,1.1845372145852477,True
 Brazil.regions.MA:São José dos Basílios,0.0,0.0,10.297502868333206,0.0,True
-Brazil.regions.MA:São João do Carú,20.26024723487313,0.4879635653871178,138.44158842322338,1.361315568104667,True
-Brazil.regions.MA:São João dos Patos,1.7087276550998949,0.7886435331230284,2.8093159332303195,2.200149346137616,True
-Brazil.regions.MA:São Luís Gonzaga do Maranhão,0.947867298578199,0.6255924170616115,5.448124137253603,1.7452710756356857,True
-Brazil.regions.MA:São Pedro da Água Branca,2.311062431544359,0.14238773274917854,26.59165801771632,0.39723178337056364,True
-Brazil.regions.MA:Timbiras,10.69894099848714,1.3615733736762479,37.58416471347403,4.675090556504078,True
-Brazil.regions.MA:Tufilândia,0.0,0.0,14.33349830033038,0.0,True
-Brazil.regions.MA:Turilândia,46.9693094629156,0.0,184.92127582693513,0.0,True
-Brazil.regions.MA:Urbano Santos,24.093843670740142,0.9960802397970946,74.39329264030286,2.7788540655519456,True
-Brazil.regions.MG:Aimorés,4.04149377593361,0.34854771784232363,18.82386913807562,0.9723747184888373,True
-Brazil.regions.MG:Almenara,4.612817089452604,0.8628170894526035,14.125042412299125,2.4070779451879023,True
-Brazil.regions.MG:Alto Rio Doce,0.4219948849104859,0.0,5.123842875508096,0.0,True
-Brazil.regions.MG:Belo Vale,3.574923547400612,0.23700305810397554,4.734841970042783,10.755394660253705,True
-Brazil.regions.MG:Bonfim,11.686202513769244,0.09603163395000709,23.913576148056844,11.787396379666175,True
-Brazil.regions.MG:Brasília de Minas,1.2293318233295583,0.7729331823329558,3.7989133310435865,2.156320776490322,True
-Brazil.regions.MG:Caldas,1.6909090909090911,0.0,16.542252943378415,0.0,True
+Brazil.regions.MA:Tufilândia,0.0,0.0,14.333498300330382,0.0,True
+Brazil.regions.MA:Zé Doca,31.580921757770636,0.9445337620578779,49.770093790146824,2.173979823748961,True
+Brazil.regions.MG:Alto Rio Doce,0.6462212486308871,0.14238773274917854,4.498298549324804,0.39723178337056364,True
+Brazil.regions.MG:Belo Vale,3.751415628539071,0.21970554926387317,4.872773362403035,10.710027008303314,True
+Brazil.regions.MG:Bonfim,12.817524115755626,0.09110396570203644,26.921039198305653,11.781797968284149,True
+Brazil.regions.MG:Brasília de Minas,1.2129337539432177,0.7886435331230284,3.577182467335825,2.200149346137616,True
 Brazil.regions.MG:Campos Altos,30.986331420857244,1.2605467431657102,83.15311130924755,3.516659905609459,True
-Brazil.regions.MG:Candeias,1.0,0.0,10.645653326934397,0.0,True
-Brazil.regions.MG:Capitólio,30.82939588255147,0.5872426594667567,77.05166839035466,5.695746957536375,True
-Brazil.regions.MG:Carmo do Paranaíba,1.0,0.0,3.8045592723102697,0.0,True
-Brazil.regions.MG:Catas Altas,0.0,0.0,15.811401105287977,0.0,True
-Brazil.regions.MG:Chácara,0.0,0.0,28.915981079319444,0.0,True
-Brazil.regions.MG:Conceição das Alagoas,11.94748124330118,0.8882636655948553,32.09170128432313,2.478068532835417,True
-Brazil.regions.MG:Delfim Moreira,2.8000000000000003,0.0,44.562235551215885,0.0,True
+Brazil.regions.MG:Carmo da Cachoeira,25.687534422617954,1.1969891683495502,66.9275063574244,3.339347658946995,True
+Brazil.regions.MG:Carmo do Paranaíba,1.25,0.0,4.628852852711866,0.0,True
+Brazil.regions.MG:Catas Altas,0.0,0.0,15.81140110528798,0.0,True
+Brazil.regions.MG:Chácara,0.0,0.0,28.915981079319447,0.0,True
+Brazil.regions.MG:Conceição das Alagoas,12.988163421153113,0.893470790378007,34.9785209424363,2.4925953142084163,True
+Brazil.regions.MG:Curvelo,7.925213675213674,0.826923076923077,8.80572455961298,2.3069412105539877,True
 Brazil.regions.MG:Diogo de Vasconcelos,0.0,0.0,23.51215697312696,0.0,True
-Brazil.regions.MG:Dionísio,3.682299546142209,0.0,61.01531519724786,0.0,True
-Brazil.regions.MG:Espinosa,11.533681683378056,0.05931365626323967,31.799367043360245,0.5168849205576721,True
-Brazil.regions.MG:Espírito Santo do Dourado,4.016152716593246,0.8027410670582477,14.254819859436518,2.2394784964660284,True
-Brazil.regions.MG:Estrela Dalva,1.9555555555555557,0.2,123.35428043513912,8.536064874093043,True
-Brazil.regions.MG:Faria Lemos,2.989913544668588,0.7132564841498559,24.273079104369618,1.9898353582085533,True
+Brazil.regions.MG:Dionísio,3.578005115089514,0.0,60.72435570205274,0.0,True
+Brazil.regions.MG:Frutal,15.936246992782678,1.1246992782678429,50.428007094099186,3.137674091973338,True
 Brazil.regions.MG:Guimarânia,30.986331420857244,1.2605467431657102,78.1798597752353,3.516659905609459,True
-Brazil.regions.MG:Icaraí de Minas,2.3101100052383448,0.5866946045049763,4.51780857050906,1.6367543716138275,True
-Brazil.regions.MG:Itapecerica,6.886725213185693,0.893470790378007,19.28461271415472,2.4925953142084163,True
-Brazil.regions.MG:Jaboticatubas,11.661307609860664,0.8882636655948553,28.331309510852204,2.478068532835417,True
-Brazil.regions.MG:Jeceaba,18.237515736466634,1.0847671002937473,38.75842615229715,3.0262717263042194,True
-Brazil.regions.MG:Ladainha,0.0,0.0,2.7317168960071165,0.0,True
-Brazil.regions.MG:Lima Duarte,0.7101024890190337,0.424597364568082,10.879368473572777,1.1845372145852477,True
-Brazil.regions.MG:Mamonas,0.9582542694497154,0.25616698292220114,9.820392147252658,0.7146519261325183,True
-Brazil.regions.MG:Minas Novas,2.2602201257861636,0.6878930817610063,5.813997925442449,1.9190768078142175,True
-Brazil.regions.MG:Monte Azul,5.957486832204665,0.8465011286681715,13.430873474705743,2.361559851215432,True
-Brazil.regions.MG:Mutum,1.5545023696682465,0.6255924170616115,2.981090885336693,1.7452710756356857,True
-Brazil.regions.MG:Novo Cruzeiro,6.728624535315986,0.08851124092759781,18.104679776608666,0.6261679023567368,True
-Brazil.regions.MG:Piedade dos Gerais,3.9800210304942167,0.7886435331230284,6.497890989860599,2.200149346137616,True
-Brazil.regions.MG:Piracema,0.7142857142857143,0.0,23.958310399509646,0.0,True
-Brazil.regions.MG:Porteirinha,1.362048894062864,0.5413271245634459,4.0671758163234815,1.5101886582883133,True
-Brazil.regions.MG:Santa Maria de Itabira,14.168280871670703,0.9467312348668282,29.75060031248562,2.6411807361328723,True
-Brazil.regions.MG:Santo Antônio do Aventureiro,0.0,0.0,24.97256487673771,0.0,True
-Brazil.regions.MG:São Francisco de Paula,1.0,0.0,27.85215945704296,0.0,True
-Brazil.regions.MG:São João da Mata,0.0,0.0,33.58707494339361,0.0,True
-Brazil.regions.MG:São Sebastião do Oeste,7.530805687203791,0.6255924170616115,152.68330219680195,1.7452710756356857,True
-Brazil.regions.MG:São Vicente de Minas,1.0379506641366223,0.25616698292220114,29.756156684804022,0.7146519261325183,True
-Brazil.regions.MG:Tabuleiro,0.3069053708439898,0.0,42.136940604718355,0.0,True
-Brazil.regions.MG:Várzea da Palma,3.047619047619048,0.0,7.5327908931712,0.0,True
-Brazil.regions.MS:Douradina,1.0,0.0,30.971182945100203,0.0,True
-Brazil.regions.MS:Glória de Dourados,0.0,0.0,7.2453335593534005,0.0,True
-Brazil.regions.MS:Vicentina,0.2857142857142857,1.0,18.28058568177344,16.38806948541462,True
-Brazil.regions.PA:Aurora do Pará,9.819571865443425,0.7553516819571865,33.16996480118301,2.1072720936174822,True
-Brazil.regions.PA:Capitão Poço,15.979639519359148,1.1298397863818426,25.030273876879132,2.04422240289145,True
-Brazil.regions.PA:Garrafão do Norte,16.84016824395373,0.34700315457413244,69.81809723090495,1.4302979633284285,True
-Brazil.regions.PA:Limoeiro do Ajuru,15.227828746177371,1.1376146788990824,55.675676849375314,4.434861519156906,True
-Brazil.regions.PA:Peixe-Boi,0.5133577789418544,0.5866946045049763,27.07784869196468,1.6367543716138275,True
-Brazil.regions.PA:São Domingos do Araguaia,4.165085388994307,0.12333965844402278,18.496423134341143,0.4932611298997779,True
-Brazil.regions.PA:São Domingos do Capim,7.467579250720462,0.7132564841498559,24.740471767295073,2.198196515862711,True
-Brazil.regions.PA:São Sebastião da Boa Vista,15.104747919725895,0.183553597650514,61.895852587091525,1.108950542533175,True
-Brazil.regions.PB:Amparo,5.6,0.0,292.1163768489367,0.0,True
-Brazil.regions.PB:Barra de Santana,2.555555555555556,0.0,39.745867472685916,0.0,True
+Brazil.regions.MG:Jeceaba,20.336808340016038,1.1246992782678429,44.386620697879614,3.137674091973338,True
+Brazil.regions.MG:Mamonas,1.3360995850622408,0.34854771784232363,8.766283301911539,0.9723747184888373,True
+Brazil.regions.MG:Mutum,1.5934539190353145,0.6589147286821705,2.9655747808809396,1.838233306408622,True
+Brazil.regions.MG:Nazareno,6.730624529721595,0.8465011286681715,12.496279792139298,2.361559851215432,True
+Brazil.regions.MG:Piracema,1.0357142857142856,0.0,28.973579106461926,0.0,True
+Brazil.regions.MG:Porteirinha,1.4248297537977999,0.5866946045049763,4.260942855756369,1.6367543716138275,True
+Brazil.regions.MG:Santana de Cataguases,0.6261859582542695,0.25616698292220114,48.052024113987855,0.7146519261325183,True
+Brazil.regions.MG:Santo Antônio do Monte,28.61221734728316,1.2605467431657102,77.49013024209772,3.516659905609459,True
+Brazil.regions.MG:São Domingos do Prata,0.0,0.0,2.9709111302784468,0.0,True
+Brazil.regions.MG:São Francisco de Paula,1.0,0.0,27.852159457042955,0.0,True
+Brazil.regions.MG:São José da Barra,0.0,0.0,10.676410467503105,0.0,True
+Brazil.regions.MG:São João da Mata,0.18181818181818182,0.0,33.07984051232043,0.0,True
+Brazil.regions.MG:São Tomás de Aquino,9.531902206320812,0.11806797853309482,19.753204229399316,11.72111458244175,True
+Brazil.regions.MG:Varzelândia,5.884237933106348,0.15041057480472664,14.491249391855131,2.7761775999899294,True
+Brazil.regions.MG:Wenceslau Braz,1.2428842504743833,0.25616698292220114,109.56368050527878,0.7146519261325183,True
+Brazil.regions.MS:Douradina,1.5,0.0,39.41142602410088,0.0,True
+Brazil.regions.MT:Mirassol d'Oeste,3.078309633486881,0.11415982375325458,11.674265145860916,1.0940487484413288,True
+Brazil.regions.PA:Inhangapi,4.89965736661772,0.5433186490455214,72.82967967152868,3.0072136423704756,True
+Brazil.regions.PA:Irituia,9.01657060518732,0.043227665706051875,28.873237526309865,0.3342326905039128,True
+Brazil.regions.PA:Redenção,13.951104100946372,0.11041009463722398,9.058845066037966,1.400223132819767,True
+Brazil.regions.PA:Tailândia,39.73813020068527,0.7342143906020558,27.517803117757957,2.1750367803917827,True
+Brazil.regions.PB:Barra de Santana,2.4545454545454546,0.0,40.205352515330645,0.0,True
+Brazil.regions.PB:Condado,15.734345351043643,0.25616698292220114,260.4310763281869,0.7146519261325183,True
+Brazil.regions.PB:Ibiara,0.0,0.0,14.076461261581901,0.0,True
+Brazil.regions.PB:Juru,0.0,0.0,7.345003372585898,0.0,True
 Brazil.regions.PB:Passagem,0.0,0.0,38.54960707390941,0.0,True
-Brazil.regions.PB:Paulista,1.0,0.0,13.40847741455146,0.0,True
-Brazil.regions.PB:Serra Branca,25.48558839728291,1.1969891683495502,66.2249904645095,3.339347658946995,True
+Brazil.regions.PB:Paulista,2.3333333333333335,0.0,24.20732193818743,0.0,True
 Brazil.regions.PB:São José da Lagoa Tapada,11.0,0.0,154.48412937090615,0.0,True
-Brazil.regions.PB:São José do Sabugi,21.805555555555557,0.0,547.9360149168434,0.0,True
-Brazil.regions.PE:Bodocó,0.8333333333333334,0.0,2.212636123238988,0.0,True
-Brazil.regions.PE:Cabrobó,3.078197481776011,0.5069582504970179,8.456708940909758,1.4445754965912778,True
+Brazil.regions.PB:Taperoá,4.226296958855099,0.12343470483005366,55.22515441234858,4.058209496175018,True
+Brazil.regions.PE:Bodocó,1.0666666666666667,0.0,2.7850551296904067,0.0,True
 Brazil.regions.PE:Flores,0.3177004538577912,0.0,1.4807216068361766,0.0,True
-Brazil.regions.PE:Inajá,4.390602055800294,0.8027410670582477,11.089258880599722,2.2394784964660284,True
-Brazil.regions.PE:São José do Belmonte,2.1705426356589146,0.6589147286821705,5.894680231534299,1.838233306408622,True
-Brazil.regions.PI:Batalha,13.485477178423238,0.0,52.393213808646145,0.32541624045044737,True
-Brazil.regions.PI:Boa Hora,2.469194312796209,0.6255924170616115,5.068766030794326,1.7452710756356857,True
-Brazil.regions.PI:Bonfim do Piauí,8.319425901201603,0.8628170894526035,14.384470640616762,2.4070779451879023,True
-Brazil.regions.PI:Campo Grande do Piauí,3.0,0.0,64.51628500230967,0.0,True
-Brazil.regions.PI:Cocal,1.1784232365145229,0.6224066390041494,6.130857202345927,2.521900866664195,True
-Brazil.regions.PI:Cocal dos Alves,1.2687052700065062,0.4879635653871178,18.50675704323302,1.361315568104667,True
-Brazil.regions.PI:Francinópolis,4.7328818660647105,0.8465011286681715,35.682634747939744,2.361559851215432,True
-Brazil.regions.PI:Francisco Santos,0.9809663250366033,0.424597364568082,10.494394590410439,1.1845372145852477,True
-Brazil.regions.PI:Ipiranga do Piauí,0.3177004538577912,0.0,6.5165341930547624,0.0,True
-Brazil.regions.PI:Monsenhor Gil,2.1776729559748427,0.6878930817610063,26.704982402582008,1.9190768078142175,True
-Brazil.regions.PI:Monsenhor Hipólito,1.3858165256994144,0.27325959661678595,28.809900067320672,8.46218632896468,True
-Brazil.regions.PI:Morro do Chapéu do Piauí,2.9818181818181815,0.0,57.96896153699378,0.0,True
-Brazil.regions.PI:São José do Divino,29.13347958150523,0.4076949038137023,62.37541847248944,15.188914355520359,True
-Brazil.regions.PI:São José do Piauí,6.213318284424379,0.8465011286681715,7.84909704730052,2.361559851215432,True
-Brazil.regions.PI:São Julião,1.1681508643268728,0.5866946045049763,44.515533408627405,1.6367543716138275,True
-Brazil.regions.PI:Várzea Grande,3.389662027833002,0.7355864811133201,10.866438852214666,2.052131346389511,True
-Brazil.regions.PR:Amaporã,8.551850159890362,0.8154408405664686,212.66640393988123,2.2749081896121317,True
-Brazil.regions.PR:Campina da Lagoa,13.864070255822833,0.10652920962199312,35.09782883987523,4.548666479905087,True
-Brazil.regions.PR:Chopinzinho,20.336808340016038,1.1246992782678429,54.584977674206264,3.137674091973338,True
-Brazil.regions.PR:Cruzeiro do Sul,1.4732754682503424,0.8154408405664686,98.86864153348935,2.2749081896121317,True
-Brazil.regions.PR:Iretama,30.46743165710429,0.3569017887276409,75.21184358782057,5.496719838849433,True
-Brazil.regions.PR:Itaúna do Sul,2.3101100052383448,0.5866946045049763,25.66950425247364,1.6367543716138275,True
-Brazil.regions.PR:Ivaí,2.1245634458672877,0.5413271245634459,4.490391060650629,1.5101886582883133,True
-Brazil.regions.PR:Kaloré,0.0,0.0,21.600454531536528,0.0,True
-Brazil.regions.PR:Mallet,0.2571860816944024,0.0,7.878453335202748,0.0,True
-Brazil.regions.PR:Marilândia do Sul,0.9582542694497154,0.25616698292220114,5.854221215629033,0.7146519261325183,True
-Brazil.regions.PR:Marumbi,11.937299035369774,0.8882636655948553,27.19423301591279,2.478068532835417,True
-Brazil.regions.PR:Palmeira,24.777125022948415,1.1969891683495502,68.84887323129408,3.339347658946995,True
-Brazil.regions.PR:Paranapoema,2.4371069182389933,0.6878930817610063,34.707477003001685,1.9190768078142175,True
-Brazil.regions.PR:Ramilândia,4.396984924623116,0.8154408405664686,14.556720045050177,2.2749081896121317,True
-Brazil.regions.PR:Santa Cruz de Monte Castelo,5.781041388518024,0.8628170894526035,22.787063641345387,2.4070779451879023,True
-Brazil.regions.PR:Santana do Itararé,8.319425901201603,0.8628170894526035,14.071257853099258,2.4070779451879023,True
-Brazil.regions.PR:Santo Inácio,1.0186199342825848,0.14238773274917854,44.41145681614783,0.39723178337056364,True
-Brazil.regions.PR:São João do Caiuá,15.696261682242989,0.03838451268357811,401.25418198695957,12.984922091296841,True
-Brazil.regions.PR:São Manoel do Paraná,25.687534422617954,1.1969891683495502,53.39640072858975,3.339347658946995,True
+Brazil.regions.PE:Itaíba,1.4069591527987897,0.0,6.664549876464149,0.0,True
+Brazil.regions.PE:Jataúba,4.776153494746459,0.052535404294198264,38.58317784586693,2.7861777862518156,True
+Brazil.regions.PE:Pedra,4.101742439415181,0.7830963348688161,29.368420848646963,3.0441320837028614,True
+Brazil.regions.PE:São José do Belmonte,2.2405660377358485,0.6878930817610063,6.050578944726936,1.9190768078142175,True
+Brazil.regions.PI:Cocal,1.390922401171303,0.5490483162518301,7.147240922162695,2.319423921269333,True
+Brazil.regions.PI:Jaicós,1.0,0.0,7.679222354390635,0.0,True
+Brazil.regions.PI:José de Freitas,1.6392978482446208,0.5605889014722537,4.098510711009237,1.614736709818464,True
+Brazil.regions.PI:Miguel Alves,15.931623931623932,0.826923076923077,48.28498201302315,2.3069412105539877,True
+Brazil.regions.PI:Morro do Chapéu do Piauí,3.1467473524962175,0.0,62.01618001248997,0.0,True
+Brazil.regions.PI:Nazária,3.828232069438099,0.8154408405664686,8.552243966039429,2.2749081896121317,True
+Brazil.regions.PI:Nossa Senhora dos Remédios,2.0,0.0,31.72470671745461,0.0,True
+Brazil.regions.PI:Pedro II,2.0328459843781297,0.16282795914279993,4.177257580824973,0.5949315195595705,True
+Brazil.regions.PI:São Julião,1.2464454976303319,0.6255924170616115,49.38648824365799,1.7452710756356857,True
+Brazil.regions.PR:Faxinal,30.75599055011812,1.2605467431657102,82.39024655518651,3.516659905609459,True
+Brazil.regions.PR:Itaúna do Sul,2.6055124892334196,0.6589147286821705,24.845393542485986,1.838233306408622,True
+Brazil.regions.PR:Ivaí,2.469194312796209,0.6255924170616115,4.906829893984851,1.7452710756356857,True
+Brazil.regions.PR:Jaguariaíva,0.0,0.0,0.07907484575412882,0.0,True
+Brazil.regions.PR:Kaloré,0.0,0.0,21.60045453153653,0.0,True
+Brazil.regions.PR:Lapa,28.8390145123186,1.2605467431657102,82.63418648672413,3.516659905609459,True
+Brazil.regions.PR:Manoel Ribas,15.919990777034817,0.15102605487664283,40.483022699657774,4.333731104880452,True
+Brazil.regions.PR:Marilândia do Sul,1.6471449487554906,0.424597364568082,5.126795719995803,1.1845372145852477,True
+Brazil.regions.PR:Marumbi,14.03995157384988,0.9467312348668282,30.107851997735757,2.6411807361328723,True
+Brazil.regions.PR:Morretes,5.884123401053423,0.8465011286681715,11.221436359467361,2.361559851215432,True
+Brazil.regions.PR:Nova Aurora,0.0,0.0,6.75948488425411,0.0,True
+Brazil.regions.PR:Palmeira,30.069692878839014,1.2605467431657102,83.61036051169854,3.516659905609459,True
+Brazil.regions.PR:Prado Ferreira,1.3089622641509433,0.6878930817610063,78.19736158115468,1.9190768078142175,True
+Brazil.regions.PR:Salto do Itararé,0.0,0.0,17.47363514784117,0.0,True
+Brazil.regions.PR:Santa Isabel do Ivaí,2.3607975921745674,0.3291948833709556,73.57860327745826,5.517094524582539,True
+Brazil.regions.PR:São Manoel do Paraná,30.986331420857244,1.2605467431657102,66.1974982217451,3.516659905609459,True
+Brazil.regions.PR:Terra Rica,25.340026999662506,1.2605467431657102,49.95846029472898,3.516659905609459,True
+Brazil.regions.PR:Tijucas do Sul,1.4444444444444444,0.0,11.701818670622549,0.0,True
+Brazil.regions.PR:Três Barras do Paraná,1.6872037914691942,0.6255924170616115,33.14890536017872,1.7452710756356857,True
 Brazil.regions.PR:Verê,29.28113398582518,0.5872426594667567,62.91848419085148,7.173648124142032,True
-Brazil.regions.PR:Vitorino,15.919990777034817,0.9960802397970946,35.165301734028965,2.7788540655519456,True
-Brazil.regions.RJ:Rio Claro,7.0,0.0,40.385773260648044,0.0,True
-Brazil.regions.RJ:Rio das Flores,12.294188861985475,0.9467312348668282,17.63918094926906,2.6411807361328723,True
-Brazil.regions.RJ:Silva Jardim,2.5526641883519208,1.056824216675518,21.530976420058632,5.916355490122416,True
-Brazil.regions.RJ:Trajano de Moraes,18.237515736466634,1.0847671002937473,45.27660791522429,3.0262717263042194,True
-Brazil.regions.RN:Acari,7.815420560747664,0.8628170894526035,14.138578863503739,2.4070779451879023,True
-Brazil.regions.RN:Afonso Bezerra,0.6393861892583119,0.0,14.713324125956486,0.0,True
-Brazil.regions.RN:Bento Fernandes,3.9584285061671993,0.8154408405664686,19.948173183140838,2.2749081896121317,True
-Brazil.regions.RN:Caraúbas,18.05533279871692,1.1246992782678429,43.73292472672991,3.137674091973338,True
+Brazil.regions.PR:Vitorino,18.237515736466634,1.0847671002937473,41.41777779371535,3.0262717263042194,True
+Brazil.regions.RJ:Cardoso Moreira,1.3043478260869565,0.0,15.299784250902661,0.0,True
+Brazil.regions.RJ:Rio Claro,11.2,0.0,63.052943642212085,0.0,True
+Brazil.regions.RJ:Silva Jardim,2.490149724192278,1.1583924349881798,24.482948712348946,6.462299238597373,True
+Brazil.regions.RJ:São Sebastião do Alto,3.026613816534541,0.7729331823329558,7.572947554011239,2.156320776490322,True
 Brazil.regions.RN:Carnaubais,30.792271346608167,1.2605467431657102,78.95898742595318,3.516659905609459,True
 Brazil.regions.RN:Felipe Guerra,6.9879518072289155,0.14238773274917854,139.67093258055112,0.39723178337056364,True
-Brazil.regions.RN:Jucurutu,0.0,0.0,2.676184939018246,0.0,True
-Brazil.regions.RN:Lajes,0.4219948849104859,0.0,4.9005404175687675,0.0,True
-Brazil.regions.RN:Ouro Branco,2.897012578616352,0.6878930817610063,9.90953561352704,1.9190768078142175,True
 Brazil.regions.RN:Parazinho,0.0,0.0,16.305112290353946,0.0,True
-Brazil.regions.RN:Porto do Mangue,0.4743833017077799,0.25616698292220114,20.242164339206138,0.7146519261325183,True
-Brazil.regions.RN:Serra do Mel,2.3101100052383448,0.5866946045049763,4.512496189626939,1.6367543716138275,True
-Brazil.regions.RN:São Rafael,2.3572407492005483,0.18455915943353127,71.75949368634008,9.917240066910665,True
+Brazil.regions.RN:Santa Maria,1.6919431279620856,0.6255924170616115,22.33845366314768,1.7452710756356857,True
 Brazil.regions.RN:Taboleiro Grande,0.6661786237188873,0.4978038067349927,113.18027046868652,34.76250765303263,True
-Brazil.regions.RO:Ouro Preto do Oeste,6.9673123486682815,0.9467312348668282,19.519358582225344,2.6411807361328723,True
-Brazil.regions.RS:Ajuricaba,10.405485986881336,0.8765652951699463,20.59752508110987,2.4454325433671262,True
-Brazil.regions.RS:Alecrim,0.0,0.0,14.016933318173134,0.0,True
-Brazil.regions.RS:Alpestre,4.67741935483871,0.25616698292220114,100.57193617418515,0.7146519261325183,True
-Brazil.regions.RS:Barra do Ribeiro,0.0,0.0,4.62255960248717,0.0,True
-Brazil.regions.RS:Barros Cassal,1.5029277813923227,0.08458035133376707,4.423330613107158,2.7125646052768113,True
-Brazil.regions.RS:Caibaté,0.0,0.0,17.845786361660444,0.0,True
-Brazil.regions.RS:Camargo,0.0,0.0,33.80003865690577,0.0,True
-Brazil.regions.RS:Campinas do Sul,2.5893796004206098,0.7886435331230284,29.939599761222354,2.200149346137616,True
-Brazil.regions.RS:Canudos do Vale,1.4814573845152896,0.4879635653871178,164.17688723620256,1.361315568104667,True
-Brazil.regions.RS:Ciríaco,3.1520172910662825,0.7132564841498559,9.48268267445204,1.9898353582085533,True
-Brazil.regions.RS:Doutor Maurício Cardoso,1.6471449487554906,0.41727672035139096,14.597876533091693,17.322257353879753,True
-Brazil.regions.RS:Doutor Ricardo,0.5900151285930408,0.0,92.52740222839887,0.0,True
-Brazil.regions.RS:Erebango,2.0,0.0,97.51111333722187,0.0,True
-Brazil.regions.RS:Esperança do Sul,1.9166666666666667,0.9166666666666666,96.89123136274982,31.328320802005017,True
-Brazil.regions.RS:Espumoso,5.644007155635062,0.7200357781753131,13.264979167936437,2.576230553569355,True
-Brazil.regions.RS:Fontoura Xavier,1.0,0.0,16.620148517296258,0.0,True
-Brazil.regions.RS:General Câmara,0.8197343453510437,0.25616698292220114,18.38899992893744,0.7146519261325183,True
-Brazil.regions.RS:Jaguari,2.469194312796209,0.6255924170616115,4.505761252030043,1.7452710756356857,True
-Brazil.regions.RS:Lagoa Vermelha,1.4069591527987897,0.0,6.122359876897676,0.0,True
-Brazil.regions.RS:Machadinho,0.832072617246596,0.0,35.80549238180308,0.0,True
-Brazil.regions.RS:Marcelino Ramos,2.427953890489914,0.7132564841498559,27.582202917304777,1.9898353582085533,True
+Brazil.regions.RN:Tibau,28.555518056024297,1.2605467431657102,26.80193945668509,3.516659905609459,True
+Brazil.regions.RO:Ariquemes,86.54721549636804,0.7566585956416465,50.58175745088418,2.4649640174942458,True
+Brazil.regions.RO:Cacoal,17.028436018957347,0.6255924170616115,14.44728691529673,1.7452710756356857,True
+Brazil.regions.RS:Ajuricaba,11.686202513769244,0.8826436943934474,24.02130775935627,2.4623899969129512,True
+Brazil.regions.RS:Anta Gorda,30.073742828214648,1.2605467431657102,68.89146654583611,3.516659905609459,True
+Brazil.regions.RS:Barão de Cotegipe,3.0,0.0,57.6058017509456,0.0,True
+Brazil.regions.RS:Cachoeira do Sul,29.032230847114416,1.2605467431657102,85.64137481326814,3.516659905609459,True
+Brazil.regions.RS:Canudos do Vale,1.5355064027939465,0.5413271245634459,163.80172121300453,1.5101886582883133,True
+Brazil.regions.RS:Glorinha,16.886128819520774,1.041987249945043,39.27968004987757,2.906924954512604,True
+Brazil.regions.RS:Lagoa Vermelha,1.4961636828644502,0.0,6.527264592578782,0.0,True
 Brazil.regions.RS:Maximiliano de Almeida,2.0,0.0,65.75030658523184,0.0,True
-Brazil.regions.RS:Minas do Leão,16.8004616030214,1.0847671002937473,31.032965948604414,3.0262717263042194,True
-Brazil.regions.RS:Montauri,0.0,0.0,66.03333519895297,0.0,True
-Brazil.regions.RS:Mormaço,0.8197343453510437,0.25616698292220114,59.36670477155503,0.7146519261325183,True
-Brazil.regions.RS:Muliterno,0.0,0.0,50.03641242518836,0.0,True
+Brazil.regions.RS:Mormaço,1.091286307053942,0.34854771784232363,58.3125959262139,0.9723747184888373,True
+Brazil.regions.RS:Nonoai,8.62148337595908,0.8056265984654731,81.91132849062352,6.888641286579505,True
 Brazil.regions.RS:Nova Palma,30.986331420857244,1.2605467431657102,76.12429736172666,3.516659905609459,True
-Brazil.regions.RS:Paim Filho,1.6822995461422086,0.0,74.69379923590698,0.0,True
-Brazil.regions.RS:Paraíso do Sul,0.3177004538577912,0.0,9.462771219618077,0.0,True
-Brazil.regions.RS:Rio Pardo,9.509540846750149,0.8765652951699463,26.865421825346303,2.4454325433671262,True
-Brazil.regions.RS:Santiago,30.587242659466757,1.2605467431657102,86.40439648361387,3.516659905609459,True
-Brazil.regions.RS:São José do Herval,0.9,0.0,93.60797825974183,0.0,True
-Brazil.regions.RS:São Lourenço do Sul,16.883130507763322,1.0847671002937473,48.26642053872219,3.0262717263042194,True
-Brazil.regions.RS:Sério,2.333965844402277,0.25616698292220114,213.30447295427794,0.7146519261325183,True
-Brazil.regions.RS:Trindade do Sul,2.896253602305476,0.5511527377521613,84.31679864559604,3.8792934964028096,True
-Brazil.regions.RS:Três Arroios,0.6390041493775934,0.34854771784232363,64.55719550379989,0.9723747184888373,True
-Brazil.regions.RS:Tunas,1.3522825150732127,0.6770025839793282,86.76284182248952,27.400490980339,True
+Brazil.regions.RS:Paim Filho,1.578005115089514,0.0,74.40283974071185,0.0,True
+Brazil.regions.RS:Palmeira das Missões,1.594315245478036,0.6589147286821705,4.22532310615384,1.838233306408622,True
+Brazil.regions.RS:Paraíso do Sul,0.4219948849104859,0.0,9.171811724422945,0.0,True
+Brazil.regions.RS:Progresso,4.2,0.0,80.49015937989827,0.0,True
+Brazil.regions.RS:Ronda Alta,0.0,0.0,6.643282980762439,0.0,True
+Brazil.regions.RS:Santa Tereza,1.215767634854772,0.6514522821576764,156.67402715706558,56.86452522367425,True
+Brazil.regions.RS:Soledade,9.040632054176072,0.8465011286681715,32.343607581411334,2.361559851215432,True
+Brazil.regions.RS:São Jorge,20.138063279002875,1.162032598274209,66.48065649924898,3.2418261913076,True
+Brazil.regions.RS:São Lourenço do Sul,18.866279069767444,1.1246992782678429,53.856509293078126,3.137674091973338,True
+Brazil.regions.RS:São Luiz Gonzaga,0.7833089311859444,0.424597364568082,2.4153175038876276,1.1845372145852477,True
+Brazil.regions.RS:São Valentim do Sul,0.18181818181818182,0.0,41.30600920426875,0.0,True
+Brazil.regions.RS:São Valério do Sul,0.4219948849104859,0.0,32.703267484635674,0.0,True
+Brazil.regions.RS:Trindade do Sul,3.1411530815109345,0.5069582504970179,93.83036404466874,4.716989380571682,True
+Brazil.regions.RS:Três Palmeiras,1.3154406891981447,0.7355864811133201,86.45730899513019,2.052131346389511,True
+Brazil.regions.RS:Tunas,1.234276729559748,0.705188679245283,90.76676208858741,28.570784452993166,True
+Brazil.regions.RS:Vila Maria,29.173979075261556,0.9601754978062775,33.319478524849565,7.057180278019606,True
 Brazil.regions.RS:Áurea,0.0,0.0,25.347520702254506,0.0,True
-Brazil.regions.SC:Abelardo Luz,0.8928571428571429,0.0,7.782469023071715,0.0,True
-Brazil.regions.SC:Alto Bela Vista,1.314787701317716,0.424597364568082,95.86747540446454,1.1845372145852477,True
-Brazil.regions.SC:Botuverá,13.839744998900859,1.041987249945043,33.12717289222825,2.906924954512604,True
-Brazil.regions.SC:Campo Erê,0.6462212486308871,0.14238773274917854,7.136218921235324,0.39723178337056364,True
-Brazil.regions.SC:Grão Pará,0.9582542694497154,0.25616698292220114,9.759900255574188,0.7146519261325183,True
-Brazil.regions.SC:Guatambú,5.859802847754655,0.14238773274917854,154.97422824212197,0.39723178337056364,True
+Brazil.regions.SC:Anchieta,2.5238095238095233,0.0,59.71126639017455,0.0,True
+Brazil.regions.SC:Arvoredo,1.376281112737921,0.424597364568082,172.2322580468224,1.1845372145852477,True
+Brazil.regions.SC:Campo Alegre,0.0,0.0,5.558849800912498,0.0,True
+Brazil.regions.SC:Campos Novos,0.0,0.0,0.0307120063731956,0.0,True
+Brazil.regions.SC:Guatambú,6.62240663900415,0.34854771784232363,183.92720924364855,0.9723747184888373,True
 Brazil.regions.SC:Ibicaré,0.9582542694497154,0.25616698292220114,25.76736400297137,0.7146519261325183,True
-Brazil.regions.SC:Jaborá,2.0428134556574924,0.7553516819571865,155.3704889843359,2.1072720936174822,True
-Brazil.regions.SC:Paial,1.062240663900415,0.34854771784232363,124.44319659004907,0.9723747184888373,True
-Brazil.regions.SC:Palma Sola,4.760164458656921,0.8154408405664686,6.571210367582671,2.2749081896121317,True
-Brazil.regions.SC:Paulo Lopes,24.85643473471636,1.1969891683495502,55.31644055465396,3.339347658946995,True
-Brazil.regions.SC:Ponte Serrada,9.98191823899371,0.6878930817610063,108.84635479494254,1.9190768078142175,True
-Brazil.regions.SC:Tangará,13.760290556900726,0.06295399515738499,26.66955270066746,7.880176223088915,True
-Brazil.regions.SC:Timbé do Sul,29.408538643266958,1.2605467431657102,44.634249142666356,3.516659905609459,True
-Brazil.regions.SC:Vidal Ramos,13.814432989690722,0.893470790378007,28.43581994548624,2.4925953142084163,True
-Brazil.regions.SC:Xavantina,2.4371069182389933,0.6878930817610063,26.247547043845262,1.9190768078142175,True
-Brazil.regions.SC:Zortéa,3.80568720379147,0.6255924170616115,206.6428655144842,1.7452710756356857,True
-Brazil.regions.SC:Águas Mornas,16.559683446911414,1.041987249945043,34.121880035409085,2.906924954512604,True
-Brazil.regions.SE:Gararu,0.8666666666666666,1.0,13.296617615194254,8.617718028266115,True
-Brazil.regions.SP:Adolfo,2.027239392352017,0.5866946045049763,26.780948260725665,1.6367543716138275,True
-Brazil.regions.SP:Altinópolis,0.5238095238095238,0.0,6.625741547347155,0.0,True
-Brazil.regions.SP:Arandu,4.634687735139202,1.0609480812641083,130.6918301314195,27.643933462175788,True
-Brazil.regions.SP:Arealva,3.1520172910662825,0.7132564841498559,4.70048355009139,1.9898353582085533,True
-Brazil.regions.SP:Bananal,0.690537084398977,0.0,15.334276583223614,0.0,True
-Brazil.regions.SP:Brotas,1.9047619047619049,0.0,9.113509013566235,0.0,True
-Brazil.regions.SP:Caiabu,12.817524115755626,0.11173633440514469,25.016450067411654,21.382585249078204,True
-Brazil.regions.SP:Castilho,6.098424499911489,0.8550185873605949,13.407168230867626,2.3853217669426554,True
-Brazil.regions.SP:Cosmorama,1.9853574504737297,0.6589147286821705,17.064852205799557,1.838233306408622,True
-Brazil.regions.SP:General Salgado,0.9642857142857143,0.0,15.282578963679473,0.0,True
-Brazil.regions.SP:Getulina,0.3177004538577912,0.0,5.0889033595557285,0.0,True
-Brazil.regions.SP:Guaraci,0.0,0.0,6.148358644828644,0.0,True
-Brazil.regions.SP:Guzolândia,4.760164458656921,0.8154408405664686,6.671829973558171,2.2749081896121317,True
-Brazil.regions.SP:Gália,0.0,0.0,12.482049358480522,0.0,True
-Brazil.regions.SP:Iacanga,0.4052573932092004,0.14238773274917854,10.494521621880535,0.39723178337056364,True
-Brazil.regions.SP:Itapura,0.5695509309967142,0.14238773274917854,34.767289868714215,0.39723178337056364,True
-Brazil.regions.SP:Itatinga,13.868038740920097,0.9467312348668282,34.728846979913584,2.6411807361328723,True
-Brazil.regions.SP:Itaóca,0.0,0.0,27.258287552174423,0.0,True
-Brazil.regions.SP:Juquiá,2.0458715596330275,0.7553516819571865,2.87252944347566,2.1072720936174822,True
-Brazil.regions.SP:Lavínia,1.2571860816944023,0.0,17.817103092416787,0.0,True
-Brazil.regions.SP:Martinópolis,1.9204892966360856,0.46788990825688076,3.666611986566468,1.5897166964506888,True
-Brazil.regions.SP:Meridiano,0.3177004538577912,0.0,22.392714969053777,0.0,True
-Brazil.regions.SP:Miracatu,7.279728199320499,1.19762174405436,47.57241825318775,7.806543505765181,True
-Brazil.regions.SP:Monções,0.0,0.0,41.477585573763285,0.0,True
-Brazil.regions.SP:Murutinga do Sul,0.0,0.0,19.501784414206732,0.0,True
+Brazil.regions.SC:Irati,28.378782547501757,1.2297677691766362,59.26528869116083,3.4307930511274547,True
+Brazil.regions.SC:Jaborá,1.9637223974763405,0.7886435331230284,162.5230358915896,2.200149346137616,True
+Brazil.regions.SC:Jacinto Machado,0.4166666666666667,0.0,10.811081084806668,0.0,True
+Brazil.regions.SC:Lindóia do Sul,24.8785046728972,0.8628170894526035,723.4623157210615,2.4070779451879023,True
+Brazil.regions.SC:Palma Sola,5.824153815341478,0.8371720408572,8.429710915551642,2.335533661200168,True
+Brazil.regions.SC:Pedras Grandes,23.50192766660547,0.3556085918854416,49.17127416083333,21.811557773648577,True
+Brazil.regions.SC:Ponte Serrada,10.284294234592444,0.7355864811133201,114.25242191978428,2.052131346389511,True
+Brazil.regions.SC:Presidente Castello Branco,2.1162079510703364,0.7553516819571865,413.96725207235613,2.1072720936174822,True
+Brazil.regions.SC:São João do Itaperiú,1.2464454976303319,0.6255924170616115,49.86490963242422,1.7452710756356857,True
+Brazil.regions.SC:Tangará,15.640800175862829,0.14838426027698398,30.611857200735408,7.696837305944986,True
+Brazil.regions.SC:Treviso,0.0,0.0,22.66197952703591,0.0,True
+Brazil.regions.SE:Graccho Cardoso,3.0727272727272723,0.0,69.8302614256877,0.0,True
+Brazil.regions.SP:Américo de Campos,0.9200438116100766,0.14238773274917854,38.40060541152283,0.39723178337056364,True
+Brazil.regions.SP:Angatuba,5.485327313769751,0.15349887133182843,13.172991032775597,1.602289839604292,True
+Brazil.regions.SP:Apiaí,8.918833727344367,0.8699763593380616,23.64735621950338,2.427050800217775,True
+Brazil.regions.SP:Arandu,5.064967250840857,1.0568242166755177,128.63767559262163,27.68928581581828,True
+Brazil.regions.SP:Brotas,1.9285714285714286,0.0,9.211077033111062,0.0,True
+Brazil.regions.SP:Coroados,1.744368779465689,0.5866946045049763,66.5909186928651,1.6367543716138275,True
+Brazil.regions.SP:General Salgado,0.9722222222222222,0.0,15.355598633718188,0.0,True
+Brazil.regions.SP:Guarani d'Oeste,0.0,0.0,47.2102106290975,0.0,True
+Brazil.regions.SP:Guzolândia,5.35042735042735,0.826923076923077,7.7136483887774165,2.3069412105539877,True
+Brazil.regions.SP:Iacanga,0.616698292220114,0.25616698292220114,9.882433411114452,0.7146519261325183,True
+Brazil.regions.SP:Itaí,2.3101100052383448,0.5866946045049763,5.979149382423378,1.6367543716138275,True
+Brazil.regions.SP:Jaborandi,1.245717082721488,0.42829172785119923,49.58437242538558,5.5542981024588585,True
+Brazil.regions.SP:Juquiá,2.114949037372593,0.7729331823329558,2.7885596530834222,2.156320776490322,True
+Brazil.regions.SP:Lavínia,1.217391304347826,0.0,18.064538035503116,0.0,True
+Brazil.regions.SP:Luís Antônio,0.0,0.0,3.9005163760701396,0.0,True
+Brazil.regions.SP:Martinópolis,1.9252548131370326,0.4331823329558324,3.4417683738458607,1.5446224504010413,True
+Brazil.regions.SP:Monções,0.0,0.0,41.47758557376328,0.0,True
+Brazil.regions.SP:Morro Agudo,3.4176516942474393,0.8699763593380616,7.966363621525921,2.427050800217775,True
+Brazil.regions.SP:Nova Campina,0.3177004538577912,0.0,6.5750465345352955,0.0,True
 Brazil.regions.SP:Nuporanga,0.0,0.0,10.665538939108266,0.0,True
-Brazil.regions.SP:Paraibuna,2.0568720379146916,0.6255924170616115,3.104092918932583,1.7452710756356857,True
-Brazil.regions.SP:Paranapanema,1.5402843601895737,0.6255924170616115,4.612196598937861,1.7452710756356857,True
-Brazil.regions.SP:Pedrinhas Paulista,1.151338766006985,0.4586728754365541,93.77148937122406,30.820881500133925,True
-Brazil.regions.SP:Pedro de Toledo,1.9907223326706427,0.7355864811133201,12.284149566716334,2.052131346389511,True
-Brazil.regions.SP:Planalto,1.6,0.0,46.85695494836426,0.0,True
-Brazil.regions.SP:Presidente Bernardes,2.272727272727273,0.0,23.06147958994752,0.0,True
-Brazil.regions.SP:Quatá,3.183064121390113,0.6607929515418502,41.877845356248294,8.133574296787202,True
-Brazil.regions.SP:Quintana,2.923709456372773,0.8154408405664686,27.280304200366082,2.2749081896121317,True
-Brazil.regions.SP:Rancharia,4.926636568848759,0.022573363431151242,12.461102725061037,0.563927381084439,True
-Brazil.regions.SP:Ribeirão Grande,0.0,0.0,10.24292273648705,0.0,True
-Brazil.regions.SP:Sagres,0.0,0.0,38.32863168172908,0.0,True
-Brazil.regions.SP:Santo Antônio da Alegria,6.730624529721595,0.15349887133182843,11.060461315385751,12.070537132476296,True
-Brazil.regions.SP:São João das Duas Pontes,0.9523809523809524,1.0,73.23750628256138,38.940809968847354,True
-Brazil.regions.SP:São João do Pau d'Alho,0.0,0.0,44.71614887137779,0.0,True
-Brazil.regions.SP:São Luiz do Paraitinga,0.4219948849104859,1.0,5.39009669280524,9.357162908206233,True
-Brazil.regions.SP:Ubirajara,1.2405446293494704,0.0,49.84366489500881,0.0,True
+Brazil.regions.SP:Paraibuna,2.1403962101636522,0.6589147286821705,3.0919056442153456,1.838233306408622,True
+Brazil.regions.SP:Parisi,2.6055124892334196,0.6589147286821705,36.21625232498036,1.838233306408622,True
+Brazil.regions.SP:Patrocínio Paulista,0.5123339658444023,0.25616698292220114,11.377975318691659,0.7146519261325183,True
+Brazil.regions.SP:Pedrinhas Paulista,1.136196961760084,0.4133053954950236,95.90497878928885,30.694315786808406,True
+Brazil.regions.SP:Quatá,3.3686614892645044,0.6829602558245774,45.03847752498714,8.345271102974486,True
+Brazil.regions.SP:Quintana,3.4401709401709395,0.826923076923077,26.70542817431658,2.3069412105539877,True
+Brazil.regions.SP:Reginópolis,0.4743833017077799,0.25616698292220114,11.735188389358704,0.7146519261325183,True
+Brazil.regions.SP:Ribeirão Branco,5.656446540880503,0.6878930817610063,47.22508542764575,1.9190768078142175,True
+Brazil.regions.SP:Ribeirão Grande,0.0,0.0,10.242922736487051,0.0,True
+Brazil.regions.SP:Rosana,3.0,0.0,21.244339091514135,0.0,True
+Brazil.regions.SP:Sales,0.0,0.0,13.005503631782702,0.0,True
+Brazil.regions.SP:Santa Maria da Serra,1.090047393364929,0.6255924170616115,62.183317286964126,1.7452710756356857,True
+Brazil.regions.SP:Santo Antônio da Alegria,7.560630200035406,0.14498141263940523,13.156951337150447,12.046775216749074,True
+Brazil.regions.SP:Taquarivaí,0.4347826086956521,0.0,27.761872499673135,0.0,True
+Brazil.regions.SP:União Paulista,0.8105147864184009,0.14238773274917854,58.54695224515725,0.39723178337056364,True
 Brazil.regions.TO:Esperantina,1.0,0.0,15.398642786245556,0.0,True
 Brazil.regions.TO:Sampaio,0.21821631878557873,0.25616698292220114,31.472521997825766,0.7146519261325183,True
 Brazil.regions.TO:Tocantinópolis,3.7369445919631796,0.5310674455655868,5.1512420701586,1.9943003328260442,True
-Sweden.regions.Gotland,18.47890651366858,0.8302396220047249,62.46208406166299,2.790390903329276,True
 United_States_of_America.regions.Alabama:Chambers,190.93553830577116,12.37765777927776,581.1259411108979,37.49556275164522,True
-United_States_of_America.regions.Alabama:Cherokee,20.42102598717516,1.2605467431657102,49.877779806406686,3.516659905609459,True
-United_States_of_America.regions.Alabama:Franklin,34.37343908201148,1.0209247384407696,122.35778918402738,2.8185557320125754,True
-United_States_of_America.regions.Alabama:Geneva,3.6747167561121055,0.8765652951699463,16.75223596908028,2.4454325433671262,True
-United_States_of_America.regions.Alabama:Jackson,17.15912926088424,0.5340870739115761,42.69649741475115,1.2892430006434286,True
-United_States_of_America.regions.Alabama:Lawrence,20.571886601417482,1.2605467431657102,55.49335798461457,3.516659905609459,True
-United_States_of_America.regions.Alabama:Pike,25.184441444481944,1.2605467431657102,82.70997368184679,3.516659905609459,True
+United_States_of_America.regions.Alabama:Chilton,23.1724603442457,0.610867364157948,52.721846877948366,2.0543402445674075,True
 United_States_of_America.regions.Alabama:Tallapoosa,181.53526830914612,14.637192035099563,439.7182790012377,35.90590055011434,True
-United_States_of_America.regions.Arkansas:Carroll,24.788881069669248,1.2297677691766362,65.94226574825329,3.4307930511274547,True
-United_States_of_America.regions.Arkansas:Cleburne,39.65153560580493,2.3396895038812016,177.6274824692556,10.93109581110033,True
+United_States_of_America.regions.Arkansas:Boone,28.43570705366183,1.2605467431657102,79.7495953347174,3.516659905609459,True
 United_States_of_America.regions.Arkansas:Hot Spring,19.696085048936887,1.2605467431657102,53.391897546502896,3.516659905609459,True
-United_States_of_America.regions.Arkansas:Independence,24.768815389807628,1.2605467431657102,70.12052135312645,3.516659905609459,True
-United_States_of_America.regions.Arkansas:Mississippi,9.340370846337432,1.1969891683495502,21.378031595030063,3.339347658946995,True
-United_States_of_America.regions.California:Lake,11.850076939986813,1.041987249945043,39.571686863275886,2.906924954512604,True
-United_States_of_America.regions.Colorado:Gilpin,13.26969581265114,0.893470790378007,20.092699156067745,2.4925953142084163,True
-United_States_of_America.regions.Colorado:Summit,35.927269659129266,0.50371245359433,129.76329598603343,1.580272191901914,True
-United_States_of_America.regions.Colorado:Teller,17.630104623692205,0.5874114073574082,48.90549829073646,3.762204717531862,True
-United_States_of_America.regions.Florida:Baker,20.2657779277759,1.069861626729666,52.79196675802294,4.249727502445141,True
+United_States_of_America.regions.California:Amador,26.288390145123184,1.2605467431657102,74.8528222380079,3.516659905609459,True
 United_States_of_America.regions.Florida:DeSoto,16.071886601417482,2.257003037462032,45.66145600342661,5.7470179796839025,True
-United_States_of_America.regions.Florida:Gilchrist,11.981323495503805,0.9960802397970946,26.410789628229477,2.7788540655519456,True
-United_States_of_America.regions.Florida:Hardee,9.936664320900773,1.2297677691766362,33.222548775388965,3.4307930511274547,True
-United_States_of_America.regions.Florida:Jackson,22.462875464056697,1.2605467431657102,68.71662877631447,3.516659905609459,True
-United_States_of_America.regions.Florida:Okeechobee,13.158954961294864,1.2297677691766362,42.30201443309313,3.4307930511274547,True
+United_States_of_America.regions.Florida:Okeechobee,14.687310158623019,1.2605467431657102,47.06586584734056,3.516659905609459,True
+United_States_of_America.regions.Florida:Suwannee,81.5502868714141,10.37040161997975,166.38882810926637,22.75363760361689,True
+United_States_of_America.regions.Florida:Union,25.437057036787042,1.2605467431657102,48.13880880200518,3.516659905609459,True
 United_States_of_America.regions.Florida:Wakulla,16.456969287883904,0.3569017887276409,45.075895832269794,1.036673857592751,True
-United_States_of_America.regions.Florida:Washington,22.70755990550118,1.2605467431657102,55.868960448906385,3.516659905609459,True
-United_States_of_America.regions.Georgia:Bacon,12.660479244009451,0.2556530543368208,166.6936311101196,5.922354690435882,True
 United_States_of_America.regions.Georgia:Bleckley,14.773877826527167,1.2605467431657102,47.041674159200106,3.516659905609459,True
-United_States_of_America.regions.Georgia:Candler,25.158623017212282,1.2605467431657102,52.20772405205237,3.516659905609459,True
-United_States_of_America.regions.Georgia:Chattahoochee,22.565811677354034,1.2605467431657102,42.51645740269706,3.516659905609459,True
-United_States_of_America.regions.Georgia:Decatur,37.48548768140398,0.31724603442456967,173.87583722306357,1.770458316454713,True
-United_States_of_America.regions.Georgia:Elbert,9.272770853307765,1.162032598274209,81.02581882585692,3.2418261913076,True
-United_States_of_America.regions.Georgia:Evans,7.489862850327968,0.8765652951699463,24.694095596192188,2.4454325433671262,True
+United_States_of_America.regions.Georgia:Evans,9.795819935691318,0.8882636655948553,27.437200074399602,2.478068532835417,True
 United_States_of_America.regions.Georgia:Grady,29.912419844751945,1.756665541680729,159.45924289989566,8.67414476558555,True
-United_States_of_America.regions.Georgia:Greene,23.728990887613904,0.9812689841376981,154.09649449864617,8.596116242861138,True
-United_States_of_America.regions.Georgia:Jeff Davis,7.360958452407124,0.16487140030775996,68.20967432894037,3.0616090947620265,True
-United_States_of_America.regions.Georgia:Lanier,21.346762843068262,0.12051372273047149,44.08227193448797,9.368408342512684,True
-United_States_of_America.regions.Georgia:Long,28.648329395882552,1.2605467431657102,72.38126470956645,3.516659905609459,True
+United_States_of_America.regions.Georgia:Lanier,23.836483293958825,0.11559230509618629,48.63082862417647,9.536978427132226,True
+United_States_of_America.regions.Georgia:Laurens,18.036787040162,0.4817752278096523,39.432711428049075,1.8787271344908412,True
 United_States_of_America.regions.Georgia:Morgan,16.786196422544716,1.2605467431657102,54.25845937692107,3.516659905609459,True
-United_States_of_America.regions.Georgia:Pulaski,14.315558555518054,0.44549443131960853,108.59703872688556,4.4231767996362095,True
-United_States_of_America.regions.Georgia:Rabun,22.125548430644614,0.7053661829227135,51.358224300275765,2.020363076262779,True
-United_States_of_America.regions.Georgia:Tattnall,25.67330408369895,1.2605467431657102,64.6479226633384,3.516659905609459,True
-United_States_of_America.regions.Georgia:Wayne,12.998396150761828,1.1246992782678429,34.65184011738083,3.137674091973338,True
-United_States_of_America.regions.Idaho:Nez Perce,21.34340195747553,12.118292271346608,51.58252829861205,29.59272193588806,True
+United_States_of_America.regions.Georgia:Pierce,25.523962200472493,0.9795815052311846,155.53904126941174,7.825446859086794,True
+United_States_of_America.regions.Georgia:Putnam,17.42440094498819,3.2543030712116097,109.82924987388051,16.725536182560504,True
+United_States_of_America.regions.Georgia:Sumter,256.5020249746878,16.49257509281134,887.89654985234,56.61449385396597,True
+United_States_of_America.regions.Idaho:Bonneville,17.858251771852853,1.2605467431657102,69.62811393602126,3.516659905609459,True
 United_States_of_America.regions.Idaho:Payette,20.917144785690176,0.13162335470806616,49.17834963342616,1.6436599200161828,True
-United_States_of_America.regions.Illinois:Christian,19.871751603104965,3.0374620317246035,55.014904078402985,9.781512687307675,True
-United_States_of_America.regions.Illinois:Douglas,20.758521768477895,1.2605467431657102,45.30213830779517,3.516659905609459,True
-United_States_of_America.regions.Illinois:Jersey,13.669702780441035,0.41227229146692235,32.50429343618706,1.6203647012425342,True
-United_States_of_America.regions.Illinois:Lee,19.973937449879713,0.9542902967121091,61.6348932936352,2.6378823816385952,True
-United_States_of_America.regions.Illinois:Logan,19.983477143381677,1.1969891683495502,51.51282140026726,3.339347658946995,True
-United_States_of_America.regions.Illinois:Macoupin,14.84505232237929,0.7196621993758032,38.998212670112295,2.276873882127899,True
-United_States_of_America.regions.Illinois:Massac,25.04398311048557,1.2297677691766362,54.89872624213431,3.4307930511274547,True
-United_States_of_America.regions.Illinois:McDonough,22.778844795932784,0.7851998305324108,84.09151492288431,2.90632926379821,True
+United_States_of_America.regions.Illinois:Henry,18.785352683091464,1.2605467431657102,40.165960272065135,3.516659905609459,True
+United_States_of_America.regions.Illinois:Jefferson,58.415597433841214,10.590417000801924,152.11066115238353,27.97548221443991,True
+United_States_of_America.regions.Illinois:Jersey,18.514338494018297,0.4600633356790993,43.68407644103418,1.5673880031429088,True
+United_States_of_America.regions.Illinois:Marion,14.903982450219372,1.2605467431657102,40.972503790192654,3.516659905609459,True
+United_States_of_America.regions.Illinois:Massac,27.58521768477894,1.2605467431657102,61.51450440966252,3.516659905609459,True
 United_States_of_America.regions.Illinois:Morgan,16.574924063449203,0.3872764090448869,44.42254510416232,1.1368569598393774,True
-United_States_of_America.regions.Illinois:Perry,14.664595396130492,0.8826436943934474,94.94785277065948,2.4623899969129512,True
+United_States_of_America.regions.Illinois:Ogle,81.3255146810665,0.2969962875464057,134.5375987789835,1.223355376493955,True
 United_States_of_America.regions.Illinois:Randolph,114.68596017549783,0.3687141410732366,372.25971745720943,1.5537333220059997,True
-United_States_of_America.regions.Illinois:Wabash,16.929215212134537,1.041987249945043,42.49662731161479,2.906924954512604,True
-United_States_of_America.regions.Indiana:Brown,19.938238272021604,0.3569017887276409,43.45394304552589,2.598024181166229,True
-United_States_of_America.regions.Indiana:Carroll,9.018562267971651,0.1822477219034762,71.63641774831055,2.377714390597217,True
+United_States_of_America.regions.Illinois:Saline,28.15642929463382,1.2605467431657102,73.3636509416258,3.516659905609459,True
 United_States_of_America.regions.Indiana:Franklin,43.54978062774215,5.037968275396557,242.67502307830227,24.15938815908106,True
-United_States_of_America.regions.Indiana:Fulton,12.023287208909888,0.7703341208234898,36.64314329668605,1.754429604812314,True
 United_States_of_America.regions.Indiana:Greene,54.71093486331421,7.358251771852852,182.35583269121543,23.482896873472562,True
 United_States_of_America.regions.Indiana:Jasper,15.865845426932163,0.4036449544380695,45.240802592010354,1.1882739045138704,True
-United_States_of_America.regions.Indiana:Jay,15.17188599577762,1.2297677691766362,34.16829783327349,3.4307930511274547,True
-United_States_of_America.regions.Indiana:Orange,34.91815727303409,7.726122173472832,251.31505427321414,42.22633569979899,True
-United_States_of_America.regions.Indiana:Owen,19.704691191360112,0.4817752278096523,53.63831428340126,1.5671155047051712,True
-United_States_of_America.regions.Indiana:Perry,6.781618435155414,0.7395498392282958,58.58265120091422,2.4241118074718386,True
+United_States_of_America.regions.Indiana:Posey,22.436213297333783,1.2605467431657102,54.959911560772355,3.516659905609459,True
 United_States_of_America.regions.Indiana:Randolph,13.711609854876814,0.4665879176510294,28.207256151914354,3.4857105011075076,True
-United_States_of_America.regions.Indiana:Spencer,19.038920506700933,0.6315402974114191,42.65041498405387,1.7893902883531247,True
-United_States_of_America.regions.Indiana:Sullivan,20.40499493756328,1.2605467431657102,40.954445380317125,3.516659905609459,True
-United_States_of_America.regions.Indiana:Switzerland,22.44920688491394,1.2605467431657102,80.10034408211557,3.516659905609459,True
+United_States_of_America.regions.Indiana:Ripley,50.77607154910564,2.8315896051299356,202.96372504507687,10.93093347207606,True
 United_States_of_America.regions.Indiana:Tipton,19.464562942963212,0.5425244684441444,46.379140015099544,2.386191345490662,True
-United_States_of_America.regions.Indiana:Union,9.556736166800322,1.1246992782678429,130.1190576653642,3.137674091973338,True
+United_States_of_America.regions.Indiana:Vermillion,25.392338845764428,1.2605467431657102,56.60152714350902,3.516659905609459,True
 United_States_of_America.regions.Indiana:Washington,16.28872764090449,1.180391495106311,56.25645937895522,3.2307587497405783,True
-United_States_of_America.regions.Indiana:White,37.41950725615929,0.8800202497468781,198.00540944046702,2.3736449516055127,True
-United_States_of_America.regions.Iowa:Boone,13.712453594330073,1.2605467431657102,25.44154184811481,3.516659905609459,True
-United_States_of_America.regions.Iowa:Bremer,23.37910776574261,2.448136588948045,109.7589389589489,10.867930374194623,True
-United_States_of_America.regions.Iowa:Dickinson,27.750590617617277,1.2605467431657102,64.97826138008607,3.516659905609459,True
-United_States_of_America.regions.Iowa:Henry,15.89014512318596,0.3695578805264934,61.527404595892364,1.525874408905247,True
-United_States_of_America.regions.Iowa:Jasper,76.82382720215998,1.462200472494094,203.38491890478645,3.966331102700819,True
-United_States_of_America.regions.Iowa:Marion,7.647395031875139,1.041987249945043,20.31554648390152,2.906924954512604,True
-United_States_of_America.regions.Iowa:Sioux,21.166891663854198,1.2605467431657102,58.41917917104512,3.516659905609459,True
-United_States_of_America.regions.Iowa:Webster,26.67651029362133,1.2605467431657102,74.44618710671361,3.516659905609459,True
-United_States_of_America.regions.Kansas:Franklin,22.848464394195073,1.2605467431657102,58.299288062045036,3.516659905609459,True
+United_States_of_America.regions.Iowa:Bremer,23.774552818089774,2.490718866014175,101.05734277039925,11.141379535966214,True
+United_States_of_America.regions.Iowa:Clinton,23.544380695241312,0.6606479919001013,52.82053393598286,2.2245822143699123,True
+United_States_of_America.regions.Iowa:Lee,14.443730493849827,1.1969891683495502,38.42415647127972,3.339347658946995,True
+United_States_of_America.regions.Iowa:Marion,10.080392943063352,1.1246992782678429,26.775877287785693,3.137674091973338,True
+United_States_of_America.regions.Kansas:Crawford,26.912588592642592,0.3872764090448869,75.86152389414579,1.267006821677202,True
+United_States_of_America.regions.Kansas:Harvey,25.21599730003375,1.2605467431657102,69.67025396540217,3.516659905609459,True
 United_States_of_America.regions.Kansas:Miami,27.34812689841377,1.2605467431657102,75.78599755949311,3.516659905609459,True
-United_States_of_America.regions.Kansas:Montgomery,20.253290583867702,0.6884913938575767,54.41762224059292,2.606806546441461,True
-United_States_of_America.regions.Kansas:Reno,14.117111036112048,1.2605467431657102,56.398902923336,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Adair,57.340537138061265,9.154007553503988,345.13386653864126,50.295125283370474,True
-United_States_of_America.regions.Kentucky:Bath,22.23517532586745,0.5773820451624747,45.70776113820334,3.2974265537499376,True
-United_States_of_America.regions.Kentucky:Clinton,18.73696872493986,1.1246992782678429,39.086615063072536,3.137674091973338,True
-United_States_of_America.regions.Kentucky:Grayson,18.05788052649342,1.8292271346608169,98.92907665741845,7.802616782866823,True
-United_States_of_America.regions.Kentucky:Hancock,26.55079311508606,1.2605467431657102,57.055491516458964,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Harlan,0.3177004538577912,0.0,1.270927737693556,0.0,True
-United_States_of_America.regions.Kentucky:Hart,8.088540465759742,0.9960802397970946,8.700758774260782,2.7788540655519456,True
+United_States_of_America.regions.Kentucky:Allen,23.19102261221735,1.2605467431657102,48.647319851835164,3.516659905609459,True
+United_States_of_America.regions.Kentucky:Carter,18.279961649089167,1.162032598274209,46.40448921121536,3.2418261913076,True
+United_States_of_America.regions.Kentucky:Graves,80.29277759028012,10.72561592980088,212.06023004006698,28.660606008798442,True
+United_States_of_America.regions.Kentucky:Harlan,0.6462212486308871,0.14238773274917854,1.7947333280987157,0.39723178337056364,True
+United_States_of_America.regions.Kentucky:Harrison,21.674991562605467,1.2605467431657102,51.137446318250205,3.516659905609459,True
 United_States_of_America.regions.Kentucky:Henry,25.1172797840027,1.2605467431657102,50.83343742824893,3.516659905609459,True
 United_States_of_America.regions.Kentucky:Larue,27.217347283158958,1.2605467431657102,63.65675524141787,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Logan,20.19827877151536,0.875801552480594,48.141194626116096,2.525311079130417,True
+United_States_of_America.regions.Kentucky:Letcher,20.953978906999044,1.162032598274209,53.34902314849744,3.2418261913076,True
 United_States_of_America.regions.Kentucky:Marion,21.520418494768816,1.2605467431657102,54.80707393021271,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Martin,29.40010124873439,1.2605467431657102,69.46725372893593,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Pendleton,21.52340738020929,1.1969891683495502,50.780933195738754,3.339347658946995,True
-United_States_of_America.regions.Kentucky:Rockcastle,23.5124873439082,1.2605467431657102,55.77633409711014,3.516659905609459,True
-United_States_of_America.regions.Kentucky:Trimble,11.102357984994642,0.8882636655948553,23.34973455696988,2.478068532835417,True
-United_States_of_America.regions.Kentucky:Wayne,25.559399257509284,1.2605467431657102,62.13982704573488,3.516659905609459,True
-United_States_of_America.regions.Louisiana:Avoyelles,35.374957813027336,3.4382382720216,87.14080760360393,8.30008573651423,True
-United_States_of_America.regions.Louisiana:Evangeline,19.510799865001687,0.9601754978062775,58.21159643285453,2.6172101515761215,True
-United_States_of_America.regions.Louisiana:Iberville,271.6402294971313,18.672797840027,844.6843488205524,57.795956080342094,True
-United_States_of_America.regions.Louisiana:Jefferson Davis,29.20688491393858,3.5327370907863656,94.44070088432838,11.764148032263774,True
-United_States_of_America.regions.Louisiana:Vermilion,18.974181572730338,0.13381707728653391,54.532965808113936,1.6233466259146516,True
+United_States_of_America.regions.Kentucky:Muhlenberg,139.147148160648,2.1371920350995612,469.6228164893884,7.48915225695769,True
+United_States_of_America.regions.Kentucky:Trimble,13.190072639225182,0.9467312348668282,27.3307289126383,2.6411807361328723,True
+United_States_of_America.regions.Louisiana:Assumption,104.352851839352,1.4537630779615254,533.5741698343271,8.417414181194044,True
+United_States_of_America.regions.Louisiana:Webster,37.06884913938576,1.9735065811677353,94.67559201291016,4.926805596889139,True
 United_States_of_America.regions.Maine:Waldo,21.302396220047246,7.504218697266285,54.75070776249373,18.579103327192772,True
-United_States_of_America.regions.Maryland:Dorchester,35.35010555946516,0.4838142153413089,120.76696186498828,1.9360583520419052,True
-United_States_of_America.regions.Maryland:Garrett,28.197266284171445,1.2605467431657102,76.54610880805502,3.516659905609459,True
-United_States_of_America.regions.Michigan:Alpena,61.626888857506025,5.122157887304055,226.2279219415604,18.6775557228459,True
-United_States_of_America.regions.Michigan:Antrim,24.64579817752278,1.2377657779277758,63.38143177978333,3.4872234931234063,True
-United_States_of_America.regions.Michigan:Benzie,3.358974358974359,0.826923076923077,9.941338596663417,2.3069412105539877,True
+United_States_of_America.regions.Maryland:Dorchester,35.04049949375633,0.4640566992912588,120.68948943973527,1.884710141861396,True
+United_States_of_America.regions.Michigan:Benzie,4.6241534988713315,0.8465011286681715,12.066506960645958,2.361559851215432,True
+United_States_of_America.regions.Michigan:Charlevoix,22.54134323320958,0.6868039149510632,56.0521035117403,1.8182011457675393,True
 United_States_of_America.regions.Michigan:Clare,24.02379345258184,0.2885588930138373,63.561995419917224,1.0775288165926176,True
-United_States_of_America.regions.Michigan:Gladwin,22.205197435032062,0.6353358083023962,52.8138278490878,1.7234136454627076,True
-United_States_of_America.regions.Michigan:Iosco,12.598717516031051,2.997806277421532,49.75260721920307,13.430659792672243,True
-United_States_of_America.regions.Michigan:Manistee,23.862639217009786,1.2605467431657102,62.05104918736059,3.516659905609459,True
-United_States_of_America.regions.Michigan:Mason,4.289831680885405,0.9960802397970946,10.830415981122309,2.7788540655519456,True
-United_States_of_America.regions.Michigan:Oceana,19.861457981775228,0.3341208234897064,43.693548513530295,1.187342024002855,True
-United_States_of_America.regions.Michigan:Otsego,25.636179547755653,3.3547080661491737,144.0286636577359,14.994447571359503,True
-United_States_of_America.regions.Michigan:Roscommon,20.86652041849477,1.2605467431657102,48.23558681304536,3.516659905609459,True
+United_States_of_America.regions.Michigan:Leelanau,26.7963212959838,1.2605467431657102,65.55021549028902,3.516659905609459,True
+United_States_of_America.regions.Michigan:Mason,5.335711288292068,1.0847671002937473,12.30670781561435,3.0262717263042194,True
+United_States_of_America.regions.Michigan:Newaygo,15.803746203172459,1.2605467431657102,56.042583337434344,3.516659905609459,True
+United_States_of_America.regions.Michigan:Tuscola,40.05399932500844,8.993418832264597,55.68337815319459,16.11003274522853,True
 United_States_of_America.regions.Michigan:Wexford,24.913094836314542,0.1940600742490719,68.70226336637799,0.7611190006905466,True
-United_States_of_America.regions.Minnesota:Dodge,20.143604454944313,1.2605467431657102,49.9245827961217,3.516659905609459,True
+United_States_of_America.regions.Minnesota:Clay,61.696422544718196,4.767127910901114,56.695916705081615,6.551310841302225,True
+United_States_of_America.regions.Minnesota:Crow Wing,20.216503543705706,0.5872426594667567,64.93752630121222,2.4816832186538766,True
 United_States_of_America.regions.Minnesota:Douglas,24.649848126898416,1.2605467431657102,69.99996500427255,3.516659905609459,True
-United_States_of_America.regions.Minnesota:Freeborn,17.347818437719916,1.2297677691766362,58.26873437818014,3.4307930511274547,True
-United_States_of_America.regions.Minnesota:Kandiyohi,84.22207222409719,0.7416469794127574,182.13477782173558,2.31547523986962,True
-United_States_of_America.regions.Minnesota:Mille Lacs,2.5921745673438674,0.13544018058690743,5.699622708751424,1.3753252926559347,True
+United_States_of_America.regions.Minnesota:Goodhue,19.95410057374283,1.2605467431657102,59.69617385026877,3.516659905609459,True
+United_States_of_America.regions.Minnesota:Le Sueur,20.31235234559568,1.2605467431657102,56.033536554857534,3.516659905609459,True
 United_States_of_America.regions.Minnesota:Mower,19.116267296658794,1.2605467431657102,53.963265956126996,3.516659905609459,True
-United_States_of_America.regions.Mississippi:Clay,10.697772527843403,0.5458994262571718,66.49237308466662,4.626873528322562,True
-United_States_of_America.regions.Mississippi:Covington,26.0804927438407,0.9947688153898077,222.349033162611,2.0905066121135216,True
-United_States_of_America.regions.Mississippi:George,22.35318933513331,0.610867364157948,54.738783769450194,1.6802117383782618,True
-United_States_of_America.regions.Mississippi:Grenada,13.757509281133986,0.9095511306108675,41.14618275623522,3.098595780698545,True
-United_States_of_America.regions.Mississippi:Itawamba,9.709247384407696,1.0867364157948025,53.35245677427655,5.76670712311771,True
-United_States_of_America.regions.Mississippi:Leflore,37.75059061761728,5.979581505231184,158.20809026693482,22.07705044730391,True
+United_States_of_America.regions.Mississippi:Adams,57.41967600404995,4.244853189335133,202.05607066210504,14.316020140949334,True
 United_States_of_America.regions.Mississippi:Lincoln,71.6842726965913,5.669929125885926,214.31245001142958,16.75828456237797,True
-United_States_of_America.regions.Mississippi:Marion,22.17009787377658,2.88643266959163,119.89263024043838,12.711653556933966,True
-United_States_of_America.regions.Mississippi:Marshall,18.876982787715153,0.4556193047586905,53.288002377309894,1.3448713308775961,True
-United_States_of_America.regions.Mississippi:Monroe,44.188322645966934,4.716503543705704,126.85092179598468,13.432609731659413,True
-United_States_of_America.regions.Mississippi:Neshoba,138.63601079986503,4.649848126898414,496.73349069604745,16.680272967425456,True
-United_States_of_America.regions.Mississippi:Panola,16.812689841376983,0.4826189672629092,48.56148852180273,1.5815084098696581,True
-United_States_of_America.regions.Mississippi:Scott,142.98515018562267,1.0251434357070537,532.9078167156478,3.0441051967460213,True
-United_States_of_America.regions.Mississippi:Simpson,10.2345595680054,1.2605467431657102,37.12064984801287,3.516659905609459,True
-United_States_of_America.regions.Mississippi:Tippah,24.90752615592305,5.3518393520081,121.51998854643473,26.519161557819157,True
-United_States_of_America.regions.Mississippi:Tishomingo,24.348633142085724,1.2605467431657102,54.22593705028662,3.516659905609459,True
-United_States_of_America.regions.Missouri:Adair,23.8830577117786,1.2605467431657102,62.75936978513981,3.516659905609459,True
-United_States_of_America.regions.Missouri:Barry,27.45528180897739,1.2605467431657102,76.57507341938113,3.516659905609459,True
-United_States_of_America.regions.Missouri:Callaway,21.398413769827876,0.3569017887276409,62.352182043425195,1.4970256512276128,True
-United_States_of_America.regions.Missouri:Clinton,23.81370232872089,1.2605467431657102,59.41859926126361,3.516659905609459,True
+United_States_of_America.regions.Mississippi:Pearl River,61.95545055686804,6.350826864664191,79.93869212665307,10.559429258250944,True
+United_States_of_America.regions.Mississippi:Pontotoc,20.552311846101922,0.4252446844414445,55.54654177549685,1.722947938013202,True
+United_States_of_America.regions.Mississippi:Prentiss,16.3396895038812,0.45646304421194733,52.005924853585064,1.9833895713116136,True
+United_States_of_America.regions.Mississippi:Washington,35.4254134323321,1.226797165035437,79.5248330080326,2.228516433814369,True
+United_States_of_America.regions.Missouri:Butler,20.56007424907189,1.2605467431657102,57.70051083824911,3.516659905609459,True
 United_States_of_America.regions.Missouri:Dunklin,19.183260209247383,0.5458994262571718,49.85049717233964,2.388243818925829,True
-United_States_of_America.regions.Missouri:Laclede,1.8444444444444443,0.0,5.172712223152997,0.0,True
-United_States_of_America.regions.Missouri:Lafayette,15.759871751603105,0.37630779615254806,46.67239707642209,1.1301888110519607,True
-United_States_of_America.regions.Missouri:Miller,5.969198088157197,0.8550185873605949,13.95986990973312,2.3853217669426554,True
-United_States_of_America.regions.Missouri:Polk,15.826608254553841,0.9960802397970946,43.84023690428917,2.7788540655519456,True
-United_States_of_America.regions.Missouri:Randolph,25.603273709078636,1.2605467431657102,67.61379289711452,3.516659905609459,True
-United_States_of_America.regions.Montana:Silver Bow,23.953763077961522,1.2605467431657102,66.54608423718308,3.516659905609459,True
+United_States_of_America.regions.Missouri:Johnson,24.26594667566655,1.2605467431657102,49.01358940288425,3.516659905609459,True
+United_States_of_America.regions.Missouri:Lawrence,3.623942745608328,0.4879635653871178,8.943244996884895,1.361315568104667,True
+United_States_of_America.regions.Missouri:Marion,3.890895410082769,0.8465011286681715,9.497354019074871,2.361559851215432,True
+United_States_of_America.regions.Missouri:Pettis,9.815221059736754,1.180391495106311,25.29232386669688,3.3273421417052584,True
+United_States_of_America.regions.Missouri:Phelps,19.48075380914194,1.1246992782678429,55.36112301739387,3.137674091973338,True
+United_States_of_America.regions.Missouri:Webster,21.13347958150523,1.2605467431657102,60.87110247074335,3.516659905609459,True
 United_States_of_America.regions.Nebraska:Adams,64.49291258859265,0.590617617279784,218.29796273425254,2.1045068514380474,True
-United_States_of_America.regions.Nebraska:Buffalo,34.10091123860952,0.34424569692878837,49.793762820540195,1.6714736428234138,True
-United_States_of_America.regions.Nebraska:Cass,28.942794465069188,1.2605467431657102,77.77442078991945,3.516659905609459,True
-United_States_of_America.regions.Nebraska:Platte,120.04640566992913,1.141579480256497,365.0007168986132,3.161215439194121,True
-United_States_of_America.regions.Nebraska:Scotts Bluff,13.891832602092473,1.2605467431657102,38.75871929004766,3.516659905609459,True
-United_States_of_America.regions.Nebraska:Washington,21.612386095173807,0.46321295983800204,63.23160641200195,1.5548877637377705,True
-United_States_of_America.regions.New Hampshire:Carroll,18.673472831589606,1.2605467431657102,54.035613074471144,3.516659905609459,True
-United_States_of_America.regions.New York:Chenango,39.42085723928451,1.2605467431657102,74.30105978416117,3.516659905609459,True
-United_States_of_America.regions.New York:Schoharie,11.738103273709081,1.2605467431657102,31.94036166532239,3.516659905609459,True
-United_States_of_America.regions.New York:Schuyler,25.83243334458319,1.2605467431657102,63.88974181672713,3.516659905609459,True
-United_States_of_America.regions.North Carolina:Alleghany,27.231184610192372,1.2605467431657102,49.01711760049578,3.516659905609459,True
-United_States_of_America.regions.North Carolina:Anson,13.886770165372932,1.2605467431657102,49.48980109402771,3.516659905609459,True
+United_States_of_America.regions.Nebraska:Madison,57.663685453931826,1.09011137360783,166.12296658665974,3.180562570169169,True
+United_States_of_America.regions.New Hampshire:Grafton,16.300539993250084,1.2605467431657102,55.6010829217808,3.516659905609459,True
+United_States_of_America.regions.New York:Cattaraugus,22.17043536955788,0.610867364157948,48.32103296315574,2.6631326002666813,True
+United_States_of_America.regions.New York:Otsego,28.014174822814716,2.8501518731015865,49.80362325676104,3.3928901528298474,True
+United_States_of_America.regions.New York:Steuben,130.95848801889977,6.696760040499494,87.57793406461569,4.996600577898124,True
+United_States_of_America.regions.New York:Wyoming,14.66891663854202,1.14073574080324,37.71789444854284,2.650009444909202,True
+United_States_of_America.regions.North Carolina:Ashe,16.5417661097852,1.1969891683495502,37.6796618518317,3.339347658946995,True
 United_States_of_America.regions.North Carolina:Beaufort,18.8521768477894,1.2605467431657102,57.83580435457196,3.516659905609459,True
-United_States_of_America.regions.North Carolina:Camden,1.933677863910422,0.6589147286821705,7.703711025985168,1.838233306408622,True
-United_States_of_America.regions.North Carolina:Caswell,10.5121498481269,0.9601754978062775,37.820373242296505,2.1878187918267966,True
-United_States_of_America.regions.North Carolina:Clay,27.47249409382383,1.2605467431657102,64.04498277888709,3.516659905609459,True
-United_States_of_America.regions.North Carolina:Madison,3.069164265129683,0.7132564841498559,7.2123876105801745,1.9898353582085533,True
-United_States_of_America.regions.North Carolina:Martin,14.355214309821127,0.8909888626392171,36.29060505986844,3.925542623410719,True
+United_States_of_America.regions.North Carolina:Cherokee,21.14967937900776,0.36196422544718193,55.09858105509211,1.2115243017611803,True
+United_States_of_America.regions.North Carolina:Columbus,96.97046911913601,7.4957813027337155,143.09398513090014,12.445010281800482,True
 United_States_of_America.regions.North Carolina:Montgomery,12.299358758015524,0.060749240634492066,36.41369319460376,1.3458726958706957,True
 United_States_of_America.regions.North Carolina:Perquimans,20.838677016537297,0.49865001687478905,37.80417107174805,5.23001990899349,True
-United_States_of_America.regions.North Carolina:Warren,7.333199679230152,1.1246992782678429,19.99600758328708,3.137674091973338,True
-United_States_of_America.regions.North Carolina:Yancey,5.045643153526971,0.34854771784232363,34.33585262202191,0.9723747184888373,True
-United_States_of_America.regions.Ohio:Adams,16.465717722534084,1.1246992782678429,42.25728126874093,3.137674091973338,True
-United_States_of_America.regions.Ohio:Meigs,14.401660133732996,0.9960802397970946,36.646861807335256,2.7788540655519456,True
-United_States_of_America.regions.Ohio:Paulding,11.163332600571556,1.041987249945043,26.26101560406112,2.906924954512604,True
-United_States_of_America.regions.Ohio:Wyandot,18.224772190347622,0.5661491731353357,49.479221817830876,4.791295178041566,True
-United_States_of_America.regions.Oklahoma:Bryan,24.800033749578134,0.5872426594667567,74.17273198507364,2.113796933010326,True
-United_States_of_America.regions.Oklahoma:Grady,11.458825514681067,0.3569017887276409,48.08050489209774,1.8982106552636666,True
-United_States_of_America.regions.Oklahoma:Kay,21.439082011474852,2.744684441444482,51.47944918983239,5.847435122483816,True
-United_States_of_America.regions.Oklahoma:Marshall,14.72676965644455,0.9960802397970946,34.93127853077936,2.7788540655519456,True
+United_States_of_America.regions.North Carolina:Sampson,5.560242996962539,1.2605467431657102,46.17069546672767,3.516659905609459,True
+United_States_of_America.regions.North Carolina:Yancey,5.029277813923227,0.4879635653871178,35.81025567659496,1.361315568104667,True
+United_States_of_America.regions.North Dakota:Burleigh,28.54471819102261,1.2605467431657102,48.27771324206305,3.516659905609459,True
+United_States_of_America.regions.Ohio:Coshocton,21.176341545730676,1.2605467431657102,59.37254125096209,3.516659905609459,True
+United_States_of_America.regions.Ohio:Gallia,26.652885588930136,0.3995950050624367,71.7775763200004,1.2943891398324292,True
+United_States_of_America.regions.Ohio:Hardin,18.48548768140398,1.2605467431657102,50.466902114358106,3.516659905609459,True
+United_States_of_America.regions.Ohio:Henry,11.090349527368653,1.041987249945043,25.571570471628174,2.906924954512604,True
+United_States_of_America.regions.Ohio:Hocking,11.245640829833269,0.2507318314878453,50.91035061157291,1.555673231877955,True
+United_States_of_America.regions.Ohio:Pike,28.979919001012487,1.2605467431657102,78.48396249455246,3.516659905609459,True
+United_States_of_America.regions.Oklahoma:Carter,29.136854539318257,0.7416469794127574,83.31241351807908,2.4381128711413473,True
+United_States_of_America.regions.Oklahoma:Cherokee,19.621160985487684,0.34424569692878837,57.36861982967833,1.6334754794489432,True
+United_States_of_America.regions.Oklahoma:Delaware,44.07036787040162,8.025649679379008,98.35128796512946,18.211855037318585,True
+United_States_of_America.regions.Oklahoma:Garfield,18.49038137023287,0.3341208234897064,64.29097191399485,1.9993218558256474,True
+United_States_of_America.regions.Oklahoma:Logan,22.078974012824844,0.9947688153898077,68.11256854501923,2.9630827508409623,True
+United_States_of_America.regions.Oklahoma:Mayes,19.056361795477557,1.8013837327033415,55.70858578227308,3.9495445012515806,True
 United_States_of_America.regions.Oklahoma:Okmulgee,22.559061761727982,1.2605467431657102,63.64812840160239,3.516659905609459,True
-United_States_of_America.regions.Oklahoma:Pontotoc,24.66419169760378,0.147654404319946,69.54483129246177,0.6097213964522011,True
-United_States_of_America.regions.Oklahoma:Stephens,19.660647991900102,0.3695578805264934,57.93523662107162,1.4514607710123817,True
-United_States_of_America.regions.Oregon:Clatsop,22.62622342220722,1.2605467431657102,65.68862062351292,3.516659905609459,True
-United_States_of_America.regions.Oregon:Hood River,26.081673979075262,1.2605467431657102,64.7013687947688,3.516659905609459,True
-United_States_of_America.regions.Oregon:Lincoln,27.372595342558217,1.2605467431657102,79.83701248261255,3.516659905609459,True
-United_States_of_America.regions.Pennsylvania:Bedford,16.87867026662167,0.34424569692878837,52.65940906621096,1.6032347338818398,True
-United_States_of_America.regions.Pennsylvania:Bradford,16.362301721228484,2.494937563280459,54.436654523861364,3.3355461041381917,True
-United_States_of_America.regions.Pennsylvania:Huntingdon,35.75008437394533,1.2605467431657102,60.8871361387621,3.516659905609459,True
-United_States_of_America.regions.Pennsylvania:Susquehanna,37.01147485656429,5.2615592305096195,90.0065881550997,12.754897807587811,True
-United_States_of_America.regions.Pennsylvania:Warren,30.938238272021604,0.5872426594667567,86.56080639746253,1.7986530068343478,True
-United_States_of_America.regions.South Carolina:Abbeville,14.013668579142763,1.2605467431657102,29.202201997983614,3.516659905609459,True
+United_States_of_America.regions.Oklahoma:Ottawa,18.217853526830915,0.5948363145460682,52.64369859232692,1.6926485633298414,True
+United_States_of_America.regions.Oklahoma:Sequoyah,23.24974687816402,1.2602092473844078,66.99183845444338,2.564871195232633,True
+United_States_of_America.regions.Oregon:Josephine,20.678366520418493,0.46321295983800204,69.7650162313271,2.605285891952906,True
+United_States_of_America.regions.Pennsylvania:Clarion,19.968444144448195,0.46321295983800204,56.21936532486031,1.4423225745107846,True
+United_States_of_America.regions.Pennsylvania:Greene,20.503543705703677,0.9264259196760041,57.22302701121898,2.5945148348460485,True
+United_States_of_America.regions.Pennsylvania:Jefferson,13.737935375577003,1.0847671002937473,40.97341537283092,3.0262717263042194,True
+United_States_of_America.regions.Pennsylvania:Juniata,35.18393520080999,0.8302396220047249,181.69031633123274,2.019133951678984,True
 United_States_of_America.regions.South Carolina:Chester,16.528855889301383,1.2605467431657102,44.63943737635362,3.516659905609459,True
 United_States_of_America.regions.South Carolina:Chesterfield,17.48531893351333,0.8614579817752279,38.951263260883024,2.6424238456084015,True
 United_States_of_America.regions.South Carolina:Clarendon,108.35588930138374,9.377151535605806,326.6552881227952,28.00711629463211,True
 United_States_of_America.regions.South Carolina:Edgefield,13.77657779277759,0.4303071211609855,29.808071250939623,1.7475459104084,True
-United_States_of_America.regions.South Carolina:Jasper,19.815052311846102,0.6353358083023962,51.87383455563988,1.7494121808359824,True
+United_States_of_America.regions.South Carolina:Marion,11.062267971650353,0.25480931488356395,32.74902771920636,1.4262766441158063,True
 United_States_of_America.regions.South Carolina:Marlboro,11.55332433344583,1.1036112048599394,43.128880114358076,2.915788712157544,True
 United_States_of_America.regions.South Carolina:Newberry,16.563449206884915,0.41258859264259196,47.91121234975025,1.3107333954036355,True
-United_States_of_America.regions.South Carolina:Saluda,7.170941613229835,1.2605467431657102,36.61224030146251,3.516659905609459,True
-United_States_of_America.regions.South Carolina:Union,19.674316571042862,1.2605467431657102,53.51004046278305,3.516659905609459,True
-United_States_of_America.regions.South Dakota:Brookings,22.597030037124537,1.2605467431657102,62.66340496520357,3.516659905609459,True
-United_States_of_America.regions.South Dakota:Davison,28.853526830914618,0.4076949038137023,73.89099400594709,1.8895124842660713,True
-United_States_of_America.regions.South Dakota:Yankton,19.697772527843405,1.2605467431657102,62.972801277364844,3.516659905609459,True
 United_States_of_America.regions.Tennessee:Cannon,23.07644279446507,1.2605467431657102,50.91909182439385,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Carroll,20.251603104961188,0.6606479919001013,51.68941605402692,1.787601106770239,True
-United_States_of_America.regions.Tennessee:Crockett,3.3974358974358965,0.5277777777777778,48.983947395522094,2.740052194117077,True
-United_States_of_America.regions.Tennessee:Giles,25.124704691191358,1.2605467431657102,66.64502833541242,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Hardin,27.294127573405333,1.2605467431657102,71.16821238924736,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Henderson,11.332983634074694,1.0847671002937473,27.572157265548448,3.0262717263042194,True
+United_States_of_America.regions.Tennessee:Chester,24.26172797840027,1.2605467431657102,53.94884102325949,3.516659905609459,True
+United_States_of_America.regions.Tennessee:Fayette,19.77033412082349,0.5425244684441444,48.44006880589095,1.7710486574107718,True
+United_States_of_America.regions.Tennessee:Henderson,15.568552253116014,1.162032598274209,38.95244761516433,3.2418261913076,True
 United_States_of_America.regions.Tennessee:Henry,22.111036112048602,1.2605467431657102,59.99189318547686,3.516659905609459,True
 United_States_of_America.regions.Tennessee:Johnson,27.573742828214648,1.2605467431657102,65.06804916354497,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Lake,127.54531126871554,0.8699763593380616,1932.7257253337152,2.427050800217775,True
-United_States_of_America.regions.Tennessee:Lauderdale,12.047061928219563,1.2297677691766362,34.520019215759014,3.4307930511274547,True
-United_States_of_America.regions.Tennessee:Lewis,30.073742828214648,1.2605467431657102,75.52854492534574,3.516659905609459,True
+United_States_of_America.regions.Tennessee:Lauderdale,13.580323995950053,1.2200472494093821,36.78039444768172,3.358662426748896,True
 United_States_of_America.regions.Tennessee:Lincoln,21.74569692878839,1.2605467431657102,59.886211231776876,3.516659905609459,True
 United_States_of_America.regions.Tennessee:Marion,20.230340870739113,0.3535268309146136,55.752087039226566,1.1721343871208503,True
-United_States_of_America.regions.Tennessee:McNairy,23.930138373270335,1.2605467431657102,62.68222608690926,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Moore,5.949725615153125,0.8550185873605949,24.383563681102952,2.3853217669426554,True
+United_States_of_America.regions.Tennessee:Meigs,22.99611879851502,1.2605467431657102,22.90617933358862,3.516659905609459,True
 United_States_of_America.regions.Tennessee:Obion,21.227472156598044,0.39149510631117107,55.74083838729654,1.261295103314072,True
-United_States_of_America.regions.Tennessee:Overton,24.541005737428282,1.2605467431657102,60.824009266148316,3.516659905609459,True
-United_States_of_America.regions.Tennessee:Sequatchie,23.93833567909922,1.2297677691766362,49.77165269830083,3.4307930511274547,True
+United_States_of_America.regions.Tennessee:Sequatchie,26.36297671279109,1.2605467431657102,55.66741830412303,3.516659905609459,True
+United_States_of_America.regions.Tennessee:Smith,17.969119136010804,0.4286196422544718,46.325588031827294,1.5511632388783165,True
 United_States_of_America.regions.Tennessee:Weakley,16.459669254134322,1.2605467431657102,44.338347120522116,3.516659905609459,True
-United_States_of_America.regions.Texas:Anderson,10.329873328641797,1.2297677691766362,34.05013739083698,3.4307930511274547,True
-United_States_of_America.regions.Texas:Austin,22.775902801214986,1.2605467431657102,60.8701721324505,3.516659905609459,True
-United_States_of_America.regions.Texas:Burnet,17.44178197772528,1.2605467431657102,57.7315428295719,3.516659905609459,True
-United_States_of_America.regions.Texas:Cherokee,19.464731690853863,0.41258859264259196,64.04480377277618,1.9059807457053473,True
-United_States_of_America.regions.Texas:Cooke,5.963290460878885,0.8882636655948553,18.3101102631201,2.478068532835417,True
-United_States_of_America.regions.Texas:Hopkins,27.27640904488694,1.2605467431657102,76.51320763993016,3.516659905609459,True
-United_States_of_America.regions.Texas:Jim Wells,22.193133835138607,1.1969891683495502,63.32444961369705,3.339347658946995,True
-United_States_of_America.regions.Texas:Kerr,23.233110485573537,1.2297677691766362,70.20741218384975,3.4307930511274547,True
-United_States_of_America.regions.Texas:Lamar,11.18511643604455,1.2605467431657102,27.846885376839968,3.265250270081981,True
-United_States_of_America.regions.Texas:Morris,26.71700978737766,1.2605467431657102,51.11608552768418,3.516659905609459,True
-United_States_of_America.regions.Texas:Navarro,16.279615254809315,0.6682416469794128,50.01689575182562,1.3937859924751517,True
-United_States_of_America.regions.Texas:Polk,13.668410394870067,1.2605467431657102,49.38256096817164,3.516659905609459,True
-United_States_of_America.regions.Texas:Rains,11.92524115755627,0.8882636655948553,26.18145250657011,2.478068532835417,True
-United_States_of_America.regions.Texas:San Jacinto,24.081167735403312,1.2605467431657102,64.34276503065124,3.516659905609459,True
-United_States_of_America.regions.Texas:Starr,23.894870064124195,1.2605467431657102,75.6146287930488,3.516659905609459,True
+United_States_of_America.regions.Texas:Hardin,55.80070874114074,1.3236584542693215,78.76085540198932,1.232993422930682,True
+United_States_of_America.regions.Texas:Rains,14.02905569007264,0.9467312348668282,31.74252029506734,2.6411807361328723,True
+United_States_of_America.regions.Texas:Rusk,14.183260209247385,0.6606479919001013,49.38989808856073,2.4140264621186502,True
+United_States_of_America.regions.Texas:Van Zandt,21.81994600067499,0.3535268309146136,69.80899190337101,1.9138680479471564,True
 United_States_of_America.regions.Texas:Washington,81.47705028687142,10.907863651704355,226.97740730652959,30.395840937973976,True
-United_States_of_America.regions.Vermont:Addison,31.040161997975023,0.45815052311846105,84.47506796825988,1.2937124300493634,True
-United_States_of_America.regions.Vermont:Bennington,14.234728315896053,0.7138035774552818,39.49287968966479,1.987778092576331,True
-United_States_of_America.regions.Vermont:Caledonia,22.321802227472155,1.2605467431657102,59.334743489266,3.516659905609459,True
+United_States_of_America.regions.Texas:Wilson,15.06311171110361,1.0875801552480595,48.40385016103168,1.5415358182989316,True
 United_States_of_America.regions.Vermont:Lamoille,21.004049949375634,0.3569017887276409,59.19692284613695,1.2671284523546698,True
-United_States_of_America.regions.Vermont:Orange,26.872932838339523,1.2605467431657102,71.71717052423462,3.516659905609459,True
-United_States_of_America.regions.Vermont:Windham,31.63803577455282,0.7408032399595006,74.49123725285808,1.4743977529829266,True
-United_States_of_America.regions.Virginia:Appomattox,8.540778193009453,1.041987249945043,63.4158857789884,2.906924954512604,True
-United_States_of_America.regions.Virginia:Caroline,10.771812080536915,0.3969319271332694,38.723743001706474,1.5646684075825188,True
-United_States_of_America.regions.Virginia:Dinwiddie,6.10145261701637,0.9960802397970946,28.642947516704787,2.7788540655519456,True
-United_States_of_America.regions.Virginia:Essex,10.642588412340105,0.8465011286681715,146.17912707869104,2.361559851215432,True
-United_States_of_America.regions.Virginia:Giles,13.483842602769842,1.041987249945043,29.079237643141045,2.906924954512604,True
-United_States_of_America.regions.Virginia:Lee,24.871076611542357,1.2605467431657102,61.167000990225496,3.516659905609459,True
-United_States_of_America.regions.Virginia:Mecklenburg,38.844751940600744,4.215322308471144,142.33738169786997,14.04766779604682,True
+United_States_of_America.regions.Vermont:Rutland,20.776915288558893,0.5872426594667567,52.28443099438091,2.3596011100930494,True
+United_States_of_America.regions.Vermont:Windsor,15.87040161997975,0.43705703678704017,49.94199591536048,1.273516801397889,True
+United_States_of_America.regions.Virginia:Amherst,23.26442794465069,1.1508606142423219,62.930923892615596,3.2517106018562325,True
+United_States_of_America.regions.Virginia:Botetourt,18.719203509956127,1.166047924400945,51.70902057505111,3.6016119746168966,True
+United_States_of_America.regions.Virginia:Caroline,13.890745953553836,0.36418015482054883,45.073855838892044,1.5116278552177236,True
+United_States_of_America.regions.Virginia:Carroll,13.10496118798515,1.2605467431657102,27.24743957031064,3.516659905609459,True
+United_States_of_America.regions.Virginia:Dinwiddie,5.688417960553923,1.0847671002937473,28.334046043531167,3.0262717263042194,True
+United_States_of_America.regions.Virginia:King William,24.697097536280797,0.854708066149173,47.74012052452281,2.837453349614494,True
 United_States_of_America.regions.Virginia:Northampton,38.36145798177523,1.2816402294971314,504.770417202651,9.987375119097024,True
-United_States_of_America.regions.Virginia:Nottoway,22.37934525818427,1.2605467431657102,40.926054844021635,3.516659905609459,True
-United_States_of_America.regions.Virginia:Richmond,111.21955896452542,1.1639501438159159,1430.1361582197324,15.380556912560435,True
-United_States_of_America.regions.Virginia:Russell,13.2974280061552,1.041987249945043,32.89029370836001,2.906924954512604,True
-United_States_of_America.regions.Washington:Walla Walla,19.370570367870403,1.2605467431657102,68.47186037292325,3.516659905609459,True
-United_States_of_America.regions.West Virginia:Barbour,24.415640394088665,0.4600633356790993,56.42747343018079,2.1097479250509847,True
-United_States_of_America.regions.West Virginia:Lincoln,6.039719626168225,0.8628170894526035,10.90960661815643,2.4070779451879023,True
-United_States_of_America.regions.West Virginia:Mingo,9.081693500298153,0.10733452593917711,22.41564200750024,1.75495945248808,True
+United_States_of_America.regions.Virginia:Northumberland,24.526662166722915,0.9601754978062775,46.972769782452566,2.648203073602584,True
+United_States_of_America.regions.Virginia:Pittsylvania,21.079142760715495,0.5644616942288222,71.1295529563278,2.3633228460328137,True
+United_States_of_America.regions.Virginia:Prince Edward,16.838508268646642,0.3602767465406682,23.209451283237385,2.334024318087476,True
+United_States_of_America.regions.Virginia:Russell,16.453488372093027,1.1246992782678429,41.3882032961816,3.137674091973338,True
+United_States_of_America.regions.Virginia:Smyth,23.223590955113057,1.2605467431657102,62.534289128786746,3.516659905609459,True
+United_States_of_America.regions.Virginia:Wythe,22.84238947013162,0.5011812352345596,60.328289874856836,1.4616555510888791,True
+United_States_of_America.regions.West Virginia:Fayette,5.074485942089802,0.9106168694922366,13.518944089223849,2.3873745140697746,True
+United_States_of_America.regions.West Virginia:Jackson,51.56091798852514,5.854708066149173,203.133466545733,21.36718025368025,True
+United_States_of_America.regions.West Virginia:Mason,23.148666891663854,1.2605467431657102,59.91481829751675,3.516659905609459,True
+United_States_of_America.regions.West Virginia:Mingo,11.426848874598072,0.09646302250803859,28.809172410332767,1.725853462139369,True
 United_States_of_America.regions.West Virginia:Pleasants,30.247215659804255,1.2605467431657102,68.32398756603433,3.516659905609459,True
-United_States_of_America.regions.West Virginia:Preston,22.100742490718865,1.2605467431657102,60.19669835120575,3.516659905609459,True
-United_States_of_America.regions.Wisconsin:Barron,16.78811121764142,1.162032598274209,50.13698590447656,3.2418261913076,True
+United_States_of_America.regions.Wisconsin:Chippewa,20.113061086736415,1.2605467431657102,64.76138594267861,3.516659905609459,True
 United_States_of_America.regions.Wisconsin:Door,18.73675329058387,0.8201147485656429,44.674208910251984,3.945005601501585,True
-United_States_of_America.regions.Wisconsin:Dunn,24.047418157273032,1.2605467431657102,70.61588725827282,3.516659905609459,True
-United_States_of_America.regions.Wisconsin:Green Lake,4.313632781717889,0.8699763593380616,6.049410361573788,2.427050800217775,True
-United_States_of_America.regions.Wisconsin:Kewaunee,5.8397449989008585,0.18135854033853596,46.02928688832229,1.9420846409410704,True
-United_States_of_America.regions.Wisconsin:Monroe,22.216503543705702,0.7703341208234898,65.82866901616693,2.456809469222153,True
-United_States_of_America.regions.Wisconsin:Polk,9.651125401929262,0.8882636655948553,28.83164934422843,2.478068532835417,True
-United_States_of_America.regions.Wisconsin:Shawano,6.918805132317563,1.1246992782678429,22.2333259118884,3.137674091973338,True
-United_States_of_America.regions.Maryland,5724.494600067499,199.5528180897739,18.6527893205839,2.0001280010203923,False
-United_States_of_America.regions.New York:Westchester,13306.96608167398,326.05383057711776,1289.4828413251078,31.425783561428254,False
-Brazil.regions.AM:Amaturá,91.89065606361831,1.540755467196819,822.283325058505,17.68037514034887,False
-Brazil.regions.AM:Itapiranga,43.97720125786164,0.9119496855345911,512.4579965309301,15.569366210283697,False
-Brazil.regions.AM:Rio Preto da Eva,194.2701019252548,3.465458663646659,583.5644077029701,10.553643676022993,False
-United_States_of_America.regions.Colorado:Logan,127.3390145123186,0.38558893013837325,621.7530734588987,1.946499937941958,False
-United_States_of_America.regions.Montana:Toole,21.136179547755656,3.8457644279446512,472.4288294067109,104.30241043033567,False
-United_States_of_America.regions.Oklahoma:Texas,172.91765102936213,0.7981775227809653,935.7848064233518,6.568980467000137,False
-United_States_of_America.regions.Texas:Oldham,29.176510293621334,0.39149510631117107,81.52864531375766,43.064789076278274,False
-United_States_of_America.regions.Utah:Summit,250.63077961525482,1.2605467431657102,581.3476488036404,3.516659905609459,False
-Dominican_Republic,1587.57256159298,79.58403644954439,73.99532551745733,2.75770316074683,False
-Switzerland,13090.263584205197,331.31538980762735,66.03267036635164,1.9995188922968987,False
-Sweden.regions.Sörmland,572.489875126561,81.05889301383733,115.92718760761294,24.532692668192958,False
-United_States_of_America.regions.Louisiana:St. Bernard,306.6868039149511,9.79497131285859,627.6298949593244,19.89899979997119,False
-United_States_of_America.regions.Louisiana:West Baton Rouge,46.306614917313524,10.854708066149175,206.6006796469522,42.26174481502112,False
-United_States_of_America.regions.Ohio:Pickaway,1221.1036112048598,10.838677016537293,2054.383348154489,17.49966419669816,False
-United_States_of_America.regions.Pennsylvania:Montgomery,1613.164529193385,74.75869051636856,109.23583981821851,6.913791244894782,False
-Israel,3383.0852176847793,16.832602092473845,50.793564689975284,3.3192257473179274,False
-United_States_of_America.regions.New Jersey,40290.921869726626,1564.6439419507258,366.0726332174802,15.116955202840494,False
-United_States_of_America.regions.Florida,10658.143604454945,240.65558555518055,39.46205338720717,2.391292228576606,False
-United_States_of_America.regions.New York,106178.38069524131,5805.965237934526,458.27880342560223,27.263130793472,False
-United_States_of_America.regions.Connecticut:Fairfield,4779.902294971313,248.05180560242997,421.01926423985316,23.39251208014154,False
-United_States_of_America.regions.Rhode Island:Providence,4736.051468106648,126.4250759365508,657.0172534439994,16.507814684734296,False
-United_States_of_America.regions.New Jersey:Middlesex,5542.859939250759,213.15642929463382,586.5562095529071,22.845672109269948,False
-United_States_of_America.regions.New Jersey:Passaic,4789.510631117111,131.49004387445157,871.8535892389608,23.59054613939592,False
-Brazil.regions.RS:Santa Tereza,1.1043643263757115,0.7438330170777988,156.30460699046876,57.12224801603058,False
-Brazil.regions.RS:Tio Hugo,6.246662216288385,0.11348464619492658,77.28479134493352,29.814101449120024,False
-Brazil.regions.SC:Lindóia do Sul,24.76410835214447,0.8465011286681715,690.5684670721059,2.361559851215432,False
-United_States_of_America.regions.Georgia:Sumter,256.5020249746878,16.49257509281134,887.89654985234,56.61449385396597,False
-United_States_of_America.regions.Iowa:Marshall,382.13736078299024,0.8639892001349982,962.6698956327872,2.131383172762484,False
-United_States_of_America.regions.Kentucky:Graves,80.29277759028012,10.72561592980088,212.06023004006698,28.660606008798442,False
-United_States_of_America.regions.Louisiana:Assumption,104.352851839352,1.4537630779615254,533.5741698343271,8.417414181194044,False
-United_States_of_America.regions.Massachusetts:Hampden,2022.087242659467,182.6088423894701,351.34354769889376,36.09726300937226,False
-United_States_of_America.regions.Massachusetts:Plymouth,2609.700641241984,119.59669254134324,417.6947427176756,20.232606516061978,False
-United_States_of_America.regions.Virginia:Emporia city,12.336049856184083,1.1188878235858102,539.406710584629,36.585810604133975,False
-Brazil.regions.PE:Fernando de Noronha,20.658116773540332,1.2605467431657102,734.0572194603807,3.516659905609459,False
-Brazil.regions.CE,3597.2716841039487,214.33682078974013,49.49326345159337,1.308295989772188,False
-United_States_of_America.regions.Georgia,7230.968781640229,266.1542355720553,23.495466512943576,1.2692144532528795,False
-United_States_of_America.regions.Michigan,21664.823320958487,1519.8970637867028,128.27427034738568,12.220647804938064,False
-United_States_of_America.regions.Tennessee,3695.6949038137022,71.82922713466083,36.864442000187,2.4478351824255316,False
-Denmark,2990.1226797165036,108.0939925750928,37.92547004039089,1.6331131890043753,False
-Puerto_Rico,1488.701316233547,78.89875126560919,51.522766662537194,1.1321663734273824,False
-Sweden.regions.Stockholm,2589.7539655754304,281.81488356395545,32.639281960211584,9.70152039338459,False
-United_States_of_America.regions.Washington:King,2434.7516031049613,167.18612892338842,34.89291342910258,4.189057802187596,False
-United_States_of_America.regions.Ohio:Marion,1349.9802564967936,1.98025649679379,2033.860160006499,2.4837569814550795,False
-Luxembourg,2029.4009449881876,30.605804927438403,250.88727734511124,2.7325889458469206,False
-United_States_of_America.regions.Michigan:Genesee,1126.0464056699293,116.74654066824166,196.17587293344423,25.615593667144424,False
-United_States_of_America.regions.Massachusetts:Middlesex,3887.508774890314,126.0926425919676,154.72489340055537,5.8091198271620765,False
-United_States_of_America.regions.Missouri,3227.534593317584,100.62183597705028,37.51125068677062,1.856972281195163,False
-United_States_of_America.regions.Florida:Broward,2200.576949038137,56.83597705028687,38.3001502234864,1.1670706156743829,False
-United_States_of_America.regions.Massachusetts:Essex,3254.3212959838,128.36483293958824,327.605779223299,13.605647446668243,False
-United_States_of_America.regions.New York:Suffolk,16601.381201484983,441.95747553155593,1037.333623754093,26.900333646372985,False
-Brazil.regions.GO:Aparecida do Rio Doce,0.0,1.0,37.630582496518684,40.42037186742118,False
-Brazil.regions.GO:Colinas do Sul,0.0,1.0,26.778513408517966,29.568302779420463,False
-Brazil.regions.MT:Ponte Branca,0.18181818181818182,0.9454545454545454,60.15475284777051,59.99077065066913,False
-Brazil.regions.MT:Vale de São Domingos,0.8181818181818182,1.0,60.66204239565784,31.979533098816763,False
-Brazil.regions.PA:Bannach,3.399161864850707,0.39287585123101104,194.94296655651178,28.173667288032778,False
-United_States_of_America.regions.Alabama:Greene,20.096017549780626,0.6901788727640905,487.72412589130676,13.290012456791015,False
-United_States_of_America.regions.Colorado:Chaffee,22.70384745190685,7.662841714478568,146.1083274345537,40.31999001404214,False
-United_States_of_America.regions.Colorado:Morgan,167.28602767465406,7.105973675329059,596.3034686231258,24.874087938258405,False
-United_States_of_America.regions.Florida:Liberty,90.09244372990355,0.8882636655948553,1192.4570035392658,2.478068532835417,False
-United_States_of_America.regions.Georgia:Baker,17.507762402969963,0.6430982112723591,566.270997392046,59.14446433527499,False
-United_States_of_America.regions.Georgia:Webster,23.601079986500167,0.7264596692541343,240.37021742330387,44.27616285431529,False
-United_States_of_America.regions.Kansas:Clark,9.137614678899082,0.7553516819571865,668.4855657977802,2.1072720936174822,False
-United_States_of_America.regions.Kansas:Coffey,27.016874789065138,5.0480931488356395,465.6440015211784,73.61550652062053,False
-United_States_of_America.regions.Kansas:Kearny,11.59511031604055,0.8765652951699463,567.4670865989614,2.4454325433671262,False
-United_States_of_America.regions.Louisiana:Bienville,27.490718866014177,7.813027337158286,332.999087523318,65.00969067458838,False
-United_States_of_America.regions.Minnesota:Wilkin,22.90583867701654,1.1086736415794802,87.22225236751096,34.36124983847269,False
-United_States_of_America.regions.Mississippi:Wilkinson,27.330070874114075,3.6601417482281473,526.8002631073077,53.50174671540859,False
-United_States_of_America.regions.Oklahoma:Greer,36.84438775510205,4.611013370865588,983.5594967046046,98.82377872832325,False
-United_States_of_America.regions.South Dakota:Jerauld,9.97301769123075,0.05345551737304314,238.53114313880013,39.53518571297428,False
-United_States_of_America.regions.Texas:Cottle,0.9603789836347976,0.0,238.91277836763,45.294436842530615,False
-United_States_of_America.regions.Texas:Donley,17.72663851661465,1.1969891683495502,658.798867794443,3.339347658946995,False
-United_States_of_America.regions.Texas:Sherman,11.028592927012792,0.8465011286681715,599.1882307517923,2.361559851215432,False
-United_States_of_America.regions.New Jersey:Monmouth,3060.4895376307795,125.433682078974,410.65109163873774,17.425383923642325,False
-United_States_of_America.regions.Connecticut:Hartford,2749.098717516031,278.38930138373274,222.7413086052463,28.34861177926401,False
-United_States_of_America.regions.Connecticut:New Haven,3860.7210597367534,221.96000674991564,366.28382567065,22.99947761604209,False
-United_States_of_America.regions.New Jersey:Sussex,614.9790752615592,63.69557880526494,371.29417001370695,42.73376209719089,False
-United_States_of_America.regions.New Jersey:Warren,516.3985825177185,41.07408032399594,431.73363643071866,36.76283585689412,False
-United_States_of_America.regions.New Mexico:McKinley,547.960344245697,8.734390820114749,723.4131967256426,10.624230698356698,False
-Brazil.regions.AM,1755.6042861964227,133.97063786702665,46.10450174165637,1.556029806666826,False
-United_States_of_America.regions.Wisconsin:Milwaukee,1686.8192710091123,93.97485656429293,92.57797080740563,6.975900707463703,False
-United_States_of_America.regions.Indiana:Marion,2076.015018562268,86.66976037799526,130.95762267248398,6.5868697291268585,False
-United_States_of_America.regions.Michigan:Wayne,9601.191360108,713.150523118461,461.63665081045184,37.589938427970544,False
-United_States_of_America.regions.Illinois:Will,1455.9282821464733,84.74755315558556,126.25567275296466,9.322893940203686,False
-United_States_of_America.regions.Louisiana:St. Charles,343.3354708066149,21.20485993925076,617.592935378505,38.810961155993816,False
-United_States_of_America.regions.Louisiana:St. John the Baptist,487.81302733715836,41.08504893688829,1124.215111143792,95.33619085437374,False
-Brazil.regions.MA:São Luís,1485.8312521093485,88.8314208572393,49.396498381070806,5.335778678688482,False
-United_States_of_America.regions.Ohio,6939.357745528182,285.2851839352008,31.408586211412675,1.1889094878938657,False
-United_States_of_America.regions.Pennsylvania,16618.717853526832,513.3150523118461,43.39380964695889,2.3257694317547957,False
-Ireland,4819.209247384408,154.3663516706041,15.100279137595672,1.6934296441517693,False
-Panama,2896.6047924400946,78.16520418494768,29.972294299954328,1.6184287966861886,False
-United_States_of_America.regions.South Carolina,2396.3039149510632,61.94228822139724,42.37952243585095,2.2898676823530666,False
-Spain,3875.003374957813,82.90161997975027,80.87635524975386,3.33827714267862,False
-United_States_of_America.regions.Mississippi,2982.5303746203176,106.99544380695241,30.51981977129595,1.246236954788951,False
-United_States_of_America.regions.Florida:Miami-Dade,6567.286533918326,132.67127910901115,153.8137514255793,2.6654379925699536,False
-Brazil.regions.RS:Boa Vista do Sul,3.5882661079099,0.2985856469355684,238.6410243601546,30.173531343102116,False
-United_States_of_America.regions.Georgia:Crisp,99.74519068511644,1.7330408369895378,499.58805382328313,9.490062595677923,False
-United_States_of_America.regions.Georgia:Lee,170.4750253121836,11.22932838339521,585.8160753521345,38.11541890391791,False
-United_States_of_America.regions.Georgia:Thomas,124.61137360782989,14.178197772527843,263.06649555770696,31.22724103765286,False
-United_States_of_America.regions.Georgia:Upson,157.88845764427944,14.163010462369222,632.1736456317603,55.01192675400876,False
-United_States_of_America.regions.Indiana:Daviess,29.17509441879983,11.757553503986571,91.49227826718386,35.48028161326677,False
-United_States_of_America.regions.Indiana:Decatur,142.45393182585218,20.966925413432335,567.567701183543,80.17426278198437,False
-United_States_of_America.regions.Kentucky:Hopkins,130.12031724603443,17.059905501181237,273.54212781429584,37.481532468617246,False
-United_States_of_America.regions.Nebraska:Dakota,1006.1207513416817,3.9773404889683963,5049.206949457692,21.70717148422378,False
-United_States_of_America.regions.New York:Sullivan,479.5757678029025,6.592136348295646,588.9650928944272,6.997387225589792,False
-United_States_of_America.regions.Georgia:Dougherty,1100.8444144448194,77.38238272021601,1198.7165141651672,85.89501122925537,False
-Norway,3773.2050286871413,37.748903138710766,31.878848822547518,2.7839517033466947,False
-Chile,4556.461525480931,44.93334458319271,64.7361757404446,3.271027460327189,False
-United_States_of_America.regions.New York:Erie,1846.6226797165036,116.28585892676341,115.32011577345499,9.618010357190816,False
-United_States_of_America.regions.Oklahoma,1415.3265271684104,72.05872426594668,52.6588457413379,1.66430026528539,False
-United_States_of_America.regions.Pennsylvania:Philadelphia,6026.0593992575095,192.38103273709078,293.7545502508843,9.832846071928858,False
-United_States_of_America.regions.New Jersey:Essex,7435.773540330746,521.4073574080325,845.4998607213915,62.02777788379996,False
-United_States_of_America.regions.New Jersey:Morris,2980.672291596355,181.8798515018562,523.3623306615617,33.88986344930594,False
-United_States_of_America.regions.New Jersey:Somerset,2080.241984475194,138.0433682078974,552.9289466622923,38.84974841911329,False
-United_States_of_America.regions.Pennsylvania:Lehigh,1747.0097873776576,31.37360782990213,392.58815280678755,5.788608072819812,False
-United_States_of_America.regions.Nevada,1993.8979075261561,73.59095511306109,29.40365816551929,1.1973702414172807,False
-United_States_of_America.regions.Nebraska:Hall,806.184947688154,18.866351670604118,1276.9198171785588,29.288416315227057,False
-Austria,7592.978062774215,123.04758690516368,32.46535824126376,2.11268409007086,False
-United_States_of_America.regions.Delaware,1776.1223422207224,47.00641241984474,96.67886259837094,2.5154126509746573,False
-Brazil.regions.GO:Professor Jamil,10.06872852233677,0.6083746977217768,136.3817709423752,44.10515485953603,False
-Brazil.regions.MG:Morro da Garça,3.751415628539071,0.22706681766704415,27.3619354232166,38.46106346396459,False
-Brazil.regions.MS:Guia Lopes da Laguna,47.85323110624316,0.14238773274917854,495.65450774920953,0.39723178337056364,False
-Brazil.regions.PR:Mirador,2.6356228172293363,0.3667054714784633,251.57170555404983,39.52155992019832,False
-Brazil.regions.SP:Uru,1.2157721796276013,0.6243154435925521,241.07206141193407,65.41419966227154,False
-United_States_of_America.regions.Arkansas:Lincoln,302.32703341208236,1.1795477556530543,2477.6672438482137,3.6866406496927,False
-United_States_of_America.regions.Georgia:Calhoun,51.34238947013163,2.086567667904151,1257.1652747690375,50.565007747805666,False
-United_States_of_America.regions.Georgia:Clay,19.088086398920012,1.1592980087748903,709.3520585614413,81.86953458770745,False
-United_States_of_America.regions.Georgia:Early,123.687310158623,10.481943975700304,1438.4747997663405,111.71877403811983,False
-United_States_of_America.regions.Georgia:Hancock,65.26170163707633,1.4802859119206824,924.556189055495,23.3157376699448,False
-United_States_of_America.regions.Georgia:Quitman,18.756471716203258,0.2444870565675935,163.76149132488217,36.668810681533444,False
-United_States_of_America.regions.Georgia:Randolph,92.5860614242322,11.685791427607155,1748.657950857173,185.9744716997945,False
-United_States_of_America.regions.Georgia:Terrell,107.37867026662168,12.944650691866352,1544.3951819007743,162.9960283493672,False
-United_States_of_America.regions.Georgia:Turner,23.845764427944655,3.669422882213972,531.9747812273762,54.577284786950855,False
-United_States_of_America.regions.Georgia:Wilcox,42.61137360782991,7.149848126898415,774.6641780735924,92.50262021085689,False
-United_States_of_America.regions.Illinois:Jasper,19.281475541299116,3.351042502004811,341.15338899875394,43.43612174853295,False
-United_States_of_America.regions.Iowa:Crawford,66.7085723928451,0.3341208234897064,496.5929391544561,1.991223088897105,False
-United_States_of_America.regions.Iowa:Louisa,229.75695110258872,1.0335570469798658,2231.4610162721883,16.498416196910277,False
-United_States_of_America.regions.Iowa:Tama,165.0801552480594,4.729159635504557,1080.021349797591,31.799328241388324,False
-United_States_of_America.regions.Louisiana:Red River,14.777252784340195,3.2483968950388125,222.15690236239578,49.89418631808779,False
-United_States_of_America.regions.Nebraska:Colfax,199.28823205434185,0.7508720396548559,2034.1869524404476,3.4743856566576237,False
-United_States_of_America.regions.Nebraska:Dawson,263.35892676341547,0.9601754978062775,1160.5597138045878,3.5781304966162333,False
-United_States_of_America.regions.Nebraska:Hamilton,21.997062603267853,5.211125390123003,379.85901196169755,64.99441213376276,False
-United_States_of_America.regions.Nebraska:Saline,254.425567423231,0.6458611481975969,1828.225970839561,2.721835989302209,False
-United_States_of_America.regions.Texas:Moore,295.3965575430307,3.8179210259871756,1474.1979621957978,20.22312077228038,False
-Ukraine,1810.0472494093824,50.02784340195748,85.10709128602703,3.4018803713692787,False
-United_States_of_America.regions.Alabama,3800.7549780627746,121.81488356395545,30.75553949068237,1.1042935424681193,False
-United_States_of_America.regions.New York:Orange,4794.530543368208,112.44346945663179,1164.6577432047563,26.499523482208193,False
-Brazil.regions.AM:Manaus,1337.7777590280118,109.13010462369222,28.75235627589508,2.9378182555691117,False
-Brazil.regions.RS:Monte Belo do Sul,2.3101100052383448,0.4133053954950236,30.011958108764457,37.60971344628256,False
-Brazil.regions.SC:Antônio Carlos,21.611542355720555,1.9616942288221397,81.3359371652295,34.334167910528805,False
-United_States_of_America.regions.Indiana:Cass,963.407526155923,1.6672291596355047,2551.8396980132834,4.3206904047934085,False
-United_States_of_America.regions.Louisiana:St. James,172.57087411407358,12.709416132298346,880.4141214262426,62.70424868115607,False
-United_States_of_America.regions.Massachusetts:Franklin,146.03594330070874,24.246540668241646,164.46329204247547,32.828577215233175,False
-United_States_of_America.regions.Tennessee:Trousdale,642.8612892338846,0.20924738440769491,5891.3357752354095,9.50881091655826,False
-Brazil.regions.AM:Autazes,142.19921683798336,13.083700440528636,357.992617892967,32.85831376332642,False
-United_States_of_America.regions.Idaho:Blaine,371.02244346945656,2.7885588930138376,1661.3785509264615,14.072087916724705,False
-San_Marino,192.40685116436043,22.5242996962538,574.9447825634131,66.88395113307489,False
-United_States_of_America.regions.Louisiana:Jefferson,3763.358083023962,168.56058049274387,788.418433857495,35.96283285832542,False
-United_States_of_America.regions.Michigan:Macomb,3292.4417819777254,291.72882213972326,291.2562977074221,30.154285433911316,False
-United_States_of_America.regions.North Carolina,2756.2055349308134,56.34576442794465,62.650749690157674,2.9702207050608127,False
-United_States_of_America.regions.Massachusetts:Worcester,1707.8685453931826,55.30880863989201,121.64278438049399,4.407088643072621,False
-United_States_of_America.regions.Pennsylvania:Lancaster,1149.1032737090786,101.81066486668917,127.294626034734,15.701460439370136,False
-United_States_of_America.regions.Louisiana:East Baton Rouge,1294.0730678366522,76.71363482956463,212.16069944502163,14.287404247127135,False
-United_States_of_America.regions.New Jersey:Ocean,3650.71751603105,171.64022949713132,517.3853569751499,25.183467659379836,False
-United_States_of_America.regions.New Jersey:Bergen,6271.649510631118,300.2775902801215,587.4058948294149,29.395223328454062,False
-United_States_of_America.regions.Florida:Palm Beach,1591.4929125885924,87.80543368207897,41.400975035633074,3.0777508972628422,False
-United_States_of_America.regions.New York:Nassau,16175.275059061762,674.6954100573741,1105.2943949367423,46.97130626154602,False
-South_Africa,1721.4524130948364,19.811846101923727,86.20042645034601,3.4806364636901033,False
-Italy,7447.92473844077,502.29412757340526,76.85856790343362,2.6839445824992714,False
-Brazil.regions.SP:São Paulo,2170.731353358083,142.41815727303407,71.25672756105206,2.3460734665903415,False
-South_Korea,1727.4080323995952,10.394870064124198,85.82777650473766,3.4955579451594927,False
-United_States_of_America.regions.New Jersey:Hudson,6488.140398245022,251.8418832264597,880.6078878474386,34.76599344153076,False
-China,22722.591798852518,510.9028012149849,87.60131625482887,3.4798873008539593,False
-Brazil.regions.CE:Fortaleza,2870.192035099562,166.71532230847114,26.883534588187654,3.705338951551681,False
-Iran,27180.831252109347,1768.4411069861626,55.96773365383126,1.3840276704951953,False
-Brazil.regions.RJ:Rio de Janeiro,1582.4465069186635,101.85875801552481,65.20690675849931,1.9837795553394522,False
-United_States_of_America.regions.Texas:Harris,2281.921025987175,30.388120148498146,40.142239537630324,2.8461543715928572,False
-Saudi_Arabia,2757.9102261221733,32.49662504218697,80.95648959242499,3.417366387501811,False
-United_States_of_America.regions.Connecticut,10662.173641579482,612.4814377320283,211.43361626579608,14.484858169862388,False
-Algeria,721.4335133310834,86.4562942963213,87.45097426549886,3.3091718002316592,False
-United_States_of_America.regions.New Jersey:Union,5659.850658116773,214.8945325683429,934.0469204646677,35.86413564114627,False
-Pakistan,2184.434525818427,30.222747215659805,88.1907052251802,3.501963498314374,False
-Romania,2472.695072561593,99.2887276409045,76.37341623061164,3.002472803966723,False
-Brazil.regions.SP,2905.03104961188,181.64529193385084,82.83905117575297,3.1188998073889582,False
-United_States_of_America.regions.Maryland:Prince George's,1933.1015862301722,59.38744515693554,128.11949067451025,4.343437630427219,False
-United_States_of_America.regions.New York:Rockland,5504.081842726966,123.36652041849477,1610.1754273393885,35.178180357679665,False
-United_States_of_America.regions.Kentucky,1448.0793115086062,73.93182585217684,56.10679320029196,1.8344964934597168,False
-United_States_of_America.regions.Louisiana,16089.355383057711,799.4836314546069,257.6700606891874,13.99601845577654,False
-Mexico,1950.564967937901,110.99983125210936,87.66405290593718,3.427903669518296,False
-Brazil.regions.RJ,2099.8997637529533,146.31623354708069,76.88706408412591,2.6621466971976475,False
-Brazil.regions.PE,1862.3540330745866,165.12571717853527,69.4137787531007,1.7759139522110137,False
-United_States_of_America.regions.Virginia,4457.762909213635,132.12537968275396,36.63435128311623,1.9553870589818056,False
-Brazil.regions.MA,2018.9463381707728,111.43266959163009,60.24742137894545,1.9246507466793783,False
-Brazil,7128.830577117787,330.7863651704354,85.81657596781908,3.358265011765545,False
-Brazil.regions.PA,1369.7583530205873,90.71633479581506,72.94119876805124,2.448047070135406,False
-Peru,6551.496118798515,168.88120148498143,68.654834921933,2.9848569433825083,False
-Colombia,2018.4049949375633,78.2332095848802,85.10532754656019,3.3566901456571614,False
-United_States_of_America.regions.Michigan:Oakland,4191.360614242322,306.72375970300374,246.76774069208236,21.284279338824796,False
-Indonesia,2304.5681741478234,203.89976375295308,88.36218243713793,3.4400257928920204,False
-Poland,4148.739622004725,133.05433682078976,78.22700263219483,3.163302175876578,False
-Ecuador,3437.0153560580493,155.34930813364832,68.92999279401823,2.6001026266259455,False
-United_States_of_America.regions.New Jersey:Mercer,1922.6817414782315,95.5357745528181,442.80158363952347,23.393918901208973,False
-Serbia,2982.9632129598376,60.30543368207897,46.053900368961536,2.6355416249532992,False
-United_States_of_America.regions.Indiana,5767.106986162673,258.4171447856902,25.071808194982022,1.8614279898387167,False
-United_States_of_America.regions.Colorado,5211.726797165035,199.31572730340872,29.559877919214244,1.3885691391485306,False
-Turkey,57984.356564292946,1349.881032737091,27.346146918724454,1.8768121368377437,False
-United_States_of_America.regions.Louisiana:Orleans,4435.910057374283,228.77742153223085,1055.968707629785,55.445663819834614,False
-Netherlands,12640.23557205535,1212.9412757340533,23.650464918152316,4.713414095680634,False
+United_States_of_America.regions.Wisconsin:Green,22.97755653054337,1.2605467431657102,64.59600926604395,3.516659905609459,True
+United_States_of_America.regions.Wisconsin:Kewaunee,7.689454691259022,0.2526062550120289,44.0889742362741,1.8309652869629554,True
+United_States_of_America.regions.Wisconsin:Waupaca,24.14613567330408,0.4036449544380695,73.81723129284106,1.8361308043589373,True
+Brazil.regions.SP:Potim,0.0,0.0,1.2681581192569797,0.0,False
+Brazil.regions.AL:Piranhas,1.0,0.0,5.19775006757348,0.0,False
+Brazil.regions.BA:Anguera,0.36363636363636365,0.0,10.475853352061803,0.0,False
+Brazil.regions.BA:Conceição do Almeida,0.0,0.0,3.0083204452974215,0.0,False
+Brazil.regions.CE:Penaforte,0.6666666666666666,0.0,15.571636944693699,0.0,False
+Brazil.regions.MG:Congonhal,0.18181818181818182,0.0,5.071177034844407,0.0,False
+Brazil.regions.MG:Engenheiro Caldas,0.0,0.0,6.1917087429828985,0.0,False
+Brazil.regions.MG:Nova Porteirinha,0.3177004538577912,0.0,9.657226613127472,0.0,False
+Brazil.regions.MG:Ouro Preto,0.0,1.0,1.4435500903327683,1.3462392805697287,False
+Brazil.regions.MG:Passa Quatro,0.2857142857142857,0.0,5.076793385548102,0.0,False
+Brazil.regions.MS:Fátima do Sul,4.3,0.0,24.83020124872333,0.0,False
+Brazil.regions.PB:Cuité de Mamanguape,0.2,0.0,16.098924622486454,0.0,False
+Brazil.regions.PB:Curral de Cima,0.0,0.0,16.341643573425035,0.0,False
+Brazil.regions.PB:Mogeiro,0.0,1.0,4.7380636854058436,7.527853056308341,False
+Brazil.regions.PB:Salgado de São Félix,2.904761904761905,0.0,29.374641475571178,0.0,False
+Brazil.regions.PB:São José dos Ramos,2.272727272727273,0.0,54.69433853721275,0.0,False
+Brazil.regions.PB:Vista Serrana,0.0,0.0,23.539857811825254,0.0,False
+Brazil.regions.PE:Canhotinho,0.6666666666666666,0.0,3.929556971085354,0.0,False
+Brazil.regions.PE:Paranatama,0.25,0.0,8.05808010753194,0.0,False
+Brazil.regions.PI:Marcolândia,2.7636363636363637,0.0,43.16381634704158,0.0,False
+Brazil.regions.PR:Colorado,1.815431164901664,0.0,9.372084262467197,0.0,False
+Brazil.regions.PR:Figueira,0.0,0.0,10.080223499110373,0.0,False
+Brazil.regions.PR:Irati,0.0,0.0,1.1430753886540739,0.0,False
+Brazil.regions.RS:Estação,1.578005115089514,0.0,46.38540105549528,0.0,False
+Brazil.regions.SC:Mondaí,0.0,0.0,5.726647351972652,0.0,False
+Brazil.regions.SE:Brejo Grande,0.0,0.0,9.245353245537508,0.0,False
+Brazil.regions.SP:Bálsamo,0.0,0.0,8.238000659975315,0.0,False
+Brazil.regions.SP:Pirapozinho,0.3510436432637571,0.25616698292220114,1.0865133537349663,0.7146519261325183,False
+Brazil.regions.AC:Epitaciolândia,1.4909090909090907,0.0,11.21998924852279,0.0,False
+Brazil.regions.BA:Encruzilhada,0.0,0.0,3.0904881781978206,0.0,False
+Brazil.regions.BA:Iaçu,3.6,0.0,16.136357512454836,0.0,False
+Brazil.regions.BA:Ibitiara,0.0,0.0,3.3305362304194936,0.0,False
+Brazil.regions.BA:Mirangaba,1.0,0.0,8.116525385341369,0.0,False
+Brazil.regions.BA:Piatã,0.0,0.0,3.0503087427458113,0.0,False
+Brazil.regions.BA:Presidente Jânio Quadros,0.0,0.0,5.315251964808315,0.0,False
+Brazil.regions.BA:Umburanas,3.0408472012102874,0.0,18.99868078925246,0.0,False
+Brazil.regions.GO:Pirenópolis,0.0,0.0,1.224984998777927,0.0,False
+Brazil.regions.MA:Barão de Grajaú,0.4219948849104859,0.0,1.571000940377413,0.0,False
+Brazil.regions.MA:Brejo de Areia,0.0,0.0,8.093972057047003,0.0,False
+Brazil.regions.MA:Cidelândia,15.545454545454545,0.0,110.51717451926491,0.0,False
+Brazil.regions.MA:Primeira Cruz,8.4,0.0,58.5879448765673,0.0,False
+Brazil.regions.MA:Ribamar Fiquene,0.6822995461422088,0.0,21.994538896531395,0.0,False
+Brazil.regions.MA:Santo Amaro do Maranhão,5.0,0.0,35.074655914974066,0.0,False
+Brazil.regions.MG:Cascalho Rico,0.0,0.0,29.73053583234954,0.0,False
+Brazil.regions.MG:Chiador,4.25,0.0,192.59539857104016,0.0,False
+Brazil.regions.MG:Couto de Magalhães de Minas,0.0,0.0,19.88594759054875,0.0,False
+Brazil.regions.MG:Estrela do Sul,0.0,0.0,9.744680421025304,0.0,False
+Brazil.regions.MG:Varjão de Minas,0.0,0.0,11.422831436374365,0.0,False
+Brazil.regions.MS:Paranhos,0.0,0.0,4.238605343744678,0.0,False
+Brazil.regions.PA:Curuá,3.071104387291981,0.0,26.816527484961735,0.0,False
+Brazil.regions.PB:Olho d'Água,0.0,0.0,12.533532725327964,0.0,False
+Brazil.regions.PB:São José dos Cordeiros,0.0,0.0,24.77360643946134,0.0,False
+Brazil.regions.PE:Belém do São Francisco,0.7999999999999999,0.0,5.893697531504759,0.0,False
+Brazil.regions.PI:Avelino Lopes,0.0,0.0,6.0683911588166985,0.0,False
+Brazil.regions.PI:Bela Vista do Piauí,0.0,0.0,22.116810878163506,0.0,False
+Brazil.regions.PI:Lagoa do Piauí,2.6071428571428568,0.0,85.96864707454182,0.0,False
+Brazil.regions.PI:Pau D'Arco do Piauí,3.2857142857142856,0.0,103.16112004106995,0.0,False
+Brazil.regions.PI:Paulistana,0.0,0.0,2.082792610289337,0.0,False
+Brazil.regions.PI:Sigefredo Pacheco,0.0,0.0,7.169378042701725,0.0,False
+Brazil.regions.PI:Simplício Mendes,8.24659606656581,0.0,71.56814251607453,0.0,False
+Brazil.regions.PI:São João da Canabrava,0.0,0.0,18.911599517986392,0.0,False
+Brazil.regions.PI:Vera Mendes,1.0,0.0,62.208585669721494,0.0,False
+Brazil.regions.PR:Campo Bonito,0.30909090909090914,0.0,35.59963914895286,0.0,False
+Brazil.regions.RN:Paraú,0.49872122762148346,0.0,47.00735290699734,0.0,False
+Brazil.regions.RN:Santana do Matos,0.8666666666666666,0.0,11.803805083531609,0.0,False
+Brazil.regions.RO:Presidente Médici,0.0,0.0,2.477249499844369,0.0,False
+Brazil.regions.RO:São Felipe D'Oeste,0.4219948849104859,0.0,15.367813908342239,0.0,False
+Brazil.regions.RS:Dom Feliciano,0.3177004538577912,0.0,2.811501947239317,0.0,False
+Brazil.regions.RS:Guabiju,0.0,0.0,63.74381009682871,0.0,False
+Brazil.regions.RS:Mato Castelhano,2.469194312796209,0.0,29.691757320723223,22.884351643325395,False
+Brazil.regions.SC:Santa Rosa de Lima,0.9166666666666666,0.0,86.69044716815759,0.0,False
+Brazil.regions.SP:Magda,0.6,0.0,48.50870373586249,0.0,False
+Brazil.regions.TO:Nova Rosalândia,0.4219948849104859,0.0,19.507112188354874,0.0,False
+Brazil.regions.TO:Riachinho,1.0,0.0,40.26726122113195,0.0,False
+Brazil.regions.TO:Xambioá,7.488888888888889,0.0,70.77077292449515,0.0,False
+United_States_of_America.regions.Arkansas:Little River,0.0,0.0,5.3674828372710905,0.0,False
+United_States_of_America.regions.Illinois:Edwards,1.0,0.0,28.48464377999664,0.0,False
+United_States_of_America.regions.Iowa:Emmet,0.25,0.0,10.785362670800371,0.0,False
+Brazil.regions.AM:Nhamundá,10.975289169295477,0.0,59.700235509024395,1.52461111824168,False
+Brazil.regions.BA:São Desidério,2.9047619047619047,0.0,8.782618621397619,0.0,False
+Brazil.regions.MS:Ribas do Rio Pardo,6.854219948849106,0.0,29.655581900624156,0.0,False
+Brazil.regions.MT:São Félix do Araguaia,0.0,0.0,5.751379060938979,0.0,False
+Brazil.regions.PA:Senador José Porfírio,6.991215226939971,0.0,75.29095535717508,2.457574336007324,False
+Brazil.regions.TO:Formoso do Araguaia,1.9948849104859339,0.0,14.562650679373514,0.0,False
+Brazil.regions.BA:Abaré,0.0,0.0,2.1888026832645844,0.0,False
+Brazil.regions.BA:Anagé,0.0,0.9523809523809524,1.754632351433336,4.3280206879388885,False
+Brazil.regions.BA:Boquira,1.0,0.0,6.509076167501818,0.0,False
+Brazil.regions.BA:Cristópolis,1.3333333333333333,0.0,13.984713384908671,0.0,False
+Brazil.regions.BA:Monte Santo,0.0,0.0,0.7662352003573516,0.0,False
+Brazil.regions.BA:Queimadas,0.8095238095238095,0.0,4.323398291835069,0.0,False
+Brazil.regions.BA:Ruy Barbosa,0.10714285714285714,0.0,0.8031971194682991,0.0,False
+Brazil.regions.GO:Caldazinha,0.0,0.0,23.498328399865116,0.0,False
+Brazil.regions.GO:Indiara,0.0,0.0,3.6159501717277003,0.0,False
+Brazil.regions.MA:Bacurituba,0.7142857142857143,0.0,27.58380585031852,0.0,False
+Brazil.regions.MA:Belágua,9.997442455242968,0.0,148.92404825980924,0.0,False
+Brazil.regions.MA:Buriti Bravo,1.0,0.0,6.027881112057541,0.0,False
+Brazil.regions.MA:Centro do Guilherme,5.296675191815857,0.0,45.95617703564926,0.0,False
+Brazil.regions.MA:Godofredo Viana,4.583333333333333,0.0,44.450529889046166,0.0,False
+Brazil.regions.MA:Itaipava do Grajaú,1.0,0.0,9.665837458517695,0.0,False
+Brazil.regions.MA:Lagoa Grande do Maranhão,0.0,0.0,5.986759690006753,0.0,False
+Brazil.regions.MA:Santa Filomena do Maranhão,0.0,0.0,10.075256300009633,0.0,False
+Brazil.regions.MA:Santana do Maranhão,0.8823529411764706,0.0,9.23526029819511,0.0,False
+Brazil.regions.MA:São João do Soter,0.0,0.0,2.603081254131209,0.0,False
+Brazil.regions.MA:São Raimundo do Doca Bezerra,8.0,0.0,169.0643255804055,0.0,False
+Brazil.regions.MA:Vila Nova dos Martírios,6.854545454545455,0.0,56.71166523897143,0.0,False
+Brazil.regions.MG:Alvarenga,1.0,0.0,48.40038211617198,0.0,False
+Brazil.regions.MG:Andrelândia,1.4285714285714286,0.0,17.07745071885068,0.0,False
+Brazil.regions.MG:Araçuaí,0.0,0.0,0.06558756203249594,0.0,False
+Brazil.regions.MG:Açucena,0.0,0.0,7.769872719910596,0.0,False
+Brazil.regions.MG:Bocaiúva,0.0,0.0,0.7889490179542585,0.0,False
+Brazil.regions.MG:Cachoeira Dourada,0.0,0.0,34.35731315510047,0.0,False
+Brazil.regions.MG:Guapé,0.8333333333333334,0.0,10.080223499110375,0.0,False
+Brazil.regions.MG:Jequitibá,0.0,0.0,16.40038525968664,0.0,False
+Brazil.regions.MG:Medina,3.2677760968229945,0.0,18.348276328212904,0.0,False
+Brazil.regions.MG:Nova Ponte,2.7777777777777777,0.0,21.512415696822032,0.0,False
+Brazil.regions.MG:Pedra Azul,0.4642857142857143,0.0,3.2301321645592456,0.0,False
+Brazil.regions.MG:Pedra do Indaiá,0.0,0.0,22.386444264545645,0.0,False
+Brazil.regions.MG:Santa Rita de Jacutinga,0.0,0.0,20.900727668503066,0.0,False
+Brazil.regions.MG:São Sebastião do Rio Preto,0.0,0.0,63.61127304609617,0.0,False
+Brazil.regions.MS:Deodápolis,0.5,0.0,8.816524463823594,0.0,False
+Brazil.regions.MT:Nova Olímpia,0.0,0.0,2.1360763499979516,0.0,False
+Brazil.regions.PB:Belém do Brejo do Cruz,0.0,0.0,10.830477586329865,0.0,False
+Brazil.regions.PB:Boa Vista,0.0,0.0,11.392596106334775,0.0,False
+Brazil.regions.PB:Cajazeirinhas,0.4219948849104859,0.0,27.351443023559234,0.0,False
+Brazil.regions.PB:Quixaba,1.8571428571428572,0.0,143.280908847035,0.0,False
+Brazil.regions.PB:Santa Teresinha,0.4,0.0,27.82468690287839,0.0,False
+Brazil.regions.PB:São Mamede,4.333333333333333,0.0,66.25906269193196,0.0,False
+Brazil.regions.PI:Belém do Piauí,0.0,0.0,25.252835418777817,0.0,False
+Brazil.regions.PI:Cocal de Telha,13.107416879795394,0.0,293.09716941546964,0.0,False
+Brazil.regions.PI:Fronteiras,1.8158567774936063,0.0,23.885421203128836,0.0,False
+Brazil.regions.PI:Olho D'Água do Piauí,0.0,0.0,37.8771484086827,0.0,False
+Brazil.regions.PR:Cafeara,0.18181818181818182,0.0,30.786139115543072,0.0,False
+Brazil.regions.PR:Fernandes Pinheiro,0.0,0.0,14.92186489760618,0.0,False
+Brazil.regions.PR:General Carneiro,0.45385779122541603,0.0,9.245543499219426,0.0,False
+Brazil.regions.PR:Mamborê,1.5714285714285714,0.0,16.79160395401809,0.0,False
+Brazil.regions.PR:Mangueirinha,0.9333333333333332,0.0,8.777359925096865,0.0,False
+Brazil.regions.PR:Paula Freitas,0.9333333333333332,0.0,30.12921851830801,0.0,False
+Brazil.regions.PR:São José da Boa Vista,0.4219948849104859,0.0,12.146372392397911,0.0,False
+Brazil.regions.PR:Tuneiras do Oeste,0.37777777777777777,0.0,13.294471401660868,0.0,False
+Brazil.regions.RN:Angicos,0.0,0.0,5.747004209428731,0.0,False
+Brazil.regions.RN:Governador Dix-Sept Rosado,0.6666666666666666,0.0,9.994337856731674,0.0,False
+Brazil.regions.RN:Severiano Melo,0.0,0.0,38.193817186474554,0.0,False
+Brazil.regions.RN:Upanema,0.151285930408472,0.0,4.280878909436808,0.0,False
+Brazil.regions.RS:Caseiros,0.4219948849104859,0.0,27.263414734005625,0.0,False
+Brazil.regions.RS:Condor,0.0,0.0,12.018444006855537,0.0,False
+Brazil.regions.RS:Gramado dos Loureiros,2.892857142857143,0.0,184.18701864336947,0.0,False
+Brazil.regions.RS:Restinga Sêca,2.0555555555555554,0.0,16.562643053922102,0.0,False
+Brazil.regions.RS:Água Santa,0.4219948849104859,0.0,22.713830262720677,0.0,False
+Brazil.regions.SC:Morro Grande,0.0,0.0,31.77640489110926,0.0,False
+Brazil.regions.SP:Altair,0.0,0.0,21.248672167559043,0.0,False
+Brazil.regions.SP:Anhumas,0.0,0.0,21.511547202609044,0.0,False
+Brazil.regions.SP:Buri,0.0,0.0,2.2408978209679127,0.0,False
+Brazil.regions.SP:Emilianópolis,2.5,0.0,106.1087793907652,0.0,False
+Brazil.regions.SP:Itaberá,0.0,0.0,2.9062689567347775,0.0,False
+Brazil.regions.SP:Monteiro Lobato,0.0,0.0,18.701721482310482,0.0,False
+Brazil.regions.SP:Ribeirão dos Índios,0.0,0.0,42.15403085381661,0.0,False
+Brazil.regions.SP:Rubiácea,0.0,0.0,29.179520092013103,0.0,False
+Brazil.regions.SP:Santa Clara d'Oeste,0.0,0.0,44.49153450616606,0.0,False
+Brazil.regions.SP:Silveiras,0.0,0.0,13.078189048646852,0.0,False
+Brazil.regions.SP:Tejupá,0.0,0.0,19.275523956546753,0.0,False
+Brazil.regions.SP:Teodoro Sampaio,1.4578005115089514,0.0,8.47372951822367,0.0,False
+Brazil.regions.SP:Águas de Santa Bárbara,0.4219948849104859,0.0,12.493839134393246,0.0,False
+United_States_of_America.regions.Illinois:Putnam,0.3,0.0,19.86224059947562,0.0,False
+United_States_of_America.regions.Kentucky:Magoffin,0.0,0.0,5.43321860541524,0.0,False
+United_States_of_America.regions.Kentucky:Wolfe,0.0,0.0,11.182545406238763,0.0,False
+United_States_of_America.regions.Tennessee:Hancock,0.0,0.0,12.315950810366385,0.0,False
+United_States_of_America.regions.Tennessee:Pickett,0.16363636363636364,0.0,23.356196195142896,0.0,False
+United_States_of_America.regions.Wisconsin:Pepin,0.0,0.0,10.933279107209207,0.0,False
+Brazil.regions.MG:Barroso,0.0,0.0,2.0155926569687184,0.0,False
+Brazil.regions.SP:Tremembé,2.178571428571429,0.0,3.994503778352009,0.0,False
+Brazil.regions.MG:Santa Cruz de Minas,0.6388888888888888,0.0,16.258198645007415,0.0,False
+Brazil.regions.AM:Uarini,4.133333333333334,0.0,35.122569073213704,0.0,False
+Brazil.regions.BA:Cocos,0.0,0.0,2.535875005728488,0.0,False
+Brazil.regions.BA:Sento Sé,0.0,0.0,0.3318206362648013,0.0,False
+Brazil.regions.MA:Alto Parnaíba,3.857142857142857,0.0,40.61631301643313,0.0,False
+Brazil.regions.MT:Cotriguaçu,0.3177004538577912,0.0,1.7152340303464215,0.0,False
+Brazil.regions.MT:Nova Ubiratã,1.4,0.0,17.240255696698902,0.0,False
+Brazil.regions.MT:Rondolândia,1.0,0.0,47.19771375331645,0.0,False
+Brazil.regions.MT:Santo Antônio do Leverger,0.18181818181818182,0.0,2.716928567521555,0.0,False
+Brazil.regions.PA:Chaves,1.4275256222547585,0.0,5.6936208008463645,0.6057286899055481,False
+Brazil.regions.PA:Faro,0.3177004538577912,0.0,10.224365895863084,0.0,False
+Brazil.regions.PA:Trairão,8.571428571428571,0.0,47.61533239132074,0.0,False
+Brazil.regions.RO:Nova Mamoré,3.8055555555555554,0.0,12.923370082243224,0.0,False
+Brazil.regions.RO:São Francisco do Guaporé,0.0,0.0,2.144583470309385,0.0,False
