@@ -29,7 +29,7 @@ def process_united_states_of_america(key, metadata):
     regions_by_parent = groupby([1, 'parent'], metadata['regions'].items())
 
     for region_key, data in parent_regions:
-        df = pd.read_csv(path.join('data', data['file']), parse_dates=False)
+        df = pd.read_csv(path.join('inf-covid19-data', data['file']), parse_dates=False)
         df = df[['state', 'county', 'place_type', 'fips']].drop_duplicates()
         for _, row in df.iterrows():
             fips = row['fips']

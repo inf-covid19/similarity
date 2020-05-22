@@ -24,7 +24,7 @@ def similarity_worker(args):
 if __name__ == "__main__":
     print('Loading metadata...')
     metadata = {}
-    with open(path.join('data', 'data', 'metadata.json')) as f:
+    with open(path.join('inf-covid19-data', 'data', 'metadata.json')) as f:
         metadata = json.load(f)
 
     # process atributes

@@ -1,7 +1,10 @@
 #!/bin/bash
 
+set -e
+
 # pull latest data
-git -C ./data pull
+wget -O data.zip https://github.com/inf-covid19/data/archive/master.zip
+7z data.zip
 
 # perform update
 pipenv run python similarity.py

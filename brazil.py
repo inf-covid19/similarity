@@ -20,7 +20,7 @@ def process_brazil(key, metadata):
     regions_by_parent = groupby([1, 'parent'], metadata['regions'].items())
 
     for region_key, data in parent_regions:
-        df = pd.read_csv(path.join('data', data['file']), parse_dates=False)
+        df = pd.read_csv(path.join('inf-covid19-data', data['file']), parse_dates=False)
         df = df[['state', 'city', 'place_type', 'estimated_population_2019', 'city_ibge_code']].drop_duplicates()
         for _, row in df.iterrows():
             code = row['city_ibge_code']
