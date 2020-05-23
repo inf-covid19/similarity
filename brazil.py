@@ -10,9 +10,9 @@ def process_brazil(key, metadata):
     population_list = []
     area_km_list = []
 
-    area_by_city_df = pd.read_csv(path.join('raw', 'brazil', 'area_by_city.csv'))[
+    area_by_city_df = pd.read_csv(path.join('inf-covid19-similarity', 'raw', 'brazil', 'area_by_city.csv'))[
         ['CD_GCMUN', 'AR_MUN_2018']].set_index('CD_GCMUN')
-    area_by_state_df = pd.read_csv(path.join('raw', 'brazil', 'area_by_state.csv'))[
+    area_by_state_df = pd.read_csv(path.join('inf-covid19-similarity', 'raw', 'brazil', 'area_by_state.csv'))[
         ['CD_GCUF', 'AR_MUN_2018']].set_index('CD_GCUF')
 
 

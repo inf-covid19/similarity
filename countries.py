@@ -7,7 +7,7 @@ from common import normalize_timeline, make_attributes
 
 
 def area_by_country():
-    df = pd.read_csv(path.join('raw', 'area_by_country.csv'))
+    df = pd.read_csv(path.join('inf-covid19-similarity', 'raw', 'area_by_country.csv'))
     area_map = {}
     for _, row in df.iterrows():
         year = 2019

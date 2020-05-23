@@ -6,18 +6,18 @@ RUN pip install pipenv
 
 COPY Pipfile* ./
 
-RUN python -m pipenv install --deploy --system
+RUN pipenv install --deploy --system && \
+    git clone https://github.com/inf-covid19/data.git inf-covid19-data && \
+    git clone https://github.com/inf-covid19/similarity.git inf-covid19-similarity
 
-RUN ls -la .
+COPY *.py ./
 
-RUN git clone https://github.com/inf-covid19/data.git inf-covid19-data
+COPY docker-entrypoint.sh /
 
-RUN git clone https://github.com/inf-covid19/similarity.git inf-covid19-similarity
+RUN useradd -m -U percy && \
+    chown percy:percy -R .
 
-COPY . .
-
-RUN useradd -m -U percy
-RUN chown percy:percy -R .
 USER percy
 
-ENTRYPOINT docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD gunicorn -t 300 --bind 0.0.0.0:$PORT server:app
