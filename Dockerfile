@@ -8,14 +8,13 @@ COPY Pipfile* ./
 
 RUN pipenv install --deploy --system && \
     git clone https://github.com/inf-covid19/data.git inf-covid19-data && \
-    git clone https://github.com/inf-covid19/similarity.git inf-covid19-similarity
+    git clone https://github.com/inf-covid19/similarity-data.git inf-covid19-similarity-data
 
-COPY *.py ./
+COPY . .
 
 COPY docker-entrypoint.sh /
 
-RUN useradd -m -U percy && \
-    chown percy:percy -R .
+RUN useradd -m -U percy && chown percy:percy -R .
 
 USER percy
 

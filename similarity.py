@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     df_attributes = df_attributes.sort_values(by=['cluster', 'key'])
 
-    df_attributes.to_csv(path.join('inf-covid19-similarity', 'output', 'regions.csv'), index=False)
+    df_attributes.to_csv(path.join('inf-covid19-similarity-data', 'regions.csv'), index=False)
 
     clusters = df_attributes['cluster'].unique()
     print(f'  Found {len(clusters)} clusters.')
@@ -73,5 +73,5 @@ if __name__ == "__main__":
 
         within_top_k = within_cases_top_k | within_deaths_top_k | within_cases_per_100k_top_k | within_deaths_per_100k_top_k 
         within_same_cluster = region_df['is_same_cluster'] == True
-        region_df[within_top_k | within_same_cluster].to_csv(path.join('inf-covid19-similarity', 'output', 'by_key', f'{region}.csv'), index=False)
+        region_df[within_top_k | within_same_cluster].to_csv(path.join('inf-covid19-similarity-data', 'by_key', f'{region}.csv'), index=False)
 

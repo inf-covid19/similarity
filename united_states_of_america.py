@@ -16,12 +16,12 @@ def process_united_states_of_america(key, metadata):
     population_list = []
     area_km_list = []
 
-    area_by_fips = pd.read_csv(path.join('inf-covid19-similarity', 'raw', 'united_states_of_america', 'DataSet.csv'))[['fips', 'LND110210']].set_index('fips')
+    area_by_fips = pd.read_csv(path.join('raw', 'united_states_of_america', 'DataSet.csv'))[['fips', 'LND110210']].set_index('fips')
 
     # convert to square km
     area_by_fips['LND110210'] *= 2.59
 
-    pop_by_fips = pd.read_csv(path.join('inf-covid19-similarity', 'raw', 'united_states_of_america', 'co-est2019-alldata.csv'), encoding='ISO-8859-1')[['STATE', 'COUNTY', 'POPESTIMATE2019']]
+    pop_by_fips = pd.read_csv(path.join('raw', 'united_states_of_america', 'co-est2019-alldata.csv'), encoding='ISO-8859-1')[['STATE', 'COUNTY', 'POPESTIMATE2019']]
     pop_by_fips['FIPS'] = pop_by_fips.apply(lambda r: get_fips(r['STATE'], r['COUNTY']), axis=1)
     pop_by_fips = pop_by_fips[['FIPS', 'POPESTIMATE2019']].set_index("FIPS")
 
