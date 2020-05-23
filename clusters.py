@@ -48,7 +48,7 @@ def process(metadata):
 
 
 def per_similarity(region_attributes):
-    df = region_attributes[['population', 'area_km', 'population_density']]
+    df = region_attributes[['population', 'area_km']]
     X = df.to_numpy()
     X_std = StandardScaler().fit_transform(X)
     model = AgglomerativeClustering(distance_threshold=0.1, n_clusters=None)
@@ -56,13 +56,56 @@ def per_similarity(region_attributes):
     return model
 
 
-def per_timeline(metadata, df):
+def per_single_timeline(metadata, a_key, df):
+    data = []
+    columns=['region', 'cases_distance', 'deaths_distance', 'cases_per_100k_distance', 'deaths_per_100k_distance', 'is_same_cluster']
+    
+    a_df = df[df['key'] == a_key]
+    if len(a_df) == 0:
+        return pd.DataFrame(data, columns=columns)
+
+    a_row = a_df.iloc[0]
+    a_cluster = a_row['cluster']
+    a_timeline = get_timeline(metadata, a_row)
+    
+    for i, b_row in df.iterrows():
+        b_key = b_row['key']
+
+        if a_key == b_key:
+            continue
+
+        b_cluster = b_row['cluster']
+        b_timeline = get_timeline(metadata, b_row)
+
+        length = min(len(a_timeline), len(b_timeline))
+        if length == 0:
+            continue
+
+        cases_distance = get_distance(a_timeline, b_timeline, ['cases'])
+        deaths_distance = get_distance(a_timeline, b_timeline, ['deaths'])
+        cases_per_100k_distance = get_distance(a_timeline, b_timeline, ['cases_per_100k'])
+        deaths_per_100k_distance = get_distance(a_timeline, b_timeline, ['deaths_per_100k'])
+
+        data.append([
+            b_key,
+            cases_distance,
+            deaths_distance,
+            cases_per_100k_distance,
+            deaths_per_100k_distance,
+            a_cluster == b_cluster,
+        ])
+
+    df = pd.DataFrame(data, columns=columns)
+    return df
+
+
+def per_timeline(metadata, df, offset=0):
     data = []
     features = ['cases', 'deaths']
 
-    idx = 1
+    idx = offset+1
     count = len(df)
-    for _, a_row in df.iterrows():
+    for _, a_row in df[offset:offset+500].iterrows():
         a_key = a_row['key']
         a_cluster = a_row['cluster']
         a_timeline = get_timeline(metadata, a_row)
@@ -121,7 +164,7 @@ def get_timeline(metadata, row):
 
             filename = get(key_path + ['file'], metadata)
 
-            df = pd.read_csv(path.join('data', filename), parse_dates=True)
+            df = pd.read_csv(path.join('inf-covid19-data', filename), parse_dates=True)
 
             df = normalize_timeline(key, df, get(key_path, metadata))
 

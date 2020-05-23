@@ -1,6 +1,10 @@
 import pandas as pd
+from os import path
+
 from fnc.mappings import merge, get
 from datetime import timedelta
+
+from utils import checksum
 
 
 def make_attributes(key_list, population_list, area_km_list):
@@ -29,9 +33,12 @@ REGION_CUSTOM_CONFIG = {
 def normalize_timeline(key, df, region_data):
     country, region, is_country = parse_key(key)
 
-    date_column = 'dateRep' if is_country else get([country, 'columns', 'date'], REGION_CUSTOM_CONFIG, default='date')
-    cases_column = 'cases' if is_country else get([country, 'columns', 'cases'], REGION_CUSTOM_CONFIG, default='cases')
-    deaths_column = 'deaths' if is_country else  get([country, 'columns', 'deaths'], REGION_CUSTOM_CONFIG, default='deaths')
+    date_column = 'dateRep' if is_country else get(
+        [country, 'columns', 'date'], REGION_CUSTOM_CONFIG, default='date')
+    cases_column = 'cases' if is_country else get(
+        [country, 'columns', 'cases'], REGION_CUSTOM_CONFIG, default='cases')
+    deaths_column = 'deaths' if is_country else get(
+        [country, 'columns', 'deaths'], REGION_CUSTOM_CONFIG, default='deaths')
 
     if not is_country:
         name_column = get(region_data['place_type'],
@@ -96,3 +103,23 @@ def parse_key(key):
     if not is_country:
         country, region = key_parts
     return country, region, is_country
+
+
+def metadata_changed():
+    metadata_path = path.join('inf-covid19-data', 'data', 'metadata.json')
+    checksum_path = path.join('inf-covid19-similarity', 'output', 'CHECKSUM')
+
+    is_changed = True
+    current_hash = checksum(metadata_path)
+
+    try:
+        with open(checksum_path, 'r') as checksum_file:
+            previous_hash = checksum_file.read()
+            is_changed = previous_hash != current_hash
+    except:
+        pass
+    
+    with open(checksum_path, 'w') as checksum_file:
+        checksum_file.write(current_hash)
+    
+    return is_changed

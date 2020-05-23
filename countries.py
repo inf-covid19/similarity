@@ -35,7 +35,7 @@ def process_country(key, metadata):
     area_km = area_map[code]
 
     df = pd.read_csv(
-        path.join('data', metadata['file']),
+        path.join('inf-covid19-data', metadata['file']),
         parse_dates=[0],
         dayfirst=True,
     )
