@@ -48,7 +48,7 @@ def process(metadata):
 
 
 def per_similarity(region_attributes):
-    df = region_attributes[['population', 'area_km', 'population_density']]
+    df = region_attributes[['population', 'area_km']]
     X = df.to_numpy()
     X_std = StandardScaler().fit_transform(X)
     model = AgglomerativeClustering(distance_threshold=0.1, n_clusters=None)
@@ -70,8 +70,6 @@ def per_single_timeline(metadata, a_key, df):
     
     for i, b_row in df.iterrows():
         b_key = b_row['key']
-
-        print(f'  [{a_key}]', i)
 
         if a_key == b_key:
             continue

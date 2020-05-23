@@ -3,8 +3,8 @@
 set -e
 
 # pull latest data
-wget -O data.zip https://github.com/inf-covid19/data/archive/master.zip
-7z data.zip
+rm -rf inf-covid19-data
+git clone https://github.com/inf-covid19/data.git inf-covid19-data
 
 # perform update
 pipenv run python similarity.py

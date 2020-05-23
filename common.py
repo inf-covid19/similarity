@@ -107,7 +107,7 @@ def parse_key(key):
 
 def metadata_changed():
     metadata_path = path.join('inf-covid19-data', 'data', 'metadata.json')
-    checksum_path = path.join('output', 'CHECKSUM')
+    checksum_path = path.join('inf-covid19-similarity', 'output', 'CHECKSUM')
 
     is_changed = True
     current_hash = checksum(metadata_path)

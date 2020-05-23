@@ -16,34 +16,36 @@ CORS(app)
 
 
 def region_worker(metadata, df, region):
+    print(f"  [{region}] Starting worker...")
     df = per_single_timeline(metadata, region, df)
-    df.to_csv(path.join('output', 'per_region', f'{region}.csv'), index=False)
+    df.to_csv(path.join('inf-covid19-similarity', 'output', 'by_key', f'{region}.csv'), index=False)
+    print(f"  [{region}] done.")
 
 
 class Manager(object):
     def __init__(self):
         self.metadata = {}
-        self.region_process = {}
         self.df_attributes = None
+        self.region_results = {}
+        self.pool = mp.Pool(processes=4)
 
     def get_regions(self):
         return self.df_attributes
 
     def get_region(self, region):
         try:
-            region_file = path.join('output', 'per_region', f'{region}.csv')
+            region_file = path.join('inf-covid19-similarity', 'output', 'by_key', f'{region}.csv')
             if time.time() - stat(region_file).st_ctime < 60 * 60 * 48:
-                return pd.read_csv(region_file)
-        except Exception as ex:
-            print('---something broke---', region, ex)
+                df = pd.read_csv(region_file)
+                return df
+        except:
+            pass
 
-        if region not in self.region_process:
-            self.region_process[region] = mp.Process(
-                target=region_worker,
+        if region not in self.region_results:
+            self.region_results[region] = self.pool.apply_async(
+                region_worker,
                 args=(self.metadata, self.df_attributes, region),
-                daemon=True
             )
-            self.region_process[region].start()
         return None
 
 
@@ -56,7 +58,9 @@ def startup():
     with open(path.join('inf-covid19-data', 'data', 'metadata.json')) as f:
         manager.metadata = json.load(f)
 
-    if metadata_changed():
+    regions_file = path.join('inf-covid19-similarity', 'output', 'regions.csv')
+
+    if metadata_changed() or not path.isfile(regions_file):
         # process atributes
         print('Processing attributes...')
         df_attributes = process(manager.metadata)
@@ -69,11 +73,10 @@ def startup():
         manager.df_attributes = df_attributes
 
         df_attributes = df_attributes.sort_values(by=['cluster', 'key'])
-        df_attributes.to_csv(
-            path.join('output', 'region_clusters.csv'), index=False)
+        df_attributes.to_csv(regions_file, index=False)
     else:
         print('Loading attributes...')
-        df_attributes = pd.read_csv(path.join('output', 'region_clusters.csv'))
+        df_attributes = pd.read_csv(regions_file)
         manager.df_attributes = df_attributes
 
     len_clusters = len(manager.df_attributes['cluster'].unique())
@@ -83,7 +86,17 @@ def startup():
 
 @app.route('/api/v1')
 def health():
-    return {'health': manager.df_attributes is not None}
+    processes = dict()
+    for region, result in manager.region_results.items():
+        if result.ready():
+            processes[region] = 'done' if result.successful() else 'failed'
+        else:
+            processes[region] = 'in_progress'
+
+    return {
+        'health': manager.get_regions() is not None,
+        'processes': processes,
+    }
 
 
 @app.route('/api/v1/regions')
