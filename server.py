@@ -9,6 +9,7 @@ import threading as th
 import time
 from sultan.api import Sultan
 import signal
+import traceback
 
 from clusters import process, per_similarity, per_single_timeline
 from common import metadata_changed
@@ -22,7 +23,6 @@ SIMILARITY_DATA = 'inf-covid19-similarity-data'
 
 # TODO(felipemfp):
 # * regenerate regions.csv every day (days changes)
-# * optimize by restricting number of regions (all above and 500 before)
 
 def update_data_repository():
     try:
@@ -36,10 +36,8 @@ def get_latest_commit_date(file):
     try:
         with Sultan.load(env={'PAGER': 'cat'}) as s:
             result = s.git(f'-C {SIMILARITY_DATA} log -1 --format=%ct {file}').run()
-            print(result.stdout)
             return int(''.join(result.stdout).strip())
-    except Exception as ex:
-        print(ex)
+    except:
         return 0
 
 
@@ -72,11 +70,16 @@ def regions_worker(metadata):
 
 def region_worker(metadata, df, region):
     print(f"  [{region}] Starting worker...")
-    region_file = path.join(SIMILARITY_DATA, 'by_key', f'{region}.csv')
-    df = per_single_timeline(metadata, region, df)
-    df.to_csv(region_file, index=False)
-    update_data_repository()
-    print(f"  [{region}] done.")
+    try:
+        region_file = path.join(SIMILARITY_DATA, 'by_key', f'{region}.csv')
+        df = per_single_timeline(metadata, region, df)
+        df.to_csv(region_file, index=False)
+        update_data_repository()
+        print(f"  [{region}] done.")
+    except:
+        print(f'  [{region}] failed.')
+        trace_info = traceback.format_exc().splitlines()
+        print(f'  [{region}]  ' + f'\n  [{region}]  '.join(trace_info))
 
 
 class Manager(object):
@@ -147,7 +150,6 @@ def health():
     return {
         'health': manager.get_regions() is not None,
         'processes': processes,
-        'brazil': get_latest_commit_date('by_key/Brazil.csv'),
     }
 
 

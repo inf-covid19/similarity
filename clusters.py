@@ -1,5 +1,5 @@
 import json
-from os import getcwd, path
+from os import getcwd, path, getenv
 
 import pandas as pd
 import numpy as np
@@ -56,6 +56,35 @@ def per_similarity(region_attributes):
     return model
 
 
+def should_get_distances(a_timeline, b_timeline):
+    a_len, b_len = len(a_timeline), len(b_timeline)
+
+    if min(a_len, b_len) == 0:
+        return False
+
+    if b_len < a_len / 2:
+        return False
+
+    return True
+
+
+def normalize_timelines(A, B):
+    TIMELINE_WINDOW = 0 - int(getenv('SIMILARITY_TIME_WINDOW', 10))
+    length = min(len(A), len(B))
+    return A[:length][TIMELINE_WINDOW:], B[:length][TIMELINE_WINDOW:]
+
+
+def get_distances(a_timeline, b_timeline):
+    A, B = normalize_timelines(a_timeline, b_timeline)
+
+    cases_distance = get_distance(A, B, ['cases'])
+    deaths_distance = get_distance(A, B, ['deaths'])
+    cases_per_100k_distance = get_distance(A, B, ['cases_per_100k'])
+    deaths_per_100k_distance = get_distance(A, B, ['deaths_per_100k'])
+
+    return cases_distance, deaths_distance, cases_per_100k_distance, deaths_per_100k_distance
+
+
 def per_single_timeline(metadata, a_key, df):
     data = []
     columns=['region', 'cases_distance', 'deaths_distance', 'cases_per_100k_distance', 'deaths_per_100k_distance', 'is_same_cluster']
@@ -77,14 +106,10 @@ def per_single_timeline(metadata, a_key, df):
         b_cluster = b_row['cluster']
         b_timeline = get_timeline(metadata, b_row)
 
-        length = min(len(a_timeline), len(b_timeline))
-        if length == 0:
+        if not should_get_distances(a_timeline, b_timeline):
             continue
 
-        cases_distance = get_distance(a_timeline, b_timeline, ['cases'])
-        deaths_distance = get_distance(a_timeline, b_timeline, ['deaths'])
-        cases_per_100k_distance = get_distance(a_timeline, b_timeline, ['cases_per_100k'])
-        deaths_per_100k_distance = get_distance(a_timeline, b_timeline, ['deaths_per_100k'])
+        cases_distance, deaths_distance, cases_per_100k_distance, deaths_per_100k_distance = get_distances(a_timeline, b_timeline)
 
         data.append([
             b_key,
@@ -101,7 +126,6 @@ def per_single_timeline(metadata, a_key, df):
 
 def per_timeline(metadata, df, offset=0):
     data = []
-    features = ['cases', 'deaths']
 
     idx = offset+1
     count = len(df)
@@ -117,14 +141,10 @@ def per_timeline(metadata, df, offset=0):
             b_cluster = b_row['cluster']
             b_timeline = get_timeline(metadata, b_row)
 
-            length = min(len(a_timeline), len(b_timeline))
-            if length == 0:
+            if not should_get_distances(a_timeline, b_timeline):
                 continue
 
-            cases_distance = get_distance(a_timeline, b_timeline, ['cases'])
-            deaths_distance = get_distance(a_timeline, b_timeline, ['deaths'])
-            cases_per_100k_distance = get_distance(a_timeline, b_timeline, ['cases_per_100k'])
-            deaths_per_100k_distance = get_distance(a_timeline, b_timeline, ['deaths_per_100k'])
+            cases_distance, deaths_distance, cases_per_100k_distance, deaths_per_100k_distance = get_distances(a_timeline, b_timeline)
 
             data.append([
                 a_key,
@@ -142,8 +162,8 @@ def per_timeline(metadata, df, offset=0):
 
 
 def get_distance(A, B, features, metric='manhattan'):
-    length = min(len(A), len(B))
-    distances = paired_distances(A[features][:length], B[features][:length], metric='manhattan')
+    length = len(A)
+    distances = paired_distances(A[features], B[features], metric='manhattan')
     return np.average(distances, weights=[max(0.1, x/length) for x in range(1, length+1)])
 
 
