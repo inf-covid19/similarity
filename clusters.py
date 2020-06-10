@@ -62,7 +62,7 @@ def should_get_distances(a_timeline, b_timeline):
     if min(a_len, b_len) == 0:
         return False
 
-    if b_len < a_len / 2:
+    if b_len < a_len - 30:
         return False
 
     return True
