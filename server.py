@@ -17,10 +17,12 @@ app = Flask(__name__)
 CORS(app)
 
 
+SIMILARITY_DATA = 'inf-covid19-similarity-data'
+
+
 # TODO(felipemfp):
-# * validate per commit date instead of creation date
 # * regenerate regions.csv every day (days changes)
-# * regenerate region.csv every day, but return file if exists (so it's ready for tomorrow or next usage)
+# * optimize by restricting number of regions (all above and 500 before)
 
 def update_data_repository():
     try:
@@ -30,8 +32,19 @@ def update_data_repository():
         pass
 
 
+def get_latest_commit_date(file):
+    try:
+        with Sultan.load(env={'PAGER': 'cat'}) as s:
+            result = s.git(f'-C {SIMILARITY_DATA} log -1 --format=%ct {file}').run()
+            print(result.stdout)
+            return int(''.join(result.stdout).strip())
+    except Exception as ex:
+        print(ex)
+        return 0
+
+
 def regions_worker(metadata):
-    regions_file = path.join('inf-covid19-similarity-data', 'regions.csv')
+    regions_file = path.join(SIMILARITY_DATA, 'regions.csv')
 
     df = None
     if metadata_changed() or not path.isfile(regions_file):
@@ -59,7 +72,7 @@ def regions_worker(metadata):
 
 def region_worker(metadata, df, region):
     print(f"  [{region}] Starting worker...")
-    region_file = path.join('inf-covid19-similarity-data', 'by_key', f'{region}.csv')
+    region_file = path.join(SIMILARITY_DATA, 'by_key', f'{region}.csv')
     df = per_single_timeline(metadata, region, df)
     df.to_csv(region_file, index=False)
     update_data_repository()
@@ -92,11 +105,14 @@ class Manager(object):
 
     def get_region(self, region):
         try:
-            region_file = path.join(
-                'inf-covid19-similarity-data', 'by_key', f'{region}.csv')
-            if time.time() - stat(region_file).st_ctime < 60 * 60 * 48:
-                df = pd.read_csv(region_file)
-                return df
+            region_file = path.join('by_key', f'{region}.csv')
+            if time.time() - get_latest_commit_date(region_file) > 60 * 60 * 48 and self.df is not None and region not in self.region_results:
+                self.region_results[region] = self.pool.apply_async(
+                    region_worker,
+                    args=(self.metadata, self.df, region),
+                )
+            df = pd.read_csv(path.join(SIMILARITY_DATA, region_file))
+            return df
         except:
             pass
 
@@ -131,6 +147,7 @@ def health():
     return {
         'health': manager.get_regions() is not None,
         'processes': processes,
+        'brazil': get_latest_commit_date('by_key/Brazil.csv'),
     }
 
 

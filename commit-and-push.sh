@@ -2,7 +2,7 @@
 
 set -e
 
-cd /opt/services/percy/inf-covid19-similarity-data
+cd ./inf-covid19-similarity-data
 
 git config --local user.email "bot@ufrgs.dev"
 git config --local user.name "inf-bot"
