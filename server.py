@@ -149,8 +149,9 @@ def health():
         else:
             processes[region] = 'in_progress'
 
+    df, _ = manager.get_regions()
     return {
-        'health': manager.get_regions() is not None,
+        'health': df is not None,
         'processes': processes,
     }
 
