@@ -35,7 +35,8 @@ def update_data_repository():
 def get_latest_commit_date(filename):
     try:
         with Sultan.load(env={'PAGER': 'cat'}) as s:
-            result = s.git(f'-C {SIMILARITY_DATA} log -1 --format=%ct "{filename}"').run()
+            result = s.git(
+                f'-C {SIMILARITY_DATA} log -1 --format=%ct "{filename}"').run()
             return int(''.join(result.stdout).strip())
     except:
         return 0
@@ -92,7 +93,7 @@ class Manager(object):
 
     def get_regions(self):
         if self.df is not None:
-            return self.df
+            return self.df, True
 
         if self.df_result is None:
             self.df_result = self.pool.apply_async(
@@ -102,20 +103,21 @@ class Manager(object):
 
         try:
             self.df = self.df_result.get(5)
-            return self.df
+            return self.df, True
         except:
-            return None
+            return None, False
 
     def get_region(self, region):
         try:
             region_file = path.join('by_key', f'{region}.csv')
-            if time.time() - get_latest_commit_date(region_file) > 60 * 60 * 24 and self.df is not None and region not in self.region_results:
+            is_up_to_date = time.time() - get_latest_commit_date(region_file) < 60 * 60 * 24
+            if not is_up_to_date and self.df is not None and region not in self.region_results:
                 self.region_results[region] = self.pool.apply_async(
                     region_worker,
                     args=(self.metadata, self.df, region),
                 )
             df = pd.read_csv(path.join(SIMILARITY_DATA, region_file))
-            return df
+            return df, is_up_to_date
         except:
             pass
 
@@ -124,7 +126,7 @@ class Manager(object):
                 region_worker,
                 args=(self.metadata, self.df, region),
             )
-        return None
+        return None, False
 
 
 manager = Manager()
@@ -155,25 +157,32 @@ def health():
 
 @app.route('/api/v1/regions')
 def index():
-    df = manager.get_regions()
+    df, use_cache = manager.get_regions()
     if df is None:
         return '', 202, {'Cache-Control': 'no-store'}
+
     headers = {
         'Content-Type': 'text/plain; charset=UTF-8',
-        'Cache-Control': 'public, max-age=7200'
     }
+
+    if use_cache:
+        headers['Cache-Control'] = 'public, max-age=7200'
+
     return df.to_csv(index=False), 200, headers
 
 
 @app.route('/api/v1/regions/<string:region>')
 def get(region):
-    df = manager.get_region(region)
+    df, use_cache = manager.get_region(region)
 
     if df is None:
         return '', 202, {'Cache-Control': 'no-store'}
 
     headers = {
         'Content-Type': 'text/plain; charset=UTF-8',
-        'Cache-Control': 'public, max-age=86400'
     }
+
+    if use_cache:
+        headers['Cache-Control'] = 'public, max-age=86400'
+
     return df.to_csv(index=False), 200, headers
