@@ -17,9 +17,6 @@ print("Requesting update...")
 for key in df['key']:
     print(f"  {key}")
     region = urllib.parse.quote(key)
-    if path.isfile(path.join("inf-covid19-similarity-data", 'by_key', f'{key}.csv')):
-        print(f"  ... skipped.")
-        continue
     urllib.request.urlretrieve(f'https://covid19-similarity.herokuapp.com/api/v1/regions/{region}', f'./tmp/{key}.csv')
     print(f"  ... done.")
     time.sleep(120)

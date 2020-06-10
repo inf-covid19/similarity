@@ -32,10 +32,10 @@ def update_data_repository():
         pass
 
 
-def get_latest_commit_date(file):
+def get_latest_commit_date(filename):
     try:
         with Sultan.load(env={'PAGER': 'cat'}) as s:
-            result = s.git(f'-C {SIMILARITY_DATA} log -1 --format=%ct {file}').run()
+            result = s.git(f'-C {SIMILARITY_DATA} log -1 --format=%ct "{filename}"').run()
             return int(''.join(result.stdout).strip())
     except:
         return 0
@@ -109,7 +109,7 @@ class Manager(object):
     def get_region(self, region):
         try:
             region_file = path.join('by_key', f'{region}.csv')
-            if time.time() - get_latest_commit_date(region_file) > 60 * 60 * 48 and self.df is not None and region not in self.region_results:
+            if time.time() - get_latest_commit_date(region_file) > 60 * 60 * 24 and self.df is not None and region not in self.region_results:
                 self.region_results[region] = self.pool.apply_async(
                     region_worker,
                     args=(self.metadata, self.df, region),
