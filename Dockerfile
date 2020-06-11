@@ -1,5 +1,7 @@
 FROM python:3.8
 
+ENV GITHUB_TOKEN
+ENV PORT=8080
 ARG DATA=inf-covid19-data
 ARG SIMILARITY_DATA=inf-covid19-similarity-data
 
@@ -22,5 +24,6 @@ RUN useradd -m -U percy && chown percy:percy -R .
 
 USER percy
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+EXPOSE $PORT
+
 CMD gunicorn -t 300 --bind 0.0.0.0:$PORT percy.server:app

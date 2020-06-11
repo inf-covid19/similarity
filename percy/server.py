@@ -11,18 +11,16 @@ from sultan.api import Sultan
 import signal
 import traceback
 
-from percy.clusters import process, per_similarity, per_single_timeline
+from percy.clusters import process, process_with_days, per_similarity, per_single_timeline
 from percy.common import metadata_changed
 
 app = Flask(__name__)
 CORS(app)
 
 
+DATA = 'inf-covid19-data'
 SIMILARITY_DATA = 'inf-covid19-similarity-data'
 
-
-# TODO(felipemfp):
-# * regenerate regions.csv every day (days changes)
 
 def update_data_repository():
     try:
@@ -32,21 +30,30 @@ def update_data_repository():
         pass
 
 
-def get_latest_commit_date(filename):
+def get_latest_commit_date(repo, filename):
     try:
         with Sultan.load(env={'PAGER': 'cat'}) as s:
-            result = s.git(
-                f'-C {SIMILARITY_DATA} log -1 --format=%ct "{filename}"').run()
+            result = s.git(f'-C {repo} log -1 --format=%ct "{filename}"').run()
             return int(''.join(result.stdout).strip())
     except:
         return 0
 
 
-def regions_worker(metadata):
+def regions_worker(_metadata):
+    with Sultan.load() as s:
+        s.git(f'-C {DATA} pull origin master').run()
+        s.git(f'-C {SIMILARITY_DATA} pull origin master').run()
+
     regions_file = path.join(SIMILARITY_DATA, 'regions.csv')
+    metadata_file = path.join('data', 'metadata.json')
 
     df = None
+    metadata = _metadata.copy()
     if metadata_changed() or not path.isfile(regions_file):
+        print('[regions_worker] Loading metadata...')
+        with open(path.join(DATA, metadata_file)) as f:
+            metadata = json.load(f)
+
         print('[regions_worker] Processing attributes...')
         df = process(metadata)
 
@@ -60,13 +67,22 @@ def regions_worker(metadata):
         update_data_repository()
     else:
         print('[regions_worker] Loading attributes...')
+        is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA, 'regions.csv') < 60 * 60 * 24
         df = pd.read_csv(regions_file)
+        if not is_up_to_date:
+            print('[regions_worker] Updating attributes...')
+            df = process_with_days(metadata, df)
+
+        if len(metadata) == 0:
+            print('[regions_worker] Loading metadata...')
+            with open(path.join(DATA, metadata_file)) as f:
+                metadata = json.load(f)
 
     len_clusters = len(df['cluster'].unique())
     print(
         f'[regions_worker]   Found {len(df)} regions across {len_clusters} clusters.')
 
-    return df
+    return df, metadata
 
 
 def region_worker(metadata, df, region):
@@ -85,47 +101,71 @@ def region_worker(metadata, df, region):
 
 class Manager(object):
     def __init__(self):
-        self.metadata = {}
-        self.df = None
-        self.df_result = None
-        self.region_results = {}
         self.pool = mp.Pool(processes=4)
 
-    def get_regions(self):
-        if self.df is not None:
-            return self.df, True
+        self.metadata = {}
+        self.df = None
 
-        if self.df_result is None:
-            self.df_result = self.pool.apply_async(
-                regions_worker,
-                args=(self.metadata,),
+        self.region_results = {}
+
+        self.bootstrap = None
+
+        self.pull()
+
+    def pull(self):
+        self.pulled_at = time.time()
+        self.bootstrap = self.pool.apply_async(
+            regions_worker,
+            args=(self.metadata,),
+        )
+
+    def is_loaded(self):
+        return len(self.metadata) > 0 and self.df is not None
+
+    def is_ready(self):
+        if self.bootstrap is not None:
+            try:
+                self.df, self.metadata = self.bootstrap.get(5)
+            except:
+                pass
+
+        if time.time() - self.pulled_at > 60 * 60 * 2:
+            self.pull()
+
+        return self.is_loaded()
+
+    def get_regions(self):
+        if not self.is_ready():
+            return None
+
+        return self.df
+
+    def load_region(self, region):
+        if region not in self.region_results:
+            self.region_results[region] = self.pool.apply_async(
+                region_worker,
+                args=(self.metadata, self.df, region),
             )
 
-        try:
-            self.df = self.df_result.get(5)
-            return self.df, True
-        except:
-            return None, False
+    def is_cacheable(self):
+        return self.bootstrap is not None and self.bootstrap.ready()
 
     def get_region(self, region):
+        if not self.is_ready():
+            return None, False
+
         try:
             region_file = path.join('by_key', f'{region}.csv')
-            is_up_to_date = time.time() - get_latest_commit_date(region_file) < 60 * 60 * 24
-            if not is_up_to_date and self.df is not None and region not in self.region_results:
-                self.region_results[region] = self.pool.apply_async(
-                    region_worker,
-                    args=(self.metadata, self.df, region),
-                )
+            is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA,
+                                                                 region_file) < 60 * 60 * 24
+            if not is_up_to_date:
+                self.load_region(region)
             df = pd.read_csv(path.join(SIMILARITY_DATA, region_file))
             return df, is_up_to_date
         except:
             pass
 
-        if self.df is not None and region not in self.region_results:
-            self.region_results[region] = self.pool.apply_async(
-                region_worker,
-                args=(self.metadata, self.df, region),
-            )
+        self.load_region(region)
         return None, False
 
 
@@ -134,31 +174,37 @@ manager = Manager()
 
 @app.before_first_request
 def startup():
-    print('Loading metadata...')
-    with open(path.join('inf-covid19-data', 'data', 'metadata.json')) as f:
-        manager.metadata = json.load(f)
-    manager.get_regions()
+    manager.is_ready()
+
+
+@app.route('/_ah/health')
+def health():
+    return {'status': 'healthy'}
 
 
 @app.route('/api/v1')
-def health():
+def index():
     processes = dict()
+
+    processes['bootstrap'] = 'in_progress'
+    if manager.bootstrap and manager.bootstrap.ready():
+        processes['bootstrap'] = 'done' if manager.bootstrap.successful() else 'failed'
+
     for region, result in manager.region_results.items():
         if result.ready():
             processes[region] = 'done' if result.successful() else 'failed'
         else:
             processes[region] = 'in_progress'
 
-    df, _ = manager.get_regions()
     return {
-        'health': df is not None,
+        'ready': manager.is_ready(),
         'processes': processes,
     }
 
 
 @app.route('/api/v1/regions')
-def index():
-    df, use_cache = manager.get_regions()
+def list_regions():
+    df = manager.get_regions()
     if df is None:
         return '', 202, {'Cache-Control': 'no-store'}
 
@@ -166,15 +212,15 @@ def index():
         'Content-Type': 'text/plain; charset=UTF-8',
     }
 
-    if use_cache:
+    if manager.is_cacheable():
         headers['Cache-Control'] = 'public, max-age=7200'
 
     return df.to_csv(index=False), 200, headers
 
 
 @app.route('/api/v1/regions/<string:region>')
-def get(region):
-    df, use_cache = manager.get_region(region)
+def show_region(region):
+    df, is_up_to_date = manager.get_region(region)
 
     if df is None:
         return '', 202, {'Cache-Control': 'no-store'}
@@ -183,7 +229,7 @@ def get(region):
         'Content-Type': 'text/plain; charset=UTF-8',
     }
 
-    if use_cache:
+    if is_up_to_date and manager.is_cacheable():
         headers['Cache-Control'] = 'public, max-age=86400'
 
     return df.to_csv(index=False), 200, headers

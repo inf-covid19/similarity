@@ -41,9 +41,13 @@ def process(metadata):
             region_attributes = pd.concat([region_attributes, subregion_attributes], ignore_index=True)
 
     region_attributes['population_density'] = region_attributes['population']/region_attributes['area_km']
-    region_attributes['days'] = region_attributes.apply(lambda r: len(get_timeline(metadata, r)), axis=1)
 
-    return region_attributes
+    return process_with_days(metadata, region_attributes)
+
+
+def process_with_days(metadata, df):
+    df['days'] = df.apply(lambda r: len(get_timeline(metadata, r)), axis=1)
+    return df
 
 
 def per_similarity(region_attributes):
