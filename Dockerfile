@@ -1,6 +1,5 @@
 FROM python:3.8
 
-ENV GITHUB_TOKEN
 ENV PORT=8080
 ARG DATA=inf-covid19-data
 ARG SIMILARITY_DATA=inf-covid19-similarity-data
