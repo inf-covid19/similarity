@@ -10,12 +10,15 @@ import time
 from sultan.api import Sultan
 import signal
 import traceback
+import logging
 
 from percy.clusters import process, process_with_days, per_similarity, per_single_timeline
 from percy.common import metadata_changed
 
 app = Flask(__name__)
 CORS(app)
+
+logging.basicConfig(level=logging.INFO)
 
 
 DATA = 'inf-covid19-data'
@@ -39,7 +42,7 @@ def get_latest_commit_date(repo, filename):
         return 0
 
 
-def regions_worker(_metadata):
+def bootstrap_worker(_metadata):
     with Sultan.load() as s:
         s.git(f'-C {DATA} pull origin master').run()
         s.git(f'-C {SIMILARITY_DATA} pull origin master').run()
@@ -50,14 +53,14 @@ def regions_worker(_metadata):
     df = None
     metadata = _metadata.copy()
     if metadata_changed() or not path.isfile(regions_file):
-        print('[regions_worker] Loading metadata...')
+        app.logger.info('[bootstrap_worker] Loading metadata...')
         with open(path.join(DATA, metadata_file)) as f:
             metadata = json.load(f)
 
-        print('[regions_worker] Processing attributes...')
+        app.logger.info('[bootstrap_worker] Processing attributes...')
         df = process(metadata)
 
-        print('[regions_worker] Clustering by attributes...')
+        app.logger.info('[bootstrap_worker] Clustering by attributes...')
         clusters = per_similarity(df)
         df['cluster'] = clusters.labels_
 
@@ -66,37 +69,37 @@ def regions_worker(_metadata):
 
         update_data_repository()
     else:
-        print('[regions_worker] Loading attributes...')
+        app.logger.info('[bootstrap_worker] Loading attributes...')
         is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA, 'regions.csv') < 60 * 60 * 24
         df = pd.read_csv(regions_file)
         if not is_up_to_date:
-            print('[regions_worker] Updating attributes...')
+            app.logger.info('[bootstrap_worker] Updating attributes...')
             df = process_with_days(metadata, df)
 
         if len(metadata) == 0:
-            print('[regions_worker] Loading metadata...')
+            app.logger.info('[bootstrap_worker] Loading metadata...')
             with open(path.join(DATA, metadata_file)) as f:
                 metadata = json.load(f)
 
     len_clusters = len(df['cluster'].unique())
-    print(
-        f'[regions_worker]   Found {len(df)} regions across {len_clusters} clusters.')
+    app.logger.info(
+        f'[bootstrap_worker]   Found {len(df)} regions across {len_clusters} clusters.')
 
     return df, metadata
 
 
 def region_worker(metadata, df, region):
-    print(f"  [{region}] Starting worker...")
+    app.logger.info(f"[region_worker<{region}>] Starting worker...")
     try:
         region_file = path.join(SIMILARITY_DATA, 'by_key', f'{region}.csv')
         df = per_single_timeline(metadata, region, df)
         df.to_csv(region_file, index=False)
         update_data_repository()
-        print(f"  [{region}] done.")
+        app.logger.info(f"[region_worker<{region}>] done.")
     except:
-        print(f'  [{region}] failed.')
+        app.logger.error(f'[region_worker<{region}>] failed.')
         trace_info = traceback.format_exc().splitlines()
-        print(f'  [{region}]  ' + f'\n  [{region}]  '.join(trace_info))
+        app.logger.error(f'[region_worker<{region}>]  ' + f'\n  [{region}]  '.join(trace_info))
 
 
 class Manager(object):
@@ -115,7 +118,7 @@ class Manager(object):
     def pull(self):
         self.pulled_at = time.time()
         self.bootstrap = self.pool.apply_async(
-            regions_worker,
+            bootstrap_worker,
             args=(self.metadata,),
         )
 
