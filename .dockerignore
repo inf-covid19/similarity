@@ -1,6 +1,7 @@
-inf-covid19-data/
-inf-covid19-similarity-data/
-.vscode/
-__pycache__/
-output/
-tmp/
+*
+!raw/
+!percy/
+!Pipfile*
+!*.sh
+!Dockerfile
+!README.md

@@ -7,11 +7,12 @@ from sultan.api import Sultan
 
 
 with Sultan.load() as s:
-    s.git('-C inf-covid19-similarity-data pull').run()
+    s.git('-C inf-covid19-data origin pull').run()
+    s.git('-C inf-covid19-similarity-data origin pull').run()
 
 df = pd.read_csv('inf-covid19-similarity-data/regions.csv')
 
-df = df.sort_values('population_density', ascending=False)
+df = df.sort_values('population', ascending=False)
 
 print("Requesting update...")
 for key in df['key']:

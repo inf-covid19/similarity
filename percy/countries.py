@@ -3,7 +3,7 @@ import numpy as np
 from os import path
 
 
-from common import normalize_timeline, make_attributes
+from percy.common import normalize_timeline, make_attributes
 
 
 def area_by_country():

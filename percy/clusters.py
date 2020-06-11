@@ -14,12 +14,11 @@ from sklearn import cluster, covariance, manifold
 
 from fnc.mappings import merge, get
 
-from countries import process_country
-from brazil import process_brazil
-from sweden import process_sweden
-from united_states_of_america import process_united_states_of_america
-
-from common import normalize_timeline
+from percy.countries import process_country
+from percy.brazil import process_brazil
+from percy.sweden import process_sweden
+from percy.united_states_of_america import process_united_states_of_america
+from percy.common import normalize_timeline
 
 COUNTRY_PROCESS_MAPPING = {
     'Brazil': process_brazil,

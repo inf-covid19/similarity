@@ -5,9 +5,10 @@ import numpy as np
 import multiprocessing as mp
 
 from sklearn import preprocessing
-from clusters import process, per_similarity, per_timeline
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
+
+from percy.clusters import process, per_similarity, per_timeline
 
 TOP_K = 100
 

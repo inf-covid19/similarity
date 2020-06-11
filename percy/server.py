@@ -11,8 +11,8 @@ from sultan.api import Sultan
 import signal
 import traceback
 
-from clusters import process, per_similarity, per_single_timeline
-from common import metadata_changed
+from percy.clusters import process, per_similarity, per_single_timeline
+from percy.common import metadata_changed
 
 app = Flask(__name__)
 CORS(app)

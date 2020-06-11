@@ -4,7 +4,7 @@ from os import path
 from fnc.mappings import merge, get
 from datetime import timedelta
 
-from utils import checksum
+from percy.utils import checksum
 
 
 def make_attributes(key_list, population_list, area_km_list):
