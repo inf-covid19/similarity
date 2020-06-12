@@ -25,4 +25,4 @@ USER percy
 
 EXPOSE $PORT
 
-CMD gunicorn -t 300 --log-level=info --bind 0.0.0.0:$PORT percy.server:app
+CMD gunicorn -t 300 --log-level=debug --bind 0.0.0.0:$PORT percy.server:app

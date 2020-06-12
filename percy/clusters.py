@@ -29,33 +29,51 @@ COUNTRY_PROCESS_MAPPING = {
 
 
 def process(metadata):
+    logger = logging.getLogger('percy.server')
     region_attributes = pd.DataFrame()
 
+
+    logger.debug('[process] starting...')
     for country, data in metadata.items():
+        logger.debug(f'[process] processing {country}...')
         attributes = process_country(country, data)
         if attributes is not None:
+            logger.debug(f'[process] concatening {country}...')
             region_attributes = pd.concat([region_attributes, attributes], ignore_index=True)
 
         if country in COUNTRY_PROCESS_MAPPING:
+            logger.debug(f'[process] processing regions from {country}...')
             process_fn = COUNTRY_PROCESS_MAPPING[country]
             subregion_attributes = process_fn(country, metadata[country])
+            logger.debug(f'[process] concatening regions from {country}...')
             region_attributes = pd.concat([region_attributes, subregion_attributes], ignore_index=True)
 
+
+    logger.debug(f'[process] adding population density information...')
     region_attributes['population_density'] = region_attributes['population']/region_attributes['area_km']
 
     return process_with_days(metadata, region_attributes)
 
 
 def process_with_days(metadata, df):
+    logger = logging.getLogger('percy.server')
+    logger.debug(f'[process_with_days] adding days information...')
     df['days'] = df.apply(lambda r: len(get_timeline(metadata, r)), axis=1)
     return df
 
 
 def per_similarity(region_attributes):
+    logger = logging.getLogger('percy.server')
+
+    logger.debug('[per_similarity] selecting features...')
     df = region_attributes[['population', 'area_km']]
+    logger.debug('[per_similarity] converting to numpy...')
     X = df.to_numpy()
+    logger.debug('[per_similarity] apply standard scaler...')
     X_std = StandardScaler().fit_transform(X)
+    logger.debug('[per_similarity] instantiate agglomerative clustering...')
     model = AgglomerativeClustering(distance_threshold=0.1, n_clusters=None)
+    logger.debug('[per_similarity] fit agglomerative clustering...')
     model = model.fit(X_std)
     return model
 
@@ -174,6 +192,7 @@ def get_distance(A, B, features, metric='manhattan'):
 timeline_cache = {}
 
 def get_timeline(metadata, row):
+    logger = logging.getLogger('percy.server')
     key = row['key']
     population = row['population']
 
@@ -199,6 +218,5 @@ def get_timeline(metadata, row):
 
         return timeline_cache[key].copy()
     except Exception:
-        logger = logging.getLogger('percy.server')
         logger.warn(f"[get_timeline] unable to get_timeline for {key}")
         return pd.DataFrame()
