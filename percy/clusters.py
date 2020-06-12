@@ -1,5 +1,6 @@
 import json
 from os import getcwd, path, getenv
+import logging
 
 import pandas as pd
 import numpy as np
@@ -173,10 +174,10 @@ def get_distance(A, B, features, metric='manhattan'):
 timeline_cache = {}
 
 def get_timeline(metadata, row):
-    try:
-        key = row['key']
-        population = row['population']
+    key = row['key']
+    population = row['population']
 
+    try:
         if key not in timeline_cache:
             key_path = key.split('.regions.')
             is_country = len(key_path) == 1
@@ -197,9 +198,7 @@ def get_timeline(metadata, row):
             timeline_cache[key] = df
 
         return timeline_cache[key].copy()
-    except Exception as e:
-        print(f"Warning: {key} failed to get_timeline")
-        print("-------------------------------------------------")
-        print(row)
-        print("-------------------------------------------------")
+    except Exception:
+        logger = logging.getLogger('percy.server')
+        logger.warn(f"[get_timeline] unable to get_timeline for {key}")
         return pd.DataFrame()

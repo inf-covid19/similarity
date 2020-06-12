@@ -18,8 +18,10 @@ from percy.common import metadata_changed
 app = Flask(__name__)
 CORS(app)
 
-logging.basicConfig(level=logging.INFO)
-
+gunicorn_logger = logging.getLogger('gunicorn.error')
+if gunicorn_logger is not None:
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
 
 DATA = 'inf-covid19-data'
 SIMILARITY_DATA = 'inf-covid19-similarity-data'
@@ -30,6 +32,9 @@ def update_data_repository():
         with Sultan.load() as s:
             s.bash(path.join(getcwd(), 'commit-and-push.sh')).run()
     except:
+        app.logger.error(f'[update_data_repository] failed.')
+        trace_info = traceback.format_exc().splitlines()
+        app.logger.error(f'[update_data_repository]  ' + f'\n  '.join(trace_info))
         pass
 
 
@@ -39,53 +44,66 @@ def get_latest_commit_date(repo, filename):
             result = s.git(f'-C {repo} log -1 --format=%ct "{filename}"').run()
             return int(''.join(result.stdout).strip())
     except:
+        app.logger.error(f'[get_latest_commit_date] failed.')
+        trace_info = traceback.format_exc().splitlines()
+        app.logger.error(f'[get_latest_commit_date]  ' + f'\n  '.join(trace_info))
         return 0
 
 
 def bootstrap_worker(_metadata):
-    with Sultan.load() as s:
-        s.git(f'-C {DATA} pull origin master').run()
-        s.git(f'-C {SIMILARITY_DATA} pull origin master').run()
+    app.logger.info(f"[bootstrap_worker] Starting worker...")
+    try:
+        with Sultan.load() as s:
+            s.git(f'-C {DATA} pull origin master').run()
+            s.git(f'-C {SIMILARITY_DATA} pull origin master').run()
 
-    regions_file = path.join(SIMILARITY_DATA, 'regions.csv')
-    metadata_file = path.join('data', 'metadata.json')
+        regions_file = path.join(SIMILARITY_DATA, 'regions.csv')
+        metadata_file = path.join('data', 'metadata.json')
 
-    df = None
-    metadata = _metadata.copy()
-    if metadata_changed() or not path.isfile(regions_file):
-        app.logger.info('[bootstrap_worker] Loading metadata...')
-        with open(path.join(DATA, metadata_file)) as f:
-            metadata = json.load(f)
-
-        app.logger.info('[bootstrap_worker] Processing attributes...')
-        df = process(metadata)
-
-        app.logger.info('[bootstrap_worker] Clustering by attributes...')
-        clusters = per_similarity(df)
-        df['cluster'] = clusters.labels_
-
-        df = df.sort_values(by=['cluster', 'key'])
-        df.to_csv(regions_file, index=False)
-
-        update_data_repository()
-    else:
-        app.logger.info('[bootstrap_worker] Loading attributes...')
-        is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA, 'regions.csv') < 60 * 60 * 24
-        df = pd.read_csv(regions_file)
-        if not is_up_to_date:
-            app.logger.info('[bootstrap_worker] Updating attributes...')
-            df = process_with_days(metadata, df)
-
-        if len(metadata) == 0:
+        df = None
+        metadata = _metadata.copy()
+        if metadata_changed() or not path.isfile(regions_file):
             app.logger.info('[bootstrap_worker] Loading metadata...')
             with open(path.join(DATA, metadata_file)) as f:
                 metadata = json.load(f)
 
-    len_clusters = len(df['cluster'].unique())
-    app.logger.info(
-        f'[bootstrap_worker]   Found {len(df)} regions across {len_clusters} clusters.')
+            app.logger.info('[bootstrap_worker] Processing attributes...')
+            df = process(metadata)
 
-    return df, metadata
+            app.logger.info('[bootstrap_worker] Clustering by attributes...')
+            clusters = per_similarity(df)
+            df['cluster'] = clusters.labels_
+
+            df = df.sort_values(by=['cluster', 'key'])
+
+            app.logger.info('[bootstrap_worker] Saving regions.csv...')
+            df.to_csv(regions_file, index=False)
+
+            app.logger.info('[bootstrap_worker] Commit and push...')
+            update_data_repository()
+        else:
+            app.logger.info('[bootstrap_worker] Loading attributes...')
+            is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA,
+                                                                'regions.csv') < 60 * 60 * 24
+            df = pd.read_csv(regions_file)
+            if not is_up_to_date:
+                app.logger.info('[bootstrap_worker] Updating attributes...')
+                df = process_with_days(metadata, df)
+
+            if len(metadata) == 0:
+                app.logger.info('[bootstrap_worker] Loading metadata...')
+                with open(path.join(DATA, metadata_file)) as f:
+                    metadata = json.load(f)
+
+        len_clusters = len(df['cluster'].unique())
+        app.logger.info(f'[bootstrap_worker] Loaded {len(df)} regions across {len_clusters} clusters.')
+
+        return df, metadata
+    except:
+        app.logger.error(f'[bootstrap_worker] failed.')
+        trace_info = traceback.format_exc().splitlines()
+        app.logger.error(
+            f'[bootstrap_worker]  ' + f'\n  '.join(trace_info))
 
 
 def region_worker(metadata, df, region):
@@ -99,7 +117,8 @@ def region_worker(metadata, df, region):
     except:
         app.logger.error(f'[region_worker<{region}>] failed.')
         trace_info = traceback.format_exc().splitlines()
-        app.logger.error(f'[region_worker<{region}>]  ' + f'\n  [{region}]  '.join(trace_info))
+        app.logger.error(
+            f'[region_worker<{region}>]  ' + f'\n  '.join(trace_info))
 
 
 class Manager(object):
@@ -189,9 +208,9 @@ def health():
 def index():
     processes = dict()
 
-    processes['bootstrap'] = 'in_progress'
+    bootstrap = 'in_progress'
     if manager.bootstrap and manager.bootstrap.ready():
-        processes['bootstrap'] = 'done' if manager.bootstrap.successful() else 'failed'
+        bootstrap = 'done' if manager.bootstrap.successful() else 'failed'
 
     for region, result in manager.region_results.items():
         if result.ready():
@@ -202,6 +221,7 @@ def index():
     return {
         'ready': manager.is_ready(),
         'processes': processes,
+        'bootstrap': bootstrap,
     }
 
 
