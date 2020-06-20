@@ -40,8 +40,18 @@ def process_country(key, metadata):
         dayfirst=True,
     )
 
-    population = df['popData2018'].iloc[0]
+    population = get_population(df)
     if np.isnan(population):
         return None
 
     return make_attributes([key], [population], [area_km])
+
+
+def get_population(df):
+    keys = ['popData2019', 'popData2018']
+    for key in keys:
+        try:
+            return df[key].iloc[0]
+        except:
+            pass
+    return np.nan
