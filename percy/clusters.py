@@ -131,16 +131,20 @@ def per_single_timeline(metadata, a_key, df):
         if not should_get_distances(a_timeline, b_timeline):
             continue
 
-        cases_distance, deaths_distance, cases_per_100k_distance, deaths_per_100k_distance = get_distances(a_timeline, b_timeline)
+        try:
+            cases_distance, deaths_distance, cases_per_100k_distance, deaths_per_100k_distance = get_distances(a_timeline, b_timeline)
+            data.append([
+                b_key,
+                cases_distance,
+                deaths_distance,
+                cases_per_100k_distance,
+                deaths_per_100k_distance,
+                a_cluster == b_cluster,
+            ])
+        except:
+            logger = logging.getLogger('percy.server')
+            logger.warn(f"[per_single_timeline] unable to compare {a_key} to {b_key}")
 
-        data.append([
-            b_key,
-            cases_distance,
-            deaths_distance,
-            cases_per_100k_distance,
-            deaths_per_100k_distance,
-            a_cluster == b_cluster,
-        ])
 
     df = pd.DataFrame(data, columns=columns)
     return df
