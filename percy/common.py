@@ -4,7 +4,7 @@ from os import path
 from fnc.mappings import merge, get
 from datetime import timedelta
 
-from utils import checksum
+from percy.utils import checksum
 
 
 def make_attributes(key_list, population_list, area_km_list):
@@ -46,7 +46,7 @@ def normalize_timeline(key, df, region_data):
         df = df[df['place_type'] == region_data['place_type']]
         df = df[df[name_column] == region_data['name']]
 
-    df[date_column] = pd.to_datetime(df[date_column], dayfirst=is_country)
+    df[date_column] = pd.to_datetime(df[date_column])
     df = df.sort_values(by=[date_column], ascending=[True])
 
     if is_country:

@@ -1,0 +1,7 @@
+runtime: custom
+env: flex
+instance_class: B4
+manual_scaling:
+  instances: 1
+env_variables:
+  GITHUB_TOKEN: $GH_TOKEN

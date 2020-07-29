@@ -2,7 +2,7 @@ import pandas as pd
 from os import path, getcwd
 from fnc.sequences import groupby
 
-from common import make_attributes
+from percy.common import make_attributes
 
 
 def process_sweden(key, metadata):
