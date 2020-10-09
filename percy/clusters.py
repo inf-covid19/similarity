@@ -222,5 +222,4 @@ def get_timeline(metadata, row):
 
         return timeline_cache[key].copy()
     except Exception as e:
-        logger.warn(f"[get_timeline] unable to get_timeline for {key}: {e}")
         return pd.DataFrame()

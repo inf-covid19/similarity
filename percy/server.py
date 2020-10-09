@@ -54,8 +54,8 @@ def bootstrap_worker(_metadata):
     app.logger.info(f"[bootstrap_worker] Starting worker...")
     try:
         with Sultan.load() as s:
-            s.git(f'-C {DATA} pull origin master').run()
-            s.git(f'-C {SIMILARITY_DATA} pull origin master').run()
+            s.git(f'-C {DATA} pull --depth 1 origin master').run()
+            s.git(f'-C {SIMILARITY_DATA} pull --depth 1 origin master').run()
 
         regions_file = path.join(SIMILARITY_DATA, 'regions.csv')
         metadata_file = path.join('data', 'metadata.json')
