@@ -3,7 +3,7 @@ from os import path, stat, getcwd
 import json
 import pandas as pd
 import numpy as np
-import multiprocessing as mp
+import multiprocessing.dummy as mp
 from flask_cors import CORS
 import threading as th
 import time
@@ -85,15 +85,16 @@ def bootstrap_worker(_metadata):
             app.logger.info('[bootstrap_worker] Loading attributes...')
             is_up_to_date = time.time() - get_latest_commit_date(SIMILARITY_DATA,
                                                                 'regions.csv') < 60 * 60 * 24
-            df = pd.read_csv(regions_file)
-            if not is_up_to_date:
-                app.logger.info('[bootstrap_worker] Updating attributes...')
-                df = process_with_days(metadata, df)
 
             if len(metadata) == 0:
                 app.logger.info('[bootstrap_worker] Loading metadata...')
                 with open(path.join(DATA, metadata_file)) as f:
                     metadata = json.load(f)
+
+            df = pd.read_csv(regions_file)
+            if not is_up_to_date:
+                app.logger.info('[bootstrap_worker] Updating attributes...')
+                df = process_with_days(metadata, df)
 
         len_clusters = len(df['cluster'].unique())
         app.logger.info(f'[bootstrap_worker] Loaded {len(df)} regions across {len_clusters} clusters.')

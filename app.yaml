@@ -1,7 +1,8 @@
-runtime: custom
-env: flex
+runtime: python38
 instance_class: B4
+service: percy
 manual_scaling:
   instances: 1
+entrypoint: gunicorn -t 300 --log-level=debug --bind :$PORT percy.server:app
 env_variables:
   GITHUB_TOKEN: $GH_TOKEN

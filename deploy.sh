@@ -2,6 +2,8 @@
 
 set -e
 
-cat app.yaml | envsubst > app.deploy.yaml
+pipenv run pip freeze > requirements.txt
 
-gcloud app deploy app.deploy.yaml --promote --quiet
+cat app.yaml | envsubst '$GH_TOKEN' > app.deploy.yaml
+
+gcloud app deploy app.deploy.yaml --promote --quiet --project nephele-project
